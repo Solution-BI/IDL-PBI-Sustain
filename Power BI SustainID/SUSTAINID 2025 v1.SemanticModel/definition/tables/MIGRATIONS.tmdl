@@ -1,0 +1,44 @@
+table MIGRATIONS
+	lineageTag: 0940b916-142d-4a45-80eb-9ff88faa7991
+
+	column ID
+		dataType: double
+		lineageTag: 14d28f04-36de-4952-996c-08170e5ad16e
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MIGRATION
+		dataType: string
+		lineageTag: 34036c1e-a9fa-4734-a2cf-c50e3a9bda0d
+		summarizeBy: none
+		sourceColumn: MIGRATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column BATCH
+		dataType: double
+		lineageTag: db3a5491-a9c6-41ea-95ca-77383e73e594
+		summarizeBy: sum
+		sourceColumn: BATCH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition MIGRATIONS = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("idlogistics.west-europe.azure.snowflakecomputing.com","WH_PRD_GRP"),
+				    DB_PRD_GRP_Database = Source{[Name="DB_PRD_GRP",Kind="Database"]}[Data],
+				    DWH_SUSTAIN_ID_Schema = DB_PRD_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
+				    MIGRATIONS_Table = DWH_SUSTAIN_ID_Schema{[Name="MIGRATIONS",Kind="Table"]}[Data]
+				in
+				    MIGRATIONS_Table
+
+	annotation PBI_ResultType = Table
+

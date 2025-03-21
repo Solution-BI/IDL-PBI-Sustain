@@ -1,0 +1,114 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "1e4631965166d4508b49",
+  "position": {
+    "x": 464.67637926916649,
+    "y": 291.03415333174109,
+    "z": 4000,
+    "height": 128.39742058753285,
+    "width": 815.62932887508964
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ANSWER_EVALUATION"
+                    }
+                  },
+                  "Property": "ANSWER_ID"
+                }
+              },
+              "queryRef": "ANSWER_EVALUATION.ANSWER_ID",
+              "nativeQueryRef": "ANSWER_ID"
+            },
+            {
+              "field": {
+                "Arithmetic": {
+                  "Left": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "ANSWER_EVALUATION"
+                            }
+                          },
+                          "Property": "EVALUATION_ID"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  },
+                  "Right": {
+                    "ScopedEval": {
+                      "Expression": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "ANSWER_EVALUATION"
+                                }
+                              },
+                              "Property": "EVALUATION_ID"
+                            }
+                          },
+                          "Function": 2
+                        }
+                      },
+                      "Scope": []
+                    }
+                  },
+                  "Operator": 3
+                }
+              },
+              "queryRef": "ANSWER_EVALUATION.EVALUATION_ID",
+              "nativeQueryRef": "%TG Nombre de EVALUATION_ID"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ANSWER_EVALUATION"
+                        }
+                      },
+                      "Property": "EVALUATION_ID"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "ANSWER_EVALUATION.EVALUATION_ID1",
+              "nativeQueryRef": "Nombre de EVALUATION_ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ANSWER"
+                    }
+                  },
+                  "Property": "LABEL"
+                }
+              },
+              "queryRef": "ANSWER.LABEL",
+              "nativeQueryRef": "LABEL"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

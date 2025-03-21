@@ -1,0 +1,40 @@
+table LANGUAGE_PILLAR
+	lineageTag: 6c674e9e-d625-44d3-8a27-48b8fc2d9d31
+
+	column LANGUAGE_ID
+		dataType: string
+		lineageTag: 37f31c0c-772a-4e4c-90fa-160624e89af5
+		summarizeBy: none
+		sourceColumn: LANGUAGE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PILLAR_ID
+		dataType: string
+		lineageTag: 71c274b6-d6bf-4beb-91f6-292de9a1c635
+		summarizeBy: none
+		sourceColumn: PILLAR_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE
+		dataType: string
+		lineageTag: 49862754-4e23-4cce-898a-d90db00fa86b
+		summarizeBy: none
+		sourceColumn: VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LANGUAGE_PILLAR = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("idlogistics.west-europe.azure.snowflakecomputing.com","WH_PRD_GRP"),
+				    DB_PRD_GRP_Database = Source{[Name="DB_PRD_GRP",Kind="Database"]}[Data],
+				    DWH_SUSTAIN_ID_Schema = DB_PRD_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
+				    LANGUAGE_PILLAR_Table = DWH_SUSTAIN_ID_Schema{[Name="LANGUAGE_PILLAR",Kind="Table"]}[Data]
+				in
+				    LANGUAGE_PILLAR_Table
+
+	annotation PBI_ResultType = Table
+
