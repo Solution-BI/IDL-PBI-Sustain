@@ -1,0 +1,40 @@
+table EVALUATION
+	lineageTag: bedd5c49-1bd9-4970-8dfa-1fa4018ec917
+
+	column ID
+		dataType: string
+		lineageTag: 58f66980-3988-4c3e-ab46-6385255c6c16
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CAMPAIGN_SITE_ID
+		dataType: string
+		lineageTag: 651a57ba-6d42-469d-b401-c0f0b4d55e35
+		summarizeBy: none
+		sourceColumn: CAMPAIGN_SITE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column QUESTION_ID
+		dataType: string
+		lineageTag: 937172d6-8969-42dd-9b9a-f173d9a4767e
+		summarizeBy: none
+		sourceColumn: QUESTION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EVALUATION = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("idlogistics.west-europe.azure.snowflakecomputing.com","WH_PRD_GRP"),
+				    DB_PRD_GRP_Database = Source{[Name="DB_PRD_GRP",Kind="Database"]}[Data],
+				    DWH_SUSTAIN_ID_Schema = DB_PRD_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
+				    EVALUATION_Table = DWH_SUSTAIN_ID_Schema{[Name="EVALUATION",Kind="Table"]}[Data]
+				in
+				    EVALUATION_Table
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "960910ec04834db70ade",
+  "position": {
+    "x": 568,
+    "y": 360,
+    "z": 0,
+    "height": 104,
+    "width": 248,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CAMPAIGN_SITE"
+                        }
+                      },
+                      "Property": "IS_FINISHED"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(CAMPAIGN_SITE.IS_FINISHED)",
+              "nativeQueryRef": "Somme de IS_FINISHED"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "CAMPAIGN_SITE"
+                      }
+                    },
+                    "Property": "IS_FINISHED"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

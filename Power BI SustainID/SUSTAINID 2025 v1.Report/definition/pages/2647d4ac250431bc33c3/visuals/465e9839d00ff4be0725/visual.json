@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "465e9839d00ff4be0725",
+  "position": {
+    "x": 683.56341055648443,
+    "y": 0,
+    "z": 6000,
+    "height": 78.261284929543834,
+    "width": 596.74229758777165
+  },
+  "visual": {
+    "visualType": "advancedSlicerVisual",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LANGUAGE"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "LANGUAGE.NAME",
+              "nativeQueryRef": "NAME"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

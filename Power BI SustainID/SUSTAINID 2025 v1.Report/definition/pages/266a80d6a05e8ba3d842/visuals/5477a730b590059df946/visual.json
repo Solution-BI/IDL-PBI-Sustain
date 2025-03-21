@@ -1,0 +1,98 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "5477a730b590059df946",
+  "position": {
+    "x": 952,
+    "y": 456,
+    "z": 1000,
+    "height": 120,
+    "width": 288,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CAMPAIGN_SITE"
+                    }
+                  },
+                  "Property": "STATUS"
+                }
+              },
+              "queryRef": "CAMPAIGN_SITE.STATUS",
+              "nativeQueryRef": "STATUS",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "COUNTRY"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "COUNTRY.NAME",
+              "nativeQueryRef": "NAME1",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CAMPAIGN_SITE"
+                        }
+                      },
+                      "Property": "IS_FINISHED"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Sum(CAMPAIGN_SITE.IS_FINISHED)",
+              "nativeQueryRef": "Nombre de IS_FINISHED1"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "COUNTRY"
+                  }
+                },
+                "Property": "NAME"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

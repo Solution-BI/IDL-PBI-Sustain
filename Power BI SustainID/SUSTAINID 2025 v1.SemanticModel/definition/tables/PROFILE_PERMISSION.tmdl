@@ -1,0 +1,42 @@
+table PROFILE_PERMISSION
+	lineageTag: 09fbbe9b-a0cd-48f9-8bd6-bc19c04b586c
+
+	column PROFILE_ID
+		dataType: string
+		lineageTag: 241473bd-74e5-4c5c-b76f-556a73798476
+		summarizeBy: none
+		sourceColumn: PROFILE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERMISSION_ID
+		dataType: string
+		lineageTag: 9170f83a-e90e-4f14-a361-647339b9ec2a
+		summarizeBy: none
+		sourceColumn: PERMISSION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE
+		dataType: double
+		lineageTag: cc0371ba-26e8-42d0-9928-e1c61afc06eb
+		summarizeBy: sum
+		sourceColumn: VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition PROFILE_PERMISSION = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("idlogistics.west-europe.azure.snowflakecomputing.com","WH_PRD_GRP"),
+				    DB_PRD_GRP_Database = Source{[Name="DB_PRD_GRP",Kind="Database"]}[Data],
+				    DWH_SUSTAIN_ID_Schema = DB_PRD_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
+				    PROFILE_PERMISSION_Table = DWH_SUSTAIN_ID_Schema{[Name="PROFILE_PERMISSION",Kind="Table"]}[Data]
+				in
+				    PROFILE_PERMISSION_Table
+
+	annotation PBI_ResultType = Table
+

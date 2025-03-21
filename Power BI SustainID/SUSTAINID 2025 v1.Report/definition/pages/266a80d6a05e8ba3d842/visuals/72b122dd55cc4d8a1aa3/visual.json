@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "72b122dd55cc4d8a1aa3",
+  "position": {
+    "x": 56,
+    "y": 600,
+    "z": 3000,
+    "height": 80,
+    "width": 479.99999999999994,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "advanceCardE03760C5AB684758B56AA29F9E6C257B",
+    "query": {
+      "queryState": {
+        "mainMeasure": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CAMPAIGN"
+                        }
+                      },
+                      "Property": "END_DATE"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(CAMPAIGN.END_DATE)",
+              "nativeQueryRef": "END_DATE (le plus ancien)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "CAMPAIGN"
+                      }
+                    },
+                    "Property": "END_DATE"
+                  }
+                },
+                "Function": 3
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
