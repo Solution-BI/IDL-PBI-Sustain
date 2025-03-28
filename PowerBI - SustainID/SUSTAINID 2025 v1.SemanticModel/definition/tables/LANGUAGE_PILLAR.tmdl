@@ -1,0 +1,42 @@
+table LANGUAGE_PILLAR
+	lineageTag: e7f22cff-14b6-4db3-b939-9c0630c866c4
+
+	column LANGUAGE_ID
+		dataType: string
+		lineageTag: ff006e5c-9025-42e3-9afb-b387807872f5
+		summarizeBy: none
+		sourceColumn: LANGUAGE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PILLAR_ID
+		dataType: string
+		lineageTag: 0d465973-e716-4567-9b69-3f3a929294f1
+		summarizeBy: none
+		sourceColumn: PILLAR_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUE
+		dataType: string
+		lineageTag: 027fa83c-8e85-44e6-b159-929098c4a368
+		summarizeBy: none
+		sourceColumn: VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LANGUAGE_PILLAR = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("UY39352-IDLOGISTICS.snowflakecomputing.com","WH_DEV_GRP"),
+				    DB_DEV_GRP_Database = Source{[Name="DB_DEV_GRP",Kind="Database"]}[Data],
+				    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
+				    LANGUAGE_PILLAR_Table = DWH_SUSTAIN_ID_Schema{[Name="LANGUAGE_PILLAR",Kind="Table"]}[Data]
+				in
+				    LANGUAGE_PILLAR_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
