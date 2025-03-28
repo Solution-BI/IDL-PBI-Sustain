@@ -1,0 +1,119 @@
+table COUNTRY
+	lineageTag: 1cda4c68-f847-4d6a-bed0-f2dbd38398b8
+
+	column ID
+		dataType: string
+		lineageTag: fc1ecd12-ec3c-451f-bd59-eb7d2d6314c8
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SURNAME
+		dataType: string
+		lineageTag: 92a321ab-ad26-4f8b-aca5-fd4271d94b95
+		summarizeBy: none
+		sourceColumn: SURNAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column START_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 477c43ff-c11a-4e7b-a3ff-6b88dd7fcb30
+		summarizeBy: none
+		sourceColumn: START_DATE
+
+		variation Variation
+			isDefault
+			relationship: c64ef68a-dd23-4697-a907-21b86e103af4
+			defaultHierarchy: LocalDateTable_ecbfb2e4-6608-4038-86a1-7a38382a20e6.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column END_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f3505c2c-2801-4bc5-8845-a22b8d2cdb38
+		summarizeBy: none
+		sourceColumn: END_DATE
+
+		variation Variation
+			isDefault
+			relationship: 96998dfd-8785-4118-8781-d46f98e5d345
+			defaultHierarchy: LocalDateTable_4590d250-7019-4045-a185-96de46e068d7.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CREATED_AT
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7b9750e7-c848-4e00-93d6-9392b780ab7b
+		summarizeBy: none
+		sourceColumn: CREATED_AT
+
+		variation Variation
+			isDefault
+			relationship: 272eae75-728f-4148-823d-fed9efb72bf0
+			defaultHierarchy: LocalDateTable_9c747105-1f56-4fb4-84b2-4a05bdeac470.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column UPDATED_AT
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a0b98917-5635-45d2-a63b-417c2791fc0c
+		summarizeBy: none
+		sourceColumn: UPDATED_AT
+
+		variation Variation
+			isDefault
+			relationship: bc6c758e-6ef6-41b3-9f56-f874d1ba410c
+			defaultHierarchy: LocalDateTable_3fed34b1-5ddf-435e-b2d9-bd8ac14b876c.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NAME
+		dataType: string
+		lineageTag: 8ba0835e-8974-43e5-afcc-3165dee31233
+		summarizeBy: none
+		sourceColumn: NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	partition COUNTRY = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("idlogistics.west-europe.azure.snowflakecomputing.com","WH_PRD_GRP"),
+				    DB_PRD_GRP_Database = Source{[Name=DB_NAME,Kind="Database"]}[Data],
+				    DWH_SUSTAIN_ID_Schema = DB_PRD_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
+				    COUNTRY_Table = DWH_SUSTAIN_ID_Schema{[Name="COUNTRY",Kind="Table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(COUNTRY_Table, each [NAME] <> null and [NAME] <> ""),
+				    #"Replaced Value" = Table.ReplaceValue(#"Filtered Rows","Benelux","Belgium",Replacer.ReplaceText,{"NAME"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Brasil","Brazil",Replacer.ReplaceText,{"NAME"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","Iberia","Spain",Replacer.ReplaceText,{"NAME"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","United-Kingdom","United Kingdom",Replacer.ReplaceText,{"NAME"}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Replaced Value3", "NAME", "NAME - Copy"),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Duplicated Column",{"ID", "NAME", "NAME - Copy", "START_DATE", "END_DATE", "CREATED_AT", "UPDATED_AT"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Reordered Columns","Spain","Iberia",Replacer.ReplaceText,{"NAME"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Belgium","Benelux",Replacer.ReplaceText,{"NAME"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Replaced Value5",{{"NAME", "SURNAME"}, {"NAME - Copy", "NAME"}}),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Renamed Columns",{"ID", "NAME", "SURNAME", "START_DATE", "END_DATE", "CREATED_AT", "UPDATED_AT"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Reordered Columns1","Reunion Island","Mayotte",Replacer.ReplaceText,{"NAME"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","Belgium","Netherlands",Replacer.ReplaceText,{"NAME"})
+				in
+				    #"Replaced Value7"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

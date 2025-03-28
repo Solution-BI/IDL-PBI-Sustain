@@ -1,0 +1,116 @@
+table CATEGORY
+	lineageTag: 10dee437-28cb-4d8a-93f7-8d8815a171a9
+
+	column ID
+		dataType: string
+		lineageTag: 1829eaaf-2f9f-4328-978e-713bdf7b48bb
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAME
+		dataType: string
+		lineageTag: a39ab7a1-64ed-41b2-ade5-16e8c73d02c3
+		summarizeBy: none
+		sourceColumn: NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CREATED_BY
+		dataType: string
+		lineageTag: aa8a80dd-86ee-4f92-8a3c-8cb91f78c4a3
+		summarizeBy: none
+		sourceColumn: CREATED_BY
+
+		annotation SummarizationSetBy = Automatic
+
+	column UPDATED_BY
+		dataType: string
+		lineageTag: 06c37d29-d7bc-492d-ba09-6f3e028ef3f7
+		summarizeBy: none
+		sourceColumn: UPDATED_BY
+
+		annotation SummarizationSetBy = Automatic
+
+	column DELETED_BY
+		dataType: string
+		lineageTag: b885cf19-2428-4c6b-becb-53ddc9001bcd
+		summarizeBy: none
+		sourceColumn: DELETED_BY
+
+		annotation SummarizationSetBy = Automatic
+
+	column CREATED_AT
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 047692ab-07a4-4af1-a5c7-17ca525e7db7
+		summarizeBy: none
+		sourceColumn: CREATED_AT
+
+		variation Variation
+			isDefault
+			relationship: 4efa255e-1e06-409b-abe6-eb6cd2152275
+			defaultHierarchy: LocalDateTable_2fcc14cb-82ef-4b83-acac-f933624b4879.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column UPDATED_AT
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 783eab06-470a-487d-90eb-cfca40bfb142
+		summarizeBy: none
+		sourceColumn: UPDATED_AT
+
+		variation Variation
+			isDefault
+			relationship: 3237f817-88b9-4287-825e-650ddc5afb21
+			defaultHierarchy: LocalDateTable_0f25cb67-c54f-4835-9ceb-05ccf314fba6.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DELETED_AT
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 58d2c11b-9e36-4992-a3da-c2e599d4e9d3
+		summarizeBy: none
+		sourceColumn: DELETED_AT
+
+		variation Variation
+			isDefault
+			relationship: c75f7a24-18da-42dd-8277-8fe6c7289395
+			defaultHierarchy: LocalDateTable_192eb0b6-9120-45e8-a504-666332e7d4ce.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ORDER
+		dataType: double
+		lineageTag: 576d14f5-f955-4b9c-851e-74a62d7a164f
+		summarizeBy: sum
+		sourceColumn: ORDER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition CATEGORY = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("idlogistics.west-europe.azure.snowflakecomputing.com","WH_PRD_GRP"),
+				    DB_PRD_GRP_Database = Source{[Name=DB_NAME,Kind="Database"]}[Data],
+				    DWH_SUSTAIN_ID_Schema = DB_PRD_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
+				    CATEGORY_Table = DWH_SUSTAIN_ID_Schema{[Name="CATEGORY",Kind="Table"]}[Data]
+				in
+				    CATEGORY_Table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

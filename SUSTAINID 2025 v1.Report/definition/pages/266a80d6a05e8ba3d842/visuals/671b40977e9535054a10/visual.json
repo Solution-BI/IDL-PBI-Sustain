@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "671b40977e9535054a10",
+  "position": {
+    "x": 672,
+    "y": 360,
+    "z": 17000,
+    "height": 344,
+    "width": 584,
+    "tabOrder": 17000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "ANSWER_ID"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.ANSWER_ID",
+              "nativeQueryRef": "ANSWER_ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ANSWER"
+                    }
+                  },
+                  "Property": "LABEL"
+                }
+              },
+              "queryRef": "ANSWER.LABEL",
+              "nativeQueryRef": "LABEL"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CATEGORY"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "CATEGORY.NAME",
+              "nativeQueryRef": "NAME"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LANGUAGE_ANSWER"
+                    }
+                  },
+                  "Property": "VALUE"
+                }
+              },
+              "queryRef": "LANGUAGE_ANSWER.VALUE",
+              "nativeQueryRef": "VALUE"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

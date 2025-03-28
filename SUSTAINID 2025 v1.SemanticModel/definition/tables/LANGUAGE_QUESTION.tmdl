@@ -1,0 +1,50 @@
+table LANGUAGE_QUESTION
+	lineageTag: 96255a06-f5c1-4184-a9e7-8492190817a8
+
+	column LANGUAGE_ID
+		dataType: string
+		lineageTag: 416922a6-fa3a-434f-a02f-f6ef150c3d0a
+		summarizeBy: none
+		sourceColumn: LANGUAGE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column QUESTION_ID
+		dataType: string
+		lineageTag: 8d6ff74c-8d3c-4ad2-b793-29f39b68fd0c
+		summarizeBy: none
+		sourceColumn: QUESTION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LABEL
+		dataType: string
+		lineageTag: ba2236a6-8856-4928-9a63-afb52cd10a30
+		summarizeBy: none
+		sourceColumn: LABEL
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCRIPTION
+		dataType: string
+		lineageTag: 27efe00d-6eef-40ed-bba6-6eb6c629855a
+		summarizeBy: none
+		sourceColumn: DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LANGUAGE_QUESTION = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("UY39352-IDLOGISTICS.snowflakecomputing.com","WH_DEV_GRP"),
+				    DB_DEV_GRP_Database = Source{[Name="DB_DEV_GRP",Kind="Database"]}[Data],
+				    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
+				    LANGUAGE_QUESTION_Table = DWH_SUSTAIN_ID_Schema{[Name="LANGUAGE_QUESTION",Kind="Table"]}[Data]
+				in
+				    LANGUAGE_QUESTION_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

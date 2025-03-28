@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SUSTAINID 2025 v1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4b84be75-2a5a-4dd7-99bb-2a380e7d963a"
+  }
+}

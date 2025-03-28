@@ -1,0 +1,200 @@
+relationship 4efa255e-1e06-409b-abe6-eb6cd2152275
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CATEGORY.CREATED_AT
+	toColumn: LocalDateTable_2fcc14cb-82ef-4b83-acac-f933624b4879.Date
+
+relationship 3237f817-88b9-4287-825e-650ddc5afb21
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CATEGORY.UPDATED_AT
+	toColumn: LocalDateTable_0f25cb67-c54f-4835-9ceb-05ccf314fba6.Date
+
+relationship c75f7a24-18da-42dd-8277-8fe6c7289395
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CATEGORY.DELETED_AT
+	toColumn: LocalDateTable_192eb0b6-9120-45e8-a504-666332e7d4ce.Date
+
+relationship 5c0ea3cf-4c45-4efb-9480-15e5cd90e6ed
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CAMPAIGN.START_DATE
+	toColumn: LocalDateTable_0aad3da0-9a2f-4989-b2f7-0cc76f67e195.Date
+
+relationship 8023ba60-f0e8-45ec-af43-6dbe62944ba6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CAMPAIGN.END_DATE
+	toColumn: LocalDateTable_9d05c692-fdb6-4c5a-a41c-59ec7b1fde8f.Date
+
+relationship 36326620-072b-4c1a-8d74-ace3fc85ed05
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CAMPAIGN.CREATED_AT
+	toColumn: LocalDateTable_488f44f8-dddc-419e-9d22-df417f3eedb9.Date
+
+relationship a753e2a6-c09b-4c5c-a5bc-f2e220562ab6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CAMPAIGN.UPDATED_AT
+	toColumn: LocalDateTable_768e8e1b-f7e1-4156-9686-b7300b2b5705.Date
+
+relationship 25880f35-696e-4421-8561-aa2d85dd7a9c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CAMPAIGN.DELETED_AT
+	toColumn: LocalDateTable_714c941c-2ce7-470b-84e9-a35a73202930.Date
+
+relationship c64ef68a-dd23-4697-a907-21b86e103af4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: COUNTRY.START_DATE
+	toColumn: LocalDateTable_ecbfb2e4-6608-4038-86a1-7a38382a20e6.Date
+
+relationship 96998dfd-8785-4118-8781-d46f98e5d345
+	joinOnDateBehavior: datePartOnly
+	fromColumn: COUNTRY.END_DATE
+	toColumn: LocalDateTable_4590d250-7019-4045-a185-96de46e068d7.Date
+
+relationship 272eae75-728f-4148-823d-fed9efb72bf0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: COUNTRY.CREATED_AT
+	toColumn: LocalDateTable_9c747105-1f56-4fb4-84b2-4a05bdeac470.Date
+
+relationship bc6c758e-6ef6-41b3-9f56-f874d1ba410c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: COUNTRY.UPDATED_AT
+	toColumn: LocalDateTable_3fed34b1-5ddf-435e-b2d9-bd8ac14b876c.Date
+
+relationship da1fd2f4-37af-4b7d-85bc-fd9d351d73b0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PILLAR.CREATED_AT
+	toColumn: LocalDateTable_28ce1ae5-7620-492d-9fc6-36c53795baf0.Date
+
+relationship ed9934ed-6176-4f13-b6cb-f2d7053e8a85
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PILLAR.UPDATED_AT
+	toColumn: LocalDateTable_c4ca646c-5be6-467b-a2bb-42c26b82ee66.Date
+
+relationship 08347625-9ff6-435f-bbc2-d774f281e152
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PILLAR.DELETED_AT
+	toColumn: LocalDateTable_fdb5ea37-c688-434d-949b-68a5ae369263.Date
+
+relationship 96c2722f-1efe-4e2c-bc46-de09367a17b6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: QUESTION.CREATED_AT
+	toColumn: LocalDateTable_734984b2-4889-40e6-be9a-6fc76f26cf46.Date
+
+relationship 8e630edc-cebe-42e4-861c-d00947631b2c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: QUESTION.UPDATED_AT
+	toColumn: LocalDateTable_ea29176c-afd9-4a48-b0df-c6a2571b4662.Date
+
+relationship aa443d29-57b4-422b-b5cc-e25991b5e304
+	joinOnDateBehavior: datePartOnly
+	fromColumn: QUESTION.DELETED_AT
+	toColumn: LocalDateTable_bafda898-93f1-4120-b008-c016e4eb19e9.Date
+
+relationship 55edb667-edd3-410f-9567-143fbbef24e7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SITE.CREATED_AT
+	toColumn: LocalDateTable_fb379a9a-0bf5-477c-8453-1f140d0c3539.Date
+
+relationship 77d15f1b-d0c8-4d0e-a4cd-d59556237534
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SITE.UPDATED_AT
+	toColumn: LocalDateTable_c6465fdb-b02d-44ac-b784-1fc5412bfb9d.Date
+
+relationship 06fbaa90-212c-4028-8cc1-924346aa3ea7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SITE.DELETED_AT
+	toColumn: LocalDateTable_9214fa93-1e18-4f5b-8469-4ea75dbea0fd.Date
+
+relationship 4784b280-6f9e-49d7-a250-5eaa6c9069cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: THEME.CREATED_AT
+	toColumn: LocalDateTable_ffebb91b-bf5d-47c1-8084-6b314062bd4f.Date
+
+relationship e9c90df2-6618-4b94-a987-bed707b90b96
+	joinOnDateBehavior: datePartOnly
+	fromColumn: THEME.UPDATED_AT
+	toColumn: LocalDateTable_a618a4c4-7f92-4e0b-87f9-50a570070ebd.Date
+
+relationship 87e49235-1844-4193-9c61-c12872819459
+	joinOnDateBehavior: datePartOnly
+	fromColumn: THEME.DELETED_AT
+	toColumn: LocalDateTable_54603a49-f471-416b-b59c-d247be04bd35.Date
+
+relationship AutoDetected_70640d94-c539-456a-80fc-5935e479a1a7
+	fromColumn: FACT_ANSWERS.SITE_ID
+	toColumn: SITE.ID
+
+relationship AutoDetected_2de93a95-ccef-48ae-8087-72de9e7e2a80
+	fromColumn: FACT_ANSWERS.QUESTION_ID
+	toColumn: QUESTION.ID
+
+relationship AutoDetected_1616b1c2-adc8-408e-8387-8acac5d0635b
+	fromColumn: FACT_ANSWERS.CAMPAIGN_ID
+	toColumn: CAMPAIGN.ID
+
+relationship AutoDetected_7ea20fce-9465-4ea2-92e8-12fc15bdc4db
+	fromColumn: FACT_ANSWERS.CATEGORY_ID
+	toColumn: CATEGORY.ID
+
+relationship AutoDetected_689489fa-99cb-447d-acf3-a3bf5888f3cd
+	fromColumn: FACT_ANSWERS.PILLAR_ID
+	toColumn: PILLAR.ID
+
+relationship AutoDetected_0345060a-e0b0-4be5-b5c3-bf55d991252f
+	fromColumn: FACT_ANSWERS.THEME_ID
+	toColumn: THEME.ID
+
+relationship ab617b0b-b688-b8a2-f052-d763e448bc96
+	crossFilteringBehavior: bothDirections
+	fromColumn: FACT_ANSWERS.COUNTRY_ID
+	toColumn: COUNTRY.ID
+
+relationship AutoDetected_4471e2d8-3610-4efa-b7ba-2872bbadd39b
+	crossFilteringBehavior: bothDirections
+	fromColumn: FACT_ANSWERS.CAMPAIGN_SITE_ID
+	toColumn: CAMPAIGN_SITE.ID
+
+relationship 8e501f13-b18b-4a4a-8746-5968115cb613
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ANSWER.CREATED_AT
+	toColumn: LocalDateTable_dd8b731d-b512-496d-abcf-44414a320678.Date
+
+relationship 04717e1d-4280-4a34-a756-7d01d4001505
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ANSWER.UPDATED_AT
+	toColumn: LocalDateTable_5fe092f8-f310-43bb-8a9d-8efe77722e6f.Date
+
+relationship 260a7cc9-65e3-40d1-a84f-fd11c36f3c7d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ANSWER.DELETED_AT
+	toColumn: LocalDateTable_51c98240-b135-4ebf-bcee-ce8b641df77f.Date
+
+relationship AutoDetected_836a7787-185b-4829-b083-4add3ae8ba0d
+	fromColumn: FACT_ANSWERS.ANSWER_ID
+	toColumn: ANSWER.ID
+
+relationship AutoDetected_2f9e5faf-fd7a-41d8-ad64-43b293b77bc3
+	fromColumn: LANGUAGE_ANSWER.LANGUAGE_ID
+	toColumn: LANGUAGE.ID
+
+relationship AutoDetected_65c875c2-cd8f-44f9-b010-0933d7dbb3a8
+	fromColumn: LANGUAGE_QUESTION.LANGUAGE_ID
+	toColumn: LANGUAGE.ID
+
+relationship 16b577d0-07c3-1720-0030-f00ee5626952
+	toCardinality: many
+	fromColumn: LANGUAGE_QUESTION.QUESTION_ID
+	toColumn: FACT_ANSWERS.QUESTION_ID
+
+relationship 9cb6fac6-466e-8db1-d26b-17352850063c
+	toCardinality: many
+	fromColumn: LANGUAGE_ANSWER.ANSWER_ID
+	toColumn: FACT_ANSWERS.ANSWER_ID
+
+relationship AutoDetected_5100420e-61fa-45bb-b0ec-a5f27c49eefa
+	fromColumn: LANGUAGE_PILLAR.LANGUAGE_ID
+	toColumn: LANGUAGE.ID
+
+relationship a57e6f61-a90d-3f6f-d10e-00abb836ff4e
+	toCardinality: many
+	fromColumn: LANGUAGE_PILLAR.PILLAR_ID
+	toColumn: FACT_ANSWERS.PILLAR_ID
+
