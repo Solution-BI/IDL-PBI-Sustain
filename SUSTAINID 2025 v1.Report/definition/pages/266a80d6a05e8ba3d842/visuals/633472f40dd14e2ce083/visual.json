@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "633472f40dd14e2ce083",
   "position": {
-    "x": 448,
-    "y": 184,
-    "z": 15000,
+    "x": 16,
+    "y": 272,
+    "z": 12000,
     "height": 160,
-    "width": 240,
-    "tabOrder": 15000
+    "width": 336,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,12 @@
                       "Entity": "FACT_ANSWERS"
                     }
                   },
-                  "Property": "RatioQuestionsAnswers"
+                  "Property": "RatioRemplisPourcentage"
                 }
               },
-              "queryRef": "FACT_ANSWERS.RatioQuestionsAnswers",
-              "nativeQueryRef": "Questions Answers",
-              "displayName": "Questions Answers"
+              "queryRef": "FACT_ANSWERS.RatioRemplisPourcentage",
+              "nativeQueryRef": "RatioRemplisPourcentage",
+              "format": "#,0.00"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "FACT_ANSWERS"
                   }
                 },
-                "Property": "RatioQuestionsAnswers"
+                "Property": "RatioRemplisPourcentage"
               }
             },
             "direction": "Descending"
@@ -107,10 +107,35 @@
                   "Value": "'center'"
                 }
               }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showBlankAs": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
+                }
+              }
             }
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ],
@@ -153,5 +178,45 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "86f39af3b67641e74d90",
+        "field": {
+          "Arithmetic": {
+            "Left": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_ANSWERS"
+                  }
+                },
+                "Property": "RatioRemplisPourcentage"
+              }
+            },
+            "Right": {
+              "ScopedEval": {
+                "Expression": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "FACT_ANSWERS"
+                      }
+                    },
+                    "Property": "RatioRemplisPourcentage"
+                  }
+                },
+                "Scope": []
+              }
+            },
+            "Operator": 3
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User",
+        "isHiddenInViewMode": true
+      }
+    ]
   }
 }

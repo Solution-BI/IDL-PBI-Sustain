@@ -6,12 +6,6 @@ table FACT_ANSWERS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure NombreTotalQuestionnairesEnvoyes =
-			
-			COUNTROWS(CAMPAIGN_SITE)
-		formatString: 0
-		lineageTag: eb7a9955-ce4a-4c69-815a-00f8fd975d77
-
 	measure MaxScore = MAX(FACT_ANSWERS[WEIGHT])
 		lineageTag: efa4c691-ab7a-4074-8bf1-fd92583ab15e
 
@@ -24,6 +18,83 @@ table FACT_ANSWERS
 			)
 			```
 		lineageTag: 52dd8bcc-22a8-4c7d-971f-abb580febbdd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure SommeID010
+		lineageTag: 33cb2172-a02f-4e3f-86b7-f33e3248fe4c
+
+	measure NombreQuestionnairesRemplis =
+			
+			CALCULATE(
+			    COUNTROWS(FACT_ANSWERS),
+			    CAMPAIGN_SITE[IS_FINISHED] = 1
+			)
+		formatString: 0
+		lineageTag: f3c82865-5412-45bb-a044-a329daf77670
+
+	measure NombreTotalQuestionnairesEnvoyes =
+			
+			COUNTROWS(FACT_ANSWERS)
+		formatString: 0
+		lineageTag: 0d5d9c6c-8b63-47de-bec7-a0fb7671edb8
+
+	measure RatioRemplisPourcentage =
+			
+			DIVIDE(
+			    [NombreQuestionnairesRemplis],
+			    [NombreTotalQuestionnairesEnvoyes],
+			    0
+			) * 100
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7dbd4d17-7b0d-42f0-9e4e-d8caf9323aea
+
+	measure 'NombreQuestionnairesRemplis total for CAMPAIGN_SITE_ID' =
+			
+			CALCULATE(
+				[NombreQuestionnairesRemplis],
+				ALLSELECTED('FACT_ANSWERS'[CAMPAIGN_SITE_ID])
+			)
+		formatString: 0
+		lineageTag: f5326679-0a79-495e-9a48-b6fb0f954ad2
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "TotalForSelectedCategory"
+				}
+
+		changedProperty = FormatString
+
+	measure TotalPointsDisponibles =
+			
+			SUMX(
+			    ANSWER,
+			    IF(
+			        ANSWER[IS_NA] = 0,
+			        ANSWER[WEIGHT],
+			        0
+			    )
+			)
+		lineageTag: ab03ba9b-58ce-4c3e-b711-a7641f6a6f1c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TotalPointsObtenus =
+			
+			SUM(FACT_ANSWERS[WEIGHT])
+		lineageTag: b252eedf-d8c3-45e3-b85f-ace7604cb99f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ScoreMoyenGlobalPourcentage =
+			
+			DIVIDE(
+			    [TotalPointsObtenus],
+			    [TotalPointsDisponibles],
+			    0
+			) * 100
+		lineageTag: 124b84bd-039d-4190-9cba-2ca842cdb7b5
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

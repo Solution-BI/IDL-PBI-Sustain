@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "90dd00abe73dae110bc5",
+  "position": {
+    "x": 16,
+    "y": 380,
+    "z": 22000,
+    "height": 150,
+    "width": 464,
+    "tabOrder": 22000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "QUESTION"
+                    }
+                  },
+                  "Property": "SHORT_LABEL"
+                }
+              },
+              "queryRef": "QUESTION.SHORT_LABEL",
+              "nativeQueryRef": "SHORT_LABEL"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

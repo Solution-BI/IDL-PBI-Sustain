@@ -119,26 +119,32 @@ relationship 87e49235-1844-4193-9c61-c12872819459
 	toColumn: LocalDateTable_54603a49-f471-416b-b59c-d247be04bd35.Date
 
 relationship AutoDetected_70640d94-c539-456a-80fc-5935e479a1a7
+	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.SITE_ID
 	toColumn: SITE.ID
 
 relationship AutoDetected_2de93a95-ccef-48ae-8087-72de9e7e2a80
+	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.QUESTION_ID
 	toColumn: QUESTION.ID
 
 relationship AutoDetected_1616b1c2-adc8-408e-8387-8acac5d0635b
+	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.CAMPAIGN_ID
 	toColumn: CAMPAIGN.ID
 
 relationship AutoDetected_7ea20fce-9465-4ea2-92e8-12fc15bdc4db
+	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.CATEGORY_ID
 	toColumn: CATEGORY.ID
 
 relationship AutoDetected_689489fa-99cb-447d-acf3-a3bf5888f3cd
+	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.PILLAR_ID
 	toColumn: PILLAR.ID
 
 relationship AutoDetected_0345060a-e0b0-4be5-b5c3-bf55d991252f
+	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.THEME_ID
 	toColumn: THEME.ID
 
@@ -168,6 +174,7 @@ relationship 260a7cc9-65e3-40d1-a84f-fd11c36f3c7d
 	toColumn: LocalDateTable_51c98240-b135-4ebf-bcee-ce8b641df77f.Date
 
 relationship AutoDetected_836a7787-185b-4829-b083-4add3ae8ba0d
+	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.ANSWER_ID
 	toColumn: ANSWER.ID
 
