@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "90dd00abe73dae110bc5",
+  "name": "64c9077ee686b3d96300",
   "position": {
-    "x": 16,
-    "y": 380,
-    "z": 22000,
-    "height": 150,
+    "x": 400,
+    "y": 304,
+    "z": 22005,
+    "height": 240,
     "width": 464,
-    "tabOrder": 22000
+    "tabOrder": 22004
   },
   "visual": {
     "visualType": "tableEx",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "QUESTION"
+                      "Entity": "LANGUAGE_QUESTION"
                     }
                   },
-                  "Property": "SHORT_LABEL"
+                  "Property": "LABEL"
                 }
               },
-              "queryRef": "QUESTION.SHORT_LABEL",
-              "nativeQueryRef": "SHORT_LABEL"
+              "queryRef": "LANGUAGE_QUESTION.LABEL",
+              "nativeQueryRef": "LABEL"
             }
           ]
         }

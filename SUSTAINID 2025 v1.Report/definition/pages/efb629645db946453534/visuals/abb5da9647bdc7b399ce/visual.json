@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "abb5da9647bdc7b399ce",
+  "position": {
+    "x": 352,
+    "y": 192,
+    "z": 22007,
+    "height": 64,
+    "width": 272,
+    "tabOrder": 22006
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CATEGORY"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "CATEGORY.NAME",
+              "nativeQueryRef": "CATEGORY",
+              "active": true,
+              "displayName": "CATEGORY"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "25139707031d8b94b38a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CATEGORY"
+              }
+            },
+            "Property": "NAME"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
