@@ -6,11 +6,11 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["ANSWER","CAMPAIGN_SITE","CATEGORY","CAMPAIGN","COUNTRY","PILLAR","QUESTION","SITE","THEME","FACT_ANSWERS","DB_NAME","LANGUAGE_ANSWER","LANGUAGE_QUESTION","LANGUAGE","LANGUAGE_PILLAR"]
+annotation PBI_QueryOrder = ["ANSWER","CAMPAIGN_SITE","CATEGORY","CAMPAIGN","COUNTRY","PILLAR","QUESTION","SITE","THEME","FACT_ANSWERS","DB_NAME","LANGUAGE_ANSWER","LANGUAGE_QUESTION","LANGUAGE","LANGUAGE_PILLAR","DATE"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a
+annotation PBIDesktopVersion = 2.141.1253.0 (25.03)+74f9999a1e95f78c739f3ea2b96ba340e9ba8729
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -56,6 +56,8 @@ ref table LANGUAGE_ANSWER
 ref table LANGUAGE_QUESTION
 ref table LANGUAGE
 ref table LANGUAGE_PILLAR
+ref table DATE
+ref table LocalDateTable_ee48f3ea-af80-4efa-9c3f-984c3d44b72a
 
 ref cultureInfo fr-FR
 

@@ -52,10 +52,10 @@ table CAMPAIGN
 	column IS_GLOBAL
 		dataType: double
 		lineageTag: 0e1f0d35-50b4-48c5-8787-283eebf710e8
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IS_GLOBAL
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -131,6 +131,26 @@ table CAMPAIGN
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column END_DATE_ID
+		dataType: double
+		lineageTag: f1eb598d-bd60-450f-836c-87224517b2a5
+		summarizeBy: none
+		sourceColumn: END_DATE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column START_DATE_ID
+		dataType: double
+		lineageTag: 00e5b6d3-e8be-44fb-ad76-c7f10b32e986
+		summarizeBy: none
+		sourceColumn: START_DATE_ID
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition CAMPAIGN = m
 		mode: import
 		source =
@@ -138,7 +158,7 @@ table CAMPAIGN
 				    Source = Snowflake.Databases("idlogistics.west-europe.azure.snowflakecomputing.com","WH_PRD_GRP"),
 				    DB_PRD_GRP_Database = Source{[Name=DB_NAME,Kind="Database"]}[Data],
 				    DWH_SUSTAIN_ID_Schema = DB_PRD_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
-				    CAMPAIGN_Table = DWH_SUSTAIN_ID_Schema{[Name="CAMPAIGN",Kind="Table"]}[Data]
+				    CAMPAIGN_Table = DWH_SUSTAIN_ID_Schema{[Name="DIM_CAMPAIGN",Kind="Table"]}[Data]
 				in
 				    CAMPAIGN_Table
 

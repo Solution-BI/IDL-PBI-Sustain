@@ -12783,7 +12783,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "SCORE"
+			          "ConceptualProperty": "Score"
 			        }
 			      },
 			      "State": "Generated",

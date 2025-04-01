@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "4870c8bd528b40126a35",
+  "position": {
+    "x": 0,
+    "y": 485.09909909909908,
+    "z": 1000,
+    "height": 234.90090090090092,
+    "width": 896
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "COUNTRY"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "COUNTRY.NAME",
+              "nativeQueryRef": "NAME"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SITE"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "SITE.NAME",
+              "nativeQueryRef": "NAME1"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "AvgScore"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.AvgScore",
+              "nativeQueryRef": "AvgScore"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_ANSWERS"
+                  }
+                },
+                "Property": "AvgScore"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

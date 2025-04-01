@@ -13,6 +13,25 @@
     }
   },
   "layoutOptimization": "None",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "24c04a07429691896b4e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "LANGUAGE"
+              }
+            },
+            "Property": "NAME"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
+  },
   "objects": {
     "section": [
       {

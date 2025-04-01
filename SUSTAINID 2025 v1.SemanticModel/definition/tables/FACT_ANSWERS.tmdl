@@ -2,26 +2,33 @@ table FACT_ANSWERS
 	lineageTag: 9717762e-33ad-4b09-954b-a7f0f35d106b
 
 	measure RatioQuestionsAnswers = DISTINCTCOUNT(FACT_ANSWERS[ANSWER_ID])/DISTINCTCOUNT(FACT_ANSWERS[QUESTION_ID])
+		displayFolder: Measures
 		lineageTag: d5190fe1-d044-4e76-bf4f-971b0aab9e47
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure MaxScore = MAX(FACT_ANSWERS[WEIGHT])
+	measure MaxScore =
+			CALCULATE(
+			    MAX(ANSWER[MAX_WEIGHT]),
+			    ALL(SITE),
+			    ALL(CAMPAIGN)
+			)
+		formatString: 0
+		displayFolder: Measures
 		lineageTag: efa4c691-ab7a-4074-8bf1-fd92583ab15e
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure SCORE = ```
+	measure Score = ```
 			DIVIDE(
-			    SUM(FACT_ANSWERS[WEIGHT]), 
+			    SUMX(FACT_ANSWERS,FACT_ANSWERS[WEIGHT])+0, 
 			    FACT_ANSWERS[MaxScore]
 			)
 			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
 		lineageTag: 52dd8bcc-22a8-4c7d-971f-abb580febbdd
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure SommeID010
+		displayFolder: Measures
 		lineageTag: 33cb2172-a02f-4e3f-86b7-f33e3248fe4c
 
 	measure NombreQuestionnairesRemplis =
@@ -31,12 +38,14 @@ table FACT_ANSWERS
 			    CAMPAIGN_SITE[IS_FINISHED] = 1
 			)
 		formatString: 0
+		displayFolder: Measures
 		lineageTag: f3c82865-5412-45bb-a044-a329daf77670
 
 	measure NombreTotalQuestionnairesEnvoyes =
 			
 			COUNTROWS(FACT_ANSWERS)
 		formatString: 0
+		displayFolder: Measures
 		lineageTag: 0d5d9c6c-8b63-47de-bec7-a0fb7671edb8
 
 	measure RatioRemplisPourcentage =
@@ -47,6 +56,7 @@ table FACT_ANSWERS
 			    0
 			) * 100
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
 		lineageTag: 7dbd4d17-7b0d-42f0-9e4e-d8caf9323aea
 
 	measure 'NombreQuestionnairesRemplis total for CAMPAIGN_SITE_ID' =
@@ -56,6 +66,7 @@ table FACT_ANSWERS
 				ALLSELECTED('FACT_ANSWERS'[CAMPAIGN_SITE_ID])
 			)
 		formatString: 0
+		displayFolder: Measures
 		lineageTag: f5326679-0a79-495e-9a48-b6fb0f954ad2
 
 		extendedProperty MeasureTemplate =
@@ -76,6 +87,7 @@ table FACT_ANSWERS
 			        0
 			    )
 			)
+		displayFolder: Measures
 		lineageTag: ab03ba9b-58ce-4c3e-b711-a7641f6a6f1c
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -83,6 +95,7 @@ table FACT_ANSWERS
 	measure TotalPointsObtenus =
 			
 			SUM(FACT_ANSWERS[WEIGHT])
+		displayFolder: Measures
 		lineageTag: b252eedf-d8c3-45e3-b85f-ace7604cb99f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -94,6 +107,7 @@ table FACT_ANSWERS
 			    [TotalPointsDisponibles],
 			    0
 			) * 100
+		displayFolder: Measures
 		lineageTag: 124b84bd-039d-4190-9cba-2ca842cdb7b5
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -112,6 +126,7 @@ table FACT_ANSWERS
 			        )
 			    )
 		formatString: 0
+		displayFolder: Measures
 		lineageTag: fcd8a9ef-1b35-4377-90fd-ca1ca40e78ac
 
 	measure TotalResponses = ```
@@ -128,6 +143,7 @@ table FACT_ANSWERS
 			        IFERROR(VALUE('FACT_ANSWERS'[ANSWER_VALUE]), 0)
 			    )
 			```
+		displayFolder: Measures
 		lineageTag: 4e49ca2f-c889-4f86-b373-6ab268b43cf5
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -140,6 +156,7 @@ table FACT_ANSWERS
 			        FACT_ANSWERS[WEIGHT]
 			    )
 			)
+		displayFolder: Measures
 		lineageTag: cc3d0aef-88fc-4ee6-9240-3257c834270b
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -156,12 +173,19 @@ table FACT_ANSWERS
 			        FACT_ANSWERS[WEIGHT]
 			    )
 			)
+		displayFolder: Measures
 		lineageTag: ced56a2f-3527-4120-b1a9-d1493ca8b6e7
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure AvgScore = CALCULATE(AVERAGEX(FACT_ANSWERS,FACT_ANSWERS[Score]), KEEPFILTERS('LANGUAGE'))
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 7a105a96-7823-4009-b706-cd9a050d3abc
+
 	column COUNTRY_ID
 		dataType: string
+		displayFolder: Details
 		lineageTag: c7aeef56-a06d-4c2a-81af-f5dbc553761b
 		summarizeBy: none
 		sourceColumn: COUNTRY_ID
@@ -170,6 +194,7 @@ table FACT_ANSWERS
 
 	column SITE_ID
 		dataType: string
+		displayFolder: Details
 		lineageTag: fae01c71-f0f1-4d00-84a4-7f4f96600e63
 		summarizeBy: none
 		sourceColumn: SITE_ID
@@ -178,6 +203,7 @@ table FACT_ANSWERS
 
 	column CAMPAIGN_ID
 		dataType: string
+		displayFolder: Details
 		lineageTag: d71a60bb-a2db-43bc-993a-115e45379f71
 		summarizeBy: none
 		sourceColumn: CAMPAIGN_ID
@@ -186,6 +212,7 @@ table FACT_ANSWERS
 
 	column PILLAR_ID
 		dataType: string
+		displayFolder: Details
 		lineageTag: c88211f2-476b-4dca-a0eb-2bb539247d1e
 		summarizeBy: none
 		sourceColumn: PILLAR_ID
@@ -194,6 +221,7 @@ table FACT_ANSWERS
 
 	column THEME_ID
 		dataType: string
+		displayFolder: Details
 		lineageTag: f7335d96-fca2-4150-93d8-3670a9c97c3c
 		summarizeBy: none
 		sourceColumn: THEME_ID
@@ -202,6 +230,7 @@ table FACT_ANSWERS
 
 	column CATEGORY_ID
 		dataType: string
+		displayFolder: Details
 		lineageTag: 979dfb0b-bffe-41a3-86c2-14a290cd95bf
 		summarizeBy: none
 		sourceColumn: CATEGORY_ID
@@ -210,6 +239,7 @@ table FACT_ANSWERS
 
 	column QUESTION_ID
 		dataType: string
+		displayFolder: Details
 		lineageTag: 14cfd092-9c20-40bd-a44b-1917e16fa0a6
 		summarizeBy: none
 		sourceColumn: QUESTION_ID
@@ -218,6 +248,7 @@ table FACT_ANSWERS
 
 	column ANSWER_ID
 		dataType: string
+		displayFolder: Details
 		lineageTag: 23f3cffc-4f94-40e7-a4db-97b56c742f1e
 		summarizeBy: none
 		sourceColumn: ANSWER_ID
@@ -225,10 +256,13 @@ table FACT_ANSWERS
 		annotation SummarizationSetBy = Automatic
 
 	column WEIGHT
-		dataType: double
+		dataType: int64
+		displayFolder: Details
 		lineageTag: 904109e8-c619-4fae-a3f2-c72b9b3addcd
 		summarizeBy: none
 		sourceColumn: WEIGHT
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = User
 
@@ -236,6 +270,7 @@ table FACT_ANSWERS
 
 	column CAMPAIGN_SITE_ID
 		dataType: string
+		displayFolder: Details
 		lineageTag: 6f5e9951-0ba1-4f59-a777-a44aff7518a7
 		summarizeBy: none
 		sourceColumn: CAMPAIGN_SITE_ID
@@ -244,6 +279,7 @@ table FACT_ANSWERS
 
 	column ANSWER_VALUE
 		dataType: string
+		displayFolder: Details
 		lineageTag: 96a11b2a-d1cd-4dd9-a75c-497f50768dd4
 		summarizeBy: none
 		sourceColumn: ANSWER_VALUE

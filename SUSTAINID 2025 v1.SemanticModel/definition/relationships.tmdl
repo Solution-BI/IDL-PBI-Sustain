@@ -119,42 +119,34 @@ relationship 87e49235-1844-4193-9c61-c12872819459
 	toColumn: LocalDateTable_54603a49-f471-416b-b59c-d247be04bd35.Date
 
 relationship AutoDetected_70640d94-c539-456a-80fc-5935e479a1a7
-	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.SITE_ID
 	toColumn: SITE.ID
 
 relationship AutoDetected_2de93a95-ccef-48ae-8087-72de9e7e2a80
-	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.QUESTION_ID
 	toColumn: QUESTION.ID
 
 relationship AutoDetected_1616b1c2-adc8-408e-8387-8acac5d0635b
-	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.CAMPAIGN_ID
 	toColumn: CAMPAIGN.ID
 
 relationship AutoDetected_7ea20fce-9465-4ea2-92e8-12fc15bdc4db
-	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.CATEGORY_ID
 	toColumn: CATEGORY.ID
 
 relationship AutoDetected_689489fa-99cb-447d-acf3-a3bf5888f3cd
-	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.PILLAR_ID
 	toColumn: PILLAR.ID
 
 relationship AutoDetected_0345060a-e0b0-4be5-b5c3-bf55d991252f
-	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.THEME_ID
 	toColumn: THEME.ID
 
 relationship ab617b0b-b688-b8a2-f052-d763e448bc96
-	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.COUNTRY_ID
 	toColumn: COUNTRY.ID
 
 relationship AutoDetected_4471e2d8-3610-4efa-b7ba-2872bbadd39b
-	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.CAMPAIGN_SITE_ID
 	toColumn: CAMPAIGN_SITE.ID
 
@@ -174,7 +166,6 @@ relationship 260a7cc9-65e3-40d1-a84f-fd11c36f3c7d
 	toColumn: LocalDateTable_51c98240-b135-4ebf-bcee-ce8b641df77f.Date
 
 relationship AutoDetected_836a7787-185b-4829-b083-4add3ae8ba0d
-	crossFilteringBehavior: bothDirections
 	fromColumn: FACT_ANSWERS.ANSWER_ID
 	toColumn: ANSWER.ID
 
@@ -186,22 +177,31 @@ relationship AutoDetected_65c875c2-cd8f-44f9-b010-0933d7dbb3a8
 	fromColumn: LANGUAGE_QUESTION.LANGUAGE_ID
 	toColumn: LANGUAGE.ID
 
-relationship 16b577d0-07c3-1720-0030-f00ee5626952
-	toCardinality: many
-	fromColumn: LANGUAGE_QUESTION.QUESTION_ID
-	toColumn: FACT_ANSWERS.QUESTION_ID
-
-relationship 9cb6fac6-466e-8db1-d26b-17352850063c
-	toCardinality: many
-	fromColumn: LANGUAGE_ANSWER.ANSWER_ID
-	toColumn: FACT_ANSWERS.ANSWER_ID
-
 relationship AutoDetected_5100420e-61fa-45bb-b0ec-a5f27c49eefa
 	fromColumn: LANGUAGE_PILLAR.LANGUAGE_ID
 	toColumn: LANGUAGE.ID
 
-relationship a57e6f61-a90d-3f6f-d10e-00abb836ff4e
-	toCardinality: many
+relationship 49e7f686-bc8d-4177-984a-dbacd3ecee61
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DATE.FULLDATE
+	toColumn: LocalDateTable_ee48f3ea-af80-4efa-9c3f-984c3d44b72a.Date
+
+relationship af460bad-c63e-3dd7-aa17-d808b1ee9aa7
+	crossFilteringBehavior: bothDirections
+	fromColumn: CAMPAIGN.END_DATE_ID
+	toColumn: DATE.DATE_ID
+
+relationship 1a51e6c4-4d5a-5283-2b8b-3a2fa1503e5d
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
 	fromColumn: LANGUAGE_PILLAR.PILLAR_ID
-	toColumn: FACT_ANSWERS.PILLAR_ID
+	toColumn: PILLAR.ID
+
+relationship ad23ab54-0246-d725-b91f-83b72f5c2b45
+	fromColumn: LANGUAGE_ANSWER.ANSWER_ID
+	toColumn: ANSWER.ID
+
+relationship 0c12016c-6d7f-342d-4b04-ded997576725
+	fromColumn: LANGUAGE_QUESTION.QUESTION_ID
+	toColumn: QUESTION.ID
 

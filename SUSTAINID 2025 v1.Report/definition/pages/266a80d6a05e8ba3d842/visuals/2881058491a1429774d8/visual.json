@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "2881058491a1429774d8",
   "position": {
     "x": 168,
     "y": 104,
-    "z": 22000,
+    "z": 21000,
     "height": 56,
     "width": 119.99999999999999,
-    "tabOrder": 22000
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "CAMPAIGN"
+                      "Entity": "DATE"
                     }
                   },
-                  "Property": "NAME"
+                  "Property": "YEAR_NUMBER"
                 }
               },
-              "queryRef": "CAMPAIGN.NAME",
-              "nativeQueryRef": "ANNÉE",
-              "active": true,
-              "displayName": "ANNÉE"
+              "queryRef": "DATE.YEAR_NUMBER",
+              "nativeQueryRef": "YEAR_NUMBER",
+              "active": true
             }
           ]
         }
@@ -258,7 +257,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }

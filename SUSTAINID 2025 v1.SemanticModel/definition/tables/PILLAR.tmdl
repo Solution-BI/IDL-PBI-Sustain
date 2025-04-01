@@ -90,22 +90,23 @@ table PILLAR
 		annotation UnderlyingDateTimeDataType = Date
 
 	column IS_SITE_INFORMATION
-		dataType: double
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: f61d0d05-dccc-4c7f-8140-7de3ac869c30
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IS_SITE_INFORMATION
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = DataType
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation SummarizationSetBy = Automatic
 
 	column ORDER
 		dataType: double
 		lineageTag: 285fb8fe-646c-412c-ad4b-28a430506907
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ORDER
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
