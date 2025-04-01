@@ -132,17 +132,6 @@ table FACT_ANSWERS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure %id004a6 =
-			
-			DIVIDE(
-			    [texte_id004a6],
-			    [id004 a 6],
-			    0
-			) * 100
-		lineageTag: fdcb02ab-381e-44ac-9754-ace7fa6190f0
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column COUNTRY_ID
 		dataType: string
 		lineageTag: c7aeef56-a06d-4c2a-81af-f5dbc553761b

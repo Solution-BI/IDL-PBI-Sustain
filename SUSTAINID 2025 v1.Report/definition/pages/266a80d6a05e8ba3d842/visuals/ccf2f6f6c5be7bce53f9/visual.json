@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "ccf2f6f6c5be7bce53f9",
+  "position": {
+    "x": 672,
+    "y": 376,
+    "z": 25001,
+    "height": 336,
+    "width": 600,
+    "tabOrder": 25001
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "SITE_ID"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.SITE_ID",
+              "nativeQueryRef": "SITE_ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SITE"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "SITE.NAME",
+              "nativeQueryRef": "NAME"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PILLAR"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "PILLAR.NAME",
+              "nativeQueryRef": "NAME1"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "ScoreMoyenGlobalPourcentage"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.ScoreMoyenGlobalPourcentage",
+              "nativeQueryRef": "ScoreMoyenGlobalPourcentage"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
