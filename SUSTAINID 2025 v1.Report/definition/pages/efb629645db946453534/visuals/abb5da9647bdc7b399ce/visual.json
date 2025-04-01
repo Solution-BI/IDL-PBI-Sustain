@@ -4,10 +4,10 @@
   "position": {
     "x": 352,
     "y": 192,
-    "z": 22007,
+    "z": 26000,
     "height": 64,
     "width": 272,
-    "tabOrder": 22006
+    "tabOrder": 25000
   },
   "visual": {
     "visualType": "slicer",
@@ -71,23 +71,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "25139707031d8b94b38a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "CATEGORY"
-              }
-            },
-            "Property": "NAME"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

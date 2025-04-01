@@ -1,34 +1,33 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "64c9077ee686b3d96300",
+  "name": "2a9fe8cceb275d962106",
   "position": {
-    "x": 272,
+    "x": 808,
     "y": 288,
-    "z": 24000,
+    "z": 29000,
     "height": 240,
-    "width": 496,
-    "tabOrder": 23000
+    "width": 208,
+    "tabOrder": 28000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "card",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "LANGUAGE_QUESTION"
+                      "Entity": "FACT_ANSWERS"
                     }
                   },
-                  "Property": "LABEL"
+                  "Property": "NombreReponsesParQuestion"
                 }
               },
-              "queryRef": "LANGUAGE_QUESTION.LABEL",
-              "nativeQueryRef": "QUESTIONS",
-              "displayName": "QUESTIONS"
+              "queryRef": "FACT_ANSWERS.NombreReponsesParQuestion",
+              "nativeQueryRef": "NombreReponsesParQuestion"
             }
           ]
         }
@@ -37,19 +36,35 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "LANGUAGE_QUESTION"
+                    "Entity": "FACT_ANSWERS"
                   }
                 },
-                "Property": "LABEL"
+                "Property": "NombreReponsesParQuestion"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "dropShadow": [

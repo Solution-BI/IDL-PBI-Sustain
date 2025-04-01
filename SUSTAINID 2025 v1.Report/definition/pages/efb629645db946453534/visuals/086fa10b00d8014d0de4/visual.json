@@ -23,11 +23,11 @@
                       "Entity": "FACT_ANSWERS"
                     }
                   },
-                  "Property": "TEXT_ANSWER"
+                  "Property": "ANSWER_VALUE"
                 }
               },
-              "queryRef": "FACT_ANSWERS.TEXT_ANSWER",
-              "nativeQueryRef": "TEXT_ANSWER",
+              "queryRef": "FACT_ANSWERS.ANSWER_VALUE",
+              "nativeQueryRef": "ANSWER_VALUE",
               "active": true
             }
           ]

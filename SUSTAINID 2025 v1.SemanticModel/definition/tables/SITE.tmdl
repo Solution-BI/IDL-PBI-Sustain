@@ -97,6 +97,14 @@ table SITE
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column COUNTRY_NAME
+		dataType: string
+		lineageTag: 1d4c2e81-4a21-472a-bef0-71aff061c0a9
+		summarizeBy: none
+		sourceColumn: COUNTRY_NAME
+
+		annotation SummarizationSetBy = Automatic
+
 	partition SITE = m
 		mode: import
 		source =
@@ -104,9 +112,27 @@ table SITE
 				    Source = Snowflake.Databases("idlogistics.west-europe.azure.snowflakecomputing.com","WH_PRD_GRP"),
 				    DB_PRD_GRP_Database = Source{[Name=DB_NAME,Kind="Database"]}[Data],
 				    DWH_SUSTAIN_ID_Schema = DB_PRD_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
-				    SITE_Table = DWH_SUSTAIN_ID_Schema{[Name="SITE",Kind="Table"]}[Data]
+				    SITE_Table = DWH_SUSTAIN_ID_Schema{[Name="SITE",Kind="Table"]}[Data],
+				    #"Duplicated Column" = Table.DuplicateColumn(SITE_Table, "COUNTRY_ID", "COUNTRY_ID - Copy"),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Duplicated Column",{"ID", "NAME", "COUNTRY_ID", "COUNTRY_ID - Copy", "CREATED_BY", "UPDATED_BY", "DELETED_BY", "CREATED_AT", "UPDATED_AT", "DELETED_AT"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"COUNTRY_ID - Copy", "COUNTRY_NAME"}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns","3","Germany",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","5","Benelux",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","6","Iberia",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","11","Brazil",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","12","Chile",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","1","Argentina",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","2","France",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","4","United Kingdom",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","9","Italy",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","7","Poland",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value9","8","Romania",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value10","Argentina0","Argentina",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11","ArgentinaBenelux","Reunion Island",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12","ArgentinaUnited Kingdom","Taiwan",Replacer.ReplaceText,{"COUNTRY_NAME"}),
+				    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13","ArgentinaGermany","Indonesia",Replacer.ReplaceText,{"COUNTRY_NAME"})
 				in
-				    SITE_Table
+				    #"Replaced Value14"
 
 	annotation PBI_ResultType = Table
 

@@ -42,54 +42,9 @@
               },
               "queryRef": "FACT_ANSWERS.SCORE",
               "nativeQueryRef": "SCORE"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "FACT_ANSWERS"
-                    }
-                  },
-                  "Property": "QUESTION_ID"
-                }
-              },
-              "queryRef": "FACT_ANSWERS.QUESTION_ID",
-              "nativeQueryRef": "QUESTION_ID"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "FACT_ANSWERS"
-                    }
-                  },
-                  "Property": "SITE_ID"
-                }
-              },
-              "queryRef": "FACT_ANSWERS.SITE_ID",
-              "nativeQueryRef": "SITE_ID"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "FACT_ANSWERS"
-                  }
-                },
-                "Property": "MaxScore"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "drillFilterOtherVisuals": true
@@ -147,7 +102,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }
