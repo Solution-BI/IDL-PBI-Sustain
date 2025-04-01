@@ -5381,6 +5381,16 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
+			          "PILIERS": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "PILLAR": {
 			            "State": "Suggested",
 			            "Source": {
@@ -7775,6 +7785,16 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "SITES": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -13709,6 +13729,580 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "site.country_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SITE",
+			          "ConceptualProperty": "COUNTRY_NAME"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "COUNTRY_NAME": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "country nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "country title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "country label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "country tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "nation name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "location name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "fact_answer.answer_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FACT_ANSWERS",
+			          "ConceptualProperty": "ANSWER_VALUE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "answer value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ANSWER_VALUE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "answer assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "answer worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "answer price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "answer cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "answer charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "answer rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "answer importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "answer significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "answer usefulness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "answer consequence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "fact_answer.nombre_reponses_par_question": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FACT_ANSWERS",
+			          "ConceptualProperty": "NombreReponsesParQuestion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre reponses par question": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NombreReponsesParQuestion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "nombre reponses par enquiry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "nombre reponses par inquiry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "nombre reponses par interrogation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "nombre reponses par query": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "nombre reponses par request": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "nombre reponses par demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "nombre reponses par difficulty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "nombre reponses par problem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "nombre reponses par issue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "nombre reponses par subject": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "fact_answer.total_responses": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FACT_ANSWERS",
+			          "ConceptualProperty": "TotalResponses"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total responses": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalResponses": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "responses": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate response": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall response": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total rejoinder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total comeback": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total reaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rejoinder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "comeback": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "reaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "total reply": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total answer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "fact_answer.moyenne_scores_par_pillier": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FACT_ANSWERS",
+			          "ConceptualProperty": "MoyenneScoresParPillier"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "moyenne scores par pillier": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MoyenneScoresParPillier": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_answer.moyenne_scores_par_pillier_site": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FACT_ANSWERS",
+			          "ConceptualProperty": "MoyenneScoresParPillier_Site"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "moyenne scores par pillier site": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MoyenneScoresParPillier_Site": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "moyenne score par pillier website": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "moyenne score par pillier campus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "moyenne score par pillier homepage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "moyenne score par pillier locale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "moyenne score par pillier place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "moyenne score par pillier position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "moyenne score par pillier spot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
 			          }
 			        }
 			      ]
@@ -21950,6 +22544,204 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "fact_answer_has_moyenne_scores_par_pillier_site": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_ANSWERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_answer": {
+			          "Target": {
+			            "Entity": "fact_answer"
+			          }
+			        },
+			        "fact_answer.moyenne_scores_par_pillier_site": {
+			          "Target": {
+			            "Entity": "fact_answer.moyenne_scores_par_pillier_site"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_answer"
+			            },
+			            "Object": {
+			              "Role": "fact_answer.moyenne_scores_par_pillier_site"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_answers_have_moyenne_scores_par_pillier_site"
+			        }
+			      ]
+			    },
+			    "fact_answer_has_moyenne_scores_par_pillier": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_ANSWERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_answer": {
+			          "Target": {
+			            "Entity": "fact_answer"
+			          }
+			        },
+			        "fact_answer.moyenne_scores_par_pillier": {
+			          "Target": {
+			            "Entity": "fact_answer.moyenne_scores_par_pillier"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_answer"
+			            },
+			            "Object": {
+			              "Role": "fact_answer.moyenne_scores_par_pillier"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_answers_have_moyenne_scores_par_pillier"
+			        }
+			      ]
+			    },
+			    "fact_answer_has_total_responses": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_ANSWERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_answer": {
+			          "Target": {
+			            "Entity": "fact_answer"
+			          }
+			        },
+			        "fact_answer.total_responses": {
+			          "Target": {
+			            "Entity": "fact_answer.total_responses"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_answer"
+			            },
+			            "Object": {
+			              "Role": "fact_answer.total_responses"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_answers_have_total_responses"
+			        }
+			      ]
+			    },
+			    "fact_answer_has_nombre_reponses_par_question": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_ANSWERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_answer": {
+			          "Target": {
+			            "Entity": "fact_answer"
+			          }
+			        },
+			        "fact_answer.nombre_reponses_par_question": {
+			          "Target": {
+			            "Entity": "fact_answer.nombre_reponses_par_question"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_answer"
+			            },
+			            "Object": {
+			              "Role": "fact_answer.nombre_reponses_par_question"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_answers_have_nombre_reponses_par_question"
+			        }
+			      ]
+			    },
+			    "fact_answer_has_answer_value": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_ANSWERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_answer": {
+			          "Target": {
+			            "Entity": "fact_answer"
+			          }
+			        },
+			        "fact_answer.answer_value": {
+			          "Target": {
+			            "Entity": "fact_answer.answer_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_answer"
+			            },
+			            "Object": {
+			              "Role": "fact_answer.answer_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_answers_have_answer_values"
+			        }
+			      ]
+			    },
+			    "site_has_country_name": {
+			      "Binding": {
+			        "ConceptualEntity": "SITE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "site": {
+			          "Target": {
+			            "Entity": "site"
+			          }
+			        },
+			        "site.country_name": {
+			          "Target": {
+			            "Entity": "site.country_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "site"
+			            },
+			            "Object": {
+			              "Role": "site.country_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sites_have_country_names"
+			        }
+			      ]
+			    },
 			    "language_pillar_has_value": {
 			      "Binding": {
 			        "ConceptualEntity": "LANGUAGE_PILLAR"
@@ -23169,39 +23961,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "weight_indicates_how_heavy_fact_answers_are"
-			        }
-			      ]
-			    },
-			    "fact_answer_has_text_answer": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_ANSWERS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_answer": {
-			          "Target": {
-			            "Entity": "fact_answer"
-			          }
-			        },
-			        "fact_answer.text_answer": {
-			          "Target": {
-			            "Entity": "fact_answer.text_answer"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_answer"
-			            },
-			            "Object": {
-			              "Role": "fact_answer.text_answer"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_answers_have_text_answers"
 			        }
 			      ]
 			    },
@@ -26225,6 +26984,51 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_answers_are_in_countries"
+			        }
+			      ]
+			    },
+			    "site_in_country_name": {
+			      "Binding": {
+			        "ConceptualEntity": "SITE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "site": {
+			          "Target": {
+			            "Entity": "site"
+			          }
+			        },
+			        "site.country_name": {
+			          "Target": {
+			            "Entity": "site.country_name"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "site.country_name"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "site"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "site.country_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sites_are_in_country_names"
 			        }
 			      ]
 			    },

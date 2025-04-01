@@ -132,6 +132,34 @@ table FACT_ANSWERS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure MoyenneScoresParPillier =
+			
+			CALCULATE(
+			    AVERAGEX(
+			        FILTER(FACT_ANSWERS, FACT_ANSWERS[PILLAR_ID] = SELECTEDVALUE(PILLAR[ID])),
+			        FACT_ANSWERS[WEIGHT]
+			    )
+			)
+		lineageTag: cc3d0aef-88fc-4ee6-9240-3257c834270b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure MoyenneScoresParPillier_Site =
+			
+			CALCULATE(
+			    AVERAGEX(
+			        FILTER(
+			            FACT_ANSWERS,
+			            FACT_ANSWERS[PILLAR_ID] = SELECTEDVALUE(PILLAR[ID]) &&
+			            FACT_ANSWERS[SITE_ID] = SELECTEDVALUE(SITE[ID])
+			        ),
+			        FACT_ANSWERS[WEIGHT]
+			    )
+			)
+		lineageTag: ced56a2f-3527-4120-b1a9-d1493ca8b6e7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column COUNTRY_ID
 		dataType: string
 		lineageTag: c7aeef56-a06d-4c2a-81af-f5dbc553761b
