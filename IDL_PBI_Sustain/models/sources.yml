@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: DWH_SUSTAIN_ID
+    schema: DWH_SUSTAIN_ID
+    tables:
+      - name: SITE
+      - name: QUESTION
+      - name: ANSWER
+      - name: ANSWER_EVALUATION
+      - name: CAMPAIGN
+      - name: CAMPAIGN_SITE
+      - name: COUNTRY
+      - name: LANGUAGE
+      - name: CATEGORY
+      - name: THEME
+      - name: PILLAR
+      - name: LANGUAGE_ANSWER
+      - name: LANGUAGE_QUESTION
+      - name: LANGUAGE_PILLAR
+      - name: EVALUATION
+
+        
