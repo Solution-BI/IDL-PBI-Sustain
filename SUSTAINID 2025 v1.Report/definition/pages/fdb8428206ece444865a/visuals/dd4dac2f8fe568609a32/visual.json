@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
-  "name": "99f34d133cce165bdc1b",
+  "name": "dd4dac2f8fe568609a32",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 8000,
-    "height": 205.71428571428567,
-    "width": 308
+    "x": 784,
+    "y": 576,
+    "z": 28002,
+    "height": 144,
+    "width": 208
   },
   "visual": {
     "visualType": "gauge",
@@ -64,19 +64,6 @@
           }
         }
       ],
-      "target": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
       "calloutValue": [
         {
           "properties": {
@@ -98,7 +85,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 8,
+                      "ColorId": 6,
                       "Percent": 0
                     }
                   }
@@ -110,8 +97,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
+                      "ColorId": 2,
+                      "Percent": 0
                     }
                   }
                 }
@@ -128,7 +115,20 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'SOCIAL'"
+                  "Value": "'COMMON CSR'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -138,11 +138,10 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4c98da1e34b14905d383",
   "filterConfig": {
     "filters": [
       {
-        "name": "73f083d63c801e8af035",
+        "name": "1b2cbb863dd4b6a375d1",
         "field": {
           "Column": {
             "Expression": {
@@ -183,7 +182,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'SOCIAL'"
+                          "Value": "'COMMON CSR'"
                         }
                       }
                     ]

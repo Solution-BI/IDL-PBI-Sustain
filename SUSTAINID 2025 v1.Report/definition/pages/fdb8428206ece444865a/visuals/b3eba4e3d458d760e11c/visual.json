@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
-  "name": "c9d90f2a7b09538ecd0e",
+  "name": "b3eba4e3d458d760e11c",
   "position": {
-    "x": 391.99999999999994,
-    "y": 0,
-    "z": 10000,
-    "height": 205.71428571428567,
-    "width": 280
+    "x": 1056,
+    "y": 560,
+    "z": 28003,
+    "height": 176.00000000000003,
+    "width": 208
   },
   "visual": {
     "visualType": "gauge",
@@ -51,19 +51,6 @@
       }
     },
     "objects": {
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "calloutValue": [
         {
           "properties": {
@@ -71,6 +58,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -85,7 +85,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 6,
+                      "ColorId": 4,
                       "Percent": 0
                     }
                   }
@@ -103,7 +103,20 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'COMMON CSR'"
+                  "Value": "'ENVIRONMENT'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -113,11 +126,10 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4c98da1e34b14905d383",
   "filterConfig": {
     "filters": [
       {
-        "name": "1b2cbb863dd4b6a375d1",
+        "name": "51d5b0d5252916c88fbd",
         "field": {
           "Column": {
             "Expression": {
@@ -158,7 +170,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'COMMON CSR'"
+                          "Value": "'ENVIRONMENT'"
                         }
                       }
                     ]

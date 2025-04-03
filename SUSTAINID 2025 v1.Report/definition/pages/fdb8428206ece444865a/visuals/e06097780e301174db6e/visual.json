@@ -3,10 +3,10 @@
   "name": "e06097780e301174db6e",
   "position": {
     "x": 320,
-    "y": 192,
+    "y": 112,
     "z": 6000,
-    "height": 144,
-    "width": 848,
+    "height": 176.00000000000003,
+    "width": 400,
     "tabOrder": 7000
   },
   "visual": {
@@ -15,21 +15,6 @@
       "queryState": {
         "Data": {
           "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "FACT_ANSWERS"
-                    }
-                  },
-                  "Property": "RatioRemplisPourcentage"
-                }
-              },
-              "queryRef": "FACT_ANSWERS.RatioRemplisPourcentage",
-              "nativeQueryRef": "RATIO QUESTIONS REMPLIS",
-              "displayName": "RATIO QUESTIONS REMPLIS"
-            },
             {
               "field": {
                 "Measure": {
@@ -58,7 +43,7 @@
                     "Entity": "FACT_ANSWERS"
                   }
                 },
-                "Property": "RatioRemplisPourcentage"
+                "Property": "AvgScore"
               }
             },
             "direction": "Descending"
@@ -92,38 +77,10 @@
                 }
               }
             },
-            "labelDisplayUnits": {
+            "showBlankAs": {
               "expr": {
                 "Literal": {
-                  "Value": "-1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "FACT_ANSWERS.RatioRemplisPourcentage"
-          }
-        },
-        {
-          "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "35D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'No Score'"
                 }
               }
             }
@@ -134,20 +91,6 @@
         }
       ],
       "label": [
-        {
-          "properties": {
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'belowValue'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "FACT_ANSWERS.RatioRemplisPourcentage"
-          }
-        },
         {
           "properties": {
             "position": {
@@ -245,61 +188,6 @@
         }
       ],
       "image": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "image": {
-              "image": {
-                "name": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'divide.png'"
-                    }
-                  }
-                },
-                "url": {
-                  "expr": {
-                    "ResourcePackageItem": {
-                      "PackageName": "RegisteredResources",
-                      "PackageType": 1,
-                      "ItemName": "divide9882536206724641.png"
-                    }
-                  }
-                },
-                "scaling": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'Normal'"
-                    }
-                  }
-                }
-              }
-            },
-            "size": {
-              "expr": {
-                "Literal": {
-                  "Value": "45L"
-                }
-              }
-            },
-            "verticalAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'top'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "FACT_ANSWERS.RatioRemplisPourcentage"
-          }
-        },
         {
           "properties": {
             "show": {

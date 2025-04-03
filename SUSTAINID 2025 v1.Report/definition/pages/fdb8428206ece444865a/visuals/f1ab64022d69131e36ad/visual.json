@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "f1ab64022d69131e36ad",
   "position": {
-    "x": 224,
-    "y": 352,
+    "x": 288,
+    "y": 320,
     "z": 4000,
-    "height": 496,
-    "width": 320,
+    "height": 528,
+    "width": 464,
     "tabOrder": 4000
   },
   "visual": {
@@ -15,6 +15,21 @@
       "queryState": {
         "Values": {
           "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "COUNTRY"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "COUNTRY.NAME",
+              "nativeQueryRef": "COUNTRY",
+              "displayName": "COUNTRY"
+            },
             {
               "field": {
                 "Column": {
@@ -29,6 +44,20 @@
               "queryRef": "SITE.NAME",
               "nativeQueryRef": "SITES",
               "displayName": "SITES"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "AvgScore"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.AvgScore",
+              "nativeQueryRef": "AvgScore"
             }
           ]
         }
@@ -37,13 +66,13 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "SITE"
+                    "Entity": "FACT_ANSWERS"
                   }
                 },
-                "Property": "NAME"
+                "Property": "AvgScore"
               }
             },
             "direction": "Ascending"
@@ -58,13 +87,46 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "304.9163351438526D"
+                  "Value": "252.85213702473123D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "SITE.NAME"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BoldHeader'"
+                }
+              }
+            }
           }
         }
       ]

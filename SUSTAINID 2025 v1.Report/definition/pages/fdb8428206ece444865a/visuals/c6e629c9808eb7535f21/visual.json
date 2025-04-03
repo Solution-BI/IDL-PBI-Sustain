@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
-  "name": "426369340a3a2d116890",
+  "name": "c6e629c9808eb7535f21",
   "position": {
-    "x": 357,
-    "y": 248.8888888888888,
-    "z": 11000,
-    "height": 213.33333333333326,
-    "width": 315
+    "x": 800,
+    "y": 320,
+    "z": 28004,
+    "height": 160,
+    "width": 208
   },
   "visual": {
     "visualType": "gauge",
@@ -91,11 +91,23 @@
             }
           }
         }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4c98da1e34b14905d383",
   "filterConfig": {
     "filters": [
       {

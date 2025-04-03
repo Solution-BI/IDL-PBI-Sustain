@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
-  "name": "d525e8c2a7c9243a04a6",
+  "name": "a91864fbbdf277f9bb7b",
   "position": {
-    "x": 0,
-    "y": 251.42857142857153,
-    "z": 9000,
-    "height": 228.5714285714285,
-    "width": 308
+    "x": 1040,
+    "y": 320,
+    "z": 28005,
+    "height": 160,
+    "width": 208
   },
   "visual": {
     "visualType": "gauge",
@@ -51,10 +51,23 @@
       }
     },
     "objects": {
-      "calloutValue": [
+      "labels": [
         {
           "properties": {
-            "bold": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "target": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -64,13 +77,13 @@
           }
         }
       ],
-      "labels": [
+      "calloutValue": [
         {
           "properties": {
-            "show": {
+            "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -85,8 +98,20 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 4,
+                      "ColorId": 8,
                       "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "target": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -103,7 +128,20 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ENVIRONMENT'"
+                  "Value": "'SOCIAL'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -113,11 +151,10 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4c98da1e34b14905d383",
   "filterConfig": {
     "filters": [
       {
-        "name": "51d5b0d5252916c88fbd",
+        "name": "73f083d63c801e8af035",
         "field": {
           "Column": {
             "Expression": {
@@ -158,7 +195,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'ENVIRONMENT'"
+                          "Value": "'SOCIAL'"
                         }
                       }
                     ]

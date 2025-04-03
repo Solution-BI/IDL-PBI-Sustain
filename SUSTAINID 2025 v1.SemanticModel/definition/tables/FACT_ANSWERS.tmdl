@@ -41,7 +41,7 @@ table FACT_ANSWERS
 	measure RatioRemplisPourcentage =
 			
 			DIVIDE(
-			    [NombreQuestionnairesRemplis],
+			    [NombreQuestionnairesRemplis total for CAMPAIGN_SITE_ID],
 			    [NombreTotalQuestionnairesEnvoyes],
 			    0
 			) * 100

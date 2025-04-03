@@ -5,11 +5,6 @@
   "displayOption": "FitToPage",
   "height": 850,
   "width": 1280,
-  "pageBinding": {
-    "name": "6dbba7a037ed59dada53",
-    "type": "Default",
-    "parameters": []
-  },
   "objects": {
     "outspace": [
       {
@@ -33,6 +28,31 @@
       {
         "properties": {
           "backgroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "background": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "74D"
+              }
+            }
+          },
+          "color": {
             "solid": {
               "color": {
                 "expr": {

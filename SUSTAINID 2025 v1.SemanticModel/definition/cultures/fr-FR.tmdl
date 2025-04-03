@@ -10575,6 +10575,16 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.714
 			          }
+			        },
+			        {
+			          "COUNTRY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "NameType": "Name"
@@ -14183,141 +14193,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "site.site_name_manual": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "SITE",
-			          "ConceptualProperty": "SITE_NAME_MANUAL"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "site name manual": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "SITE_NAME_MANUAL": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "manual": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "name manual": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "website name manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "campus name manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "homepage name manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "locale name manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "place name manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "position name manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "spot name manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "site nickname manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "site title manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "site label manual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
 			    "site.code_sap": {
 			      "Definition": {
 			        "Binding": {
@@ -15688,6 +15563,119 @@ cultureInfo fr-FR
 			        }
 			      ],
 			      "NameType": "Identifier"
+			    },
+			    "site.code_site": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SITE",
+			          "ConceptualProperty": "CODE_SITE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "code site": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CODE_SITE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "code website": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code campus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code homepage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code locale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "code position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "code spot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "id site": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "key site": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -24578,6 +24566,39 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "site_has_code_site": {
+			      "Binding": {
+			        "ConceptualEntity": "SITE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "site": {
+			          "Target": {
+			            "Entity": "site"
+			          }
+			        },
+			        "site.code_site": {
+			          "Target": {
+			            "Entity": "site.code_site"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "site"
+			            },
+			            "Object": {
+			              "Role": "site.code_site"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sites_have_code_sites"
+			        }
+			      ]
+			    },
 			    "date_has_date_id": {
 			      "Binding": {
 			        "ConceptualEntity": "DATE"
@@ -25182,39 +25203,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "sites_have_code_saps"
-			        }
-			      ]
-			    },
-			    "site_has_site_name_manual": {
-			      "Binding": {
-			        "ConceptualEntity": "SITE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "site": {
-			          "Target": {
-			            "Entity": "site"
-			          }
-			        },
-			        "site.site_name_manual": {
-			          "Target": {
-			            "Entity": "site.site_name_manual"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "site"
-			            },
-			            "Object": {
-			              "Role": "site.site_name_manual"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sites_have_site_name_manuals"
 			        }
 			      ]
 			    },
