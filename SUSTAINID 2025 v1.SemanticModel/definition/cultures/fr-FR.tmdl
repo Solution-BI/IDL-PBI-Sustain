@@ -3472,7 +3472,8 @@ cultureInfo fr-FR
 			            "Weight": 0.736
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Location"
 			    },
 			    "country.ID": {
 			      "Definition": {
@@ -3533,6 +3534,12 @@ cultureInfo fr-FR
 			        {
 			          "surname": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "county": {
+			            "State": "Generated",
+			            "Weight": 0.7
 			          }
 			        }
 			      ],
@@ -10698,141 +10705,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "fact_answer.ratio_questions_answers": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "RatioQuestionsAnswers"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ratio questions answers": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "RatioQuestionsAnswers": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "answers": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "questions answers": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "ratio question response": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "ratio question reaction": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "ratio question rejoinder": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "question response": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "question reaction": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "question rejoinder": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "ratio question reply": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "ratio question riposte": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "ratio question retort": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "response": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        }
-			      ]
-			    },
 			    "answer": {
 			      "Definition": {
 			        "Binding": {
@@ -12783,7 +12655,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "SCORE"
+			          "ConceptualProperty": "Score"
 			        }
 			      },
 			      "State": "Generated",
@@ -12885,35 +12757,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "fact_answer.somme_ID010": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "SommeID010"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "somme ID010": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "SommeID010": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "ID010": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
 			    "fact_answer.nombre_questionnaires_remplis": {
 			      "Definition": {
 			        "Binding": {
@@ -13000,6 +12843,16 @@ cultureInfo fr-FR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "RATIO QUESTIONS REMPLIS": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -13035,115 +12888,6 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.748
-			          }
-			        }
-			      ]
-			    },
-			    "fact_answer.total_points_disponibles": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "TotalPointsDisponibles"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total points disponibles": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "TotalPointsDisponibles": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "aggregate point disponible": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "overall point disponible": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "fact_answer.total_points_obtenus": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "TotalPointsObtenus"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total points obtenus": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "TotalPointsObtenus": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "aggregate point obtenus": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "overall point obtenus": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "fact_answer.score_moyen_global_pourcentage": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "ScoreMoyenGlobalPourcentage"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "score moyen global pourcentage": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ScoreMoyenGlobalPourcentage": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -13943,121 +13687,27 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "NombreReponsesParQuestion"
+			          "ConceptualProperty": "SommeID010"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "nombre reponses par question": {
+			          "somme ID010": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "NombreReponsesParQuestion": {
+			          "SommeID010": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "nombre reponses par enquiry": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "nombre reponses par inquiry": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "nombre reponses par interrogation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "nombre reponses par query": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "nombre reponses par request": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "nombre reponses par demand": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "nombre reponses par difficulty": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.489
-			          }
-			        },
-			        {
-			          "nombre reponses par problem": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.474
-			          }
-			        },
-			        {
-			          "nombre reponses par issue": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.474
-			          }
-			        },
-			        {
-			          "nombre reponses par subject": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.474
+			          "ID010": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        }
 			      ]
@@ -14191,29 +13841,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "fact_answer.moyenne_scores_par_pillier": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "MoyenneScoresParPillier"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "moyenne scores par pillier": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "MoyenneScoresParPillier": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "fact_answer.moyenne_scores_par_pillier_site": {
 			      "Definition": {
 			        "Binding": {
@@ -14306,9 +13933,2193 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "campaign.end_date_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CAMPAIGN",
+			          "ConceptualProperty": "END_DATE_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "end date id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "END_DATE_ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "end date identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end date identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end date identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end date credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "culmination date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "completion date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "conclusion date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "expiration date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "end moment id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "cease date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.597
+			          }
+			        }
+			      ]
+			    },
+			    "campaign.start_date_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CAMPAIGN",
+			          "ConceptualProperty": "START_DATE_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "start date id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "START_DATE_ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "start date identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start date identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start date identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start date credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "commencement date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "inception date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "kickoff date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "start moment id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "beginning date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.597
+			          }
+			        },
+			        {
+			          "first date id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.597
+			          }
+			        }
+			      ]
+			    },
+			    "site.site_name_manual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SITE",
+			          "ConceptualProperty": "SITE_NAME_MANUAL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "site name manual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SITE_NAME_MANUAL": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "manual": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "name manual": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "website name manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "campus name manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "homepage name manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "locale name manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "place name manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "position name manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "spot name manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "site nickname manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "site title manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "site label manual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "site.code_sap": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SITE",
+			          "ConceptualProperty": "CODE_SAP"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "code sap": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CODE_SAP": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sap": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "id sap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "key sap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "code juice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "code fluid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "code liquid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "code latex": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "juice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fluid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "liquid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "latex": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "site.vertical": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SITE",
+			          "ConceptualProperty": "VERTICAL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vertical": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "perpendicular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "upright": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "plumb": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "site.main_activity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SITE",
+			          "ConceptualProperty": "MAIN_ACTIVITY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "main activity": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MAIN_ACTIVITY": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "activity": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "main movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "main commotion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "commotion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "main action": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "main motion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "main bustle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "action": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "motion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "bustle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "site.secondary_activity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SITE",
+			          "ConceptualProperty": "SECONDARY_ACTIVITY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "secondary activity": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SECONDARY_ACTIVITY": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "activity": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "secondary movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "secondary commotion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "commotion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "secondary action": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "secondary motion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "secondary bustle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "action": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "motion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "bustle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "site.temperature": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SITE",
+			          "ConceptualProperty": "TEMPERATURE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "temperature": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "infection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "disease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "illness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "malaise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fever": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hotness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "warmth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "heat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "fact_answer.avg_score": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FACT_ANSWERS",
+			          "ConceptualProperty": "AvgScore"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg score": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AvgScore": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "average score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "avg notch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg slash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg groove": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg nick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg mark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "avg tally": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "avg grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "SCORE MOYEN GLOBAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_answer.somme_ID011": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FACT_ANSWERS",
+			          "ConceptualProperty": "SommeID011"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "somme ID011": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SommeID011": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ID011": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "answer.max_weight": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ANSWER",
+			          "ConceptualProperty": "MAX_WEIGHT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "max weight": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MAX_WEIGHT": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "maximum weight": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "max heaviness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max weightiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "max bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "max heft": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "max encumbrance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "max burden": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "max load": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "max credence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "date.fulldate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "ConceptualProperty": "FULLDATE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fulldate": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "date.fulldate.hiérarchie_de_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "VariationSource": "FULLDATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hiérarchie de date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hiérarchie de moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hiérarchie de period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "date.fulldate.année": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "VariationSource": "FULLDATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates",
+			          "HierarchyLevel": "Année"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "année": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fulldate année": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "date.fulldate.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "VariationSource": "FULLDATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fulldate trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "date.fulldate.mois": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "VariationSource": "FULLDATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates",
+			          "HierarchyLevel": "Mois"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mois": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fulldate mois": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "date.fulldate.jour": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "VariationSource": "FULLDATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hiérarchie de dates",
+			          "HierarchyLevel": "Jour"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jour": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fulldate jour": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "date.year_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "ConceptualProperty": "YEAR_NUMBER"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "YEAR_NUMBER": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "year no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "yr number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "date.month_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "ConceptualProperty": "MONTH_NUMBER"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MONTH_NUMBER": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "month no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "date.month_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "ConceptualProperty": "MONTH_NAME"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MONTH_NAME": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "month nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "date.day_of_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "ConceptualProperty": "DAY_OF_MONTH"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day of month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DAY_OF_MONTH": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "day of mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "date.day_of_week": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "ConceptualProperty": "DAY_OF_WEEK"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day of week": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DAY_OF_WEEK": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "date.week_of_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "ConceptualProperty": "WEEK_OF_YEAR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week of year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "WEEK_OF_YEAR": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "week of yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "date.day_of_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "ConceptualProperty": "DAY_OF_YEAR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day of year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DAY_OF_YEAR": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "day of yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "date.date_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DATE",
+			          "ConceptualProperty": "DATE_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "DATE_ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "moment id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
 			    }
 			  },
 			  "Relationships": {
+			    "theme_updated_at_hiérarchie_de_date_has_theme_updated_at_jour": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.updated_at.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "theme.updated_at.hiérarchie_de_date"
+			          }
+			        },
+			        "theme.updated_at.jour": {
+			          "Target": {
+			            "Entity": "theme.updated_at.jour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.updated_at.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "theme.updated_at.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_jour"
+			        }
+			      ]
+			    },
+			    "theme_updated_at_hiérarchie_de_date_has_theme_updated_at_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.updated_at.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "theme.updated_at.hiérarchie_de_date"
+			          }
+			        },
+			        "theme.updated_at.mois": {
+			          "Target": {
+			            "Entity": "theme.updated_at.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.updated_at.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "theme.updated_at.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_moises"
+			        }
+			      ]
+			    },
+			    "theme_updated_at_hiérarchie_de_date_has_theme_updated_at_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.updated_at.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "theme.updated_at.hiérarchie_de_date"
+			          }
+			        },
+			        "theme.updated_at.trimestre": {
+			          "Target": {
+			            "Entity": "theme.updated_at.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.updated_at.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "theme.updated_at.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_trimestres"
+			        }
+			      ]
+			    },
+			    "theme_updated_at_hiérarchie_de_date_has_theme_updated_at_année": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.updated_at.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "theme.updated_at.hiérarchie_de_date"
+			          }
+			        },
+			        "theme.updated_at.année": {
+			          "Target": {
+			            "Entity": "theme.updated_at.année"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.updated_at.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "theme.updated_at.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_années"
+			        }
+			      ]
+			    },
+			    "theme_updated_at_has_hiérarchie_de_date": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.updated_at": {
+			          "Target": {
+			            "Entity": "theme.updated_at"
+			          }
+			        },
+			        "theme.updated_at.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "theme.updated_at.hiérarchie_de_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.updated_at"
+			            },
+			            "Object": {
+			              "Role": "theme.updated_at.hiérarchie_de_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "updated_at_have_hiérarchie_de_dates"
+			        }
+			      ]
+			    },
+			    "theme_created_at_mois_has_theme_created_at_jour": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.created_at.mois": {
+			          "Target": {
+			            "Entity": "theme.created_at.mois"
+			          }
+			        },
+			        "theme.created_at.jour": {
+			          "Target": {
+			            "Entity": "theme.created_at.jour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.created_at.mois"
+			            },
+			            "Object": {
+			              "Role": "theme.created_at.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_jour"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.created_at.jour"
+			            },
+			            "Object": {
+			              "Role": "theme.created_at.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_have_moises"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "theme.created_at.jour"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "theme.created_at.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_are_in_moises21"
+			        }
+			      ]
+			    },
+			    "theme_created_at_trimestre_has_theme_created_at_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.created_at.trimestre": {
+			          "Target": {
+			            "Entity": "theme.created_at.trimestre"
+			          }
+			        },
+			        "theme.created_at.mois": {
+			          "Target": {
+			            "Entity": "theme.created_at.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.created_at.trimestre"
+			            },
+			            "Object": {
+			              "Role": "theme.created_at.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_moises"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.created_at.mois"
+			            },
+			            "Object": {
+			              "Role": "theme.created_at.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "theme.created_at.mois"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "theme.created_at.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_are_in_trimestres21"
+			        }
+			      ]
+			    },
+			    "theme_created_at_année_has_theme_created_at_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.created_at.année": {
+			          "Target": {
+			            "Entity": "theme.created_at.année"
+			          }
+			        },
+			        "theme.created_at.trimestre": {
+			          "Target": {
+			            "Entity": "theme.created_at.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.created_at.année"
+			            },
+			            "Object": {
+			              "Role": "theme.created_at.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "années_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.created_at.trimestre"
+			            },
+			            "Object": {
+			              "Role": "theme.created_at.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_années"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "theme.created_at.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "theme.created_at.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_années21"
+			        }
+			      ]
+			    },
+			    "theme_created_at_hiérarchie_de_date_has_theme_created_at_jour": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.created_at.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "theme.created_at.hiérarchie_de_date"
+			          }
+			        },
+			        "theme.created_at.jour": {
+			          "Target": {
+			            "Entity": "theme.created_at.jour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.created_at.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "theme.created_at.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_jour1"
+			        }
+			      ]
+			    },
+			    "theme_created_at_hiérarchie_de_date_has_theme_created_at_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "THEME"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "theme.created_at.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "theme.created_at.hiérarchie_de_date"
+			          }
+			        },
+			        "theme.created_at.mois": {
+			          "Target": {
+			            "Entity": "theme.created_at.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "theme.created_at.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "theme.created_at.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_moises1"
+			        }
+			      ]
+			    },
 			    "theme_created_at_hiérarchie_de_date_has_theme_created_at_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "THEME"
@@ -14338,7 +16149,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres"
+			          "ID": "hiérarchie_de_dates_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -14371,7 +16182,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années"
+			          "ID": "hiérarchie_de_dates_have_années1"
 			        }
 			      ]
 			    },
@@ -14437,7 +16248,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour"
+			          "ID": "moises_have_jour1"
 			        },
 			        {
 			          "Attribute": {
@@ -14450,7 +16261,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises"
+			          "ID": "jour_have_moises1"
 			        },
 			        {
 			          "Preposition": {
@@ -14503,7 +16314,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises"
+			          "ID": "trimestres_have_moises1"
 			        },
 			        {
 			          "Attribute": {
@@ -14516,7 +16327,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres"
+			          "ID": "moises_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -14569,7 +16380,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres"
+			          "ID": "années_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -14582,7 +16393,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années"
+			          "ID": "trimestres_have_années1"
 			        },
 			        {
 			          "Preposition": {
@@ -14635,7 +16446,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour"
+			          "ID": "hiérarchie_de_dates_have_jour2"
 			        }
 			      ]
 			    },
@@ -14668,7 +16479,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises"
+			          "ID": "hiérarchie_de_dates_have_moises2"
 			        }
 			      ]
 			    },
@@ -14701,7 +16512,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres1"
+			          "ID": "hiérarchie_de_dates_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -14734,7 +16545,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années1"
+			          "ID": "hiérarchie_de_dates_have_années2"
 			        }
 			      ]
 			    },
@@ -14800,7 +16611,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour1"
+			          "ID": "moises_have_jour2"
 			        },
 			        {
 			          "Attribute": {
@@ -14813,7 +16624,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises1"
+			          "ID": "jour_have_moises2"
 			        },
 			        {
 			          "Preposition": {
@@ -14866,7 +16677,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises1"
+			          "ID": "trimestres_have_moises2"
 			        },
 			        {
 			          "Attribute": {
@@ -14879,7 +16690,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres1"
+			          "ID": "moises_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -14932,7 +16743,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres1"
+			          "ID": "années_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -14945,7 +16756,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années1"
+			          "ID": "trimestres_have_années2"
 			        },
 			        {
 			          "Preposition": {
@@ -14998,7 +16809,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour1"
+			          "ID": "hiérarchie_de_dates_have_jour3"
 			        }
 			      ]
 			    },
@@ -15031,7 +16842,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises1"
+			          "ID": "hiérarchie_de_dates_have_moises3"
 			        }
 			      ]
 			    },
@@ -15064,7 +16875,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres2"
+			          "ID": "hiérarchie_de_dates_have_trimestres3"
 			        }
 			      ]
 			    },
@@ -15097,7 +16908,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années2"
+			          "ID": "hiérarchie_de_dates_have_années3"
 			        }
 			      ]
 			    },
@@ -15130,7 +16941,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "updated_at_have_hiérarchie_de_dates"
+			          "ID": "updated_at_have_hiérarchie_de_dates1"
 			        }
 			      ]
 			    },
@@ -15163,7 +16974,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour2"
+			          "ID": "moises_have_jour3"
 			        },
 			        {
 			          "Attribute": {
@@ -15176,7 +16987,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises2"
+			          "ID": "jour_have_moises3"
 			        },
 			        {
 			          "Preposition": {
@@ -15229,7 +17040,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises2"
+			          "ID": "trimestres_have_moises3"
 			        },
 			        {
 			          "Attribute": {
@@ -15242,7 +17053,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres2"
+			          "ID": "moises_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -15295,7 +17106,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres2"
+			          "ID": "années_have_trimestres3"
 			        },
 			        {
 			          "Attribute": {
@@ -15308,7 +17119,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années2"
+			          "ID": "trimestres_have_années3"
 			        },
 			        {
 			          "Preposition": {
@@ -15361,7 +17172,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour2"
+			          "ID": "hiérarchie_de_dates_have_jour4"
 			        }
 			      ]
 			    },
@@ -15394,7 +17205,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises2"
+			          "ID": "hiérarchie_de_dates_have_moises4"
 			        }
 			      ]
 			    },
@@ -15427,7 +17238,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres3"
+			          "ID": "hiérarchie_de_dates_have_trimestres4"
 			        }
 			      ]
 			    },
@@ -15460,7 +17271,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années3"
+			          "ID": "hiérarchie_de_dates_have_années4"
 			        }
 			      ]
 			    },
@@ -15526,7 +17337,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour3"
+			          "ID": "moises_have_jour4"
 			        },
 			        {
 			          "Attribute": {
@@ -15539,7 +17350,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises3"
+			          "ID": "jour_have_moises4"
 			        },
 			        {
 			          "Preposition": {
@@ -15592,7 +17403,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises3"
+			          "ID": "trimestres_have_moises4"
 			        },
 			        {
 			          "Attribute": {
@@ -15605,7 +17416,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres3"
+			          "ID": "moises_have_trimestres4"
 			        },
 			        {
 			          "Preposition": {
@@ -15658,7 +17469,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres3"
+			          "ID": "années_have_trimestres4"
 			        },
 			        {
 			          "Attribute": {
@@ -15671,7 +17482,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années3"
+			          "ID": "trimestres_have_années4"
 			        },
 			        {
 			          "Preposition": {
@@ -15724,7 +17535,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour3"
+			          "ID": "hiérarchie_de_dates_have_jour5"
 			        }
 			      ]
 			    },
@@ -15757,7 +17568,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises3"
+			          "ID": "hiérarchie_de_dates_have_moises5"
 			        }
 			      ]
 			    },
@@ -15790,7 +17601,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres4"
+			          "ID": "hiérarchie_de_dates_have_trimestres5"
 			        }
 			      ]
 			    },
@@ -15823,7 +17634,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années4"
+			          "ID": "hiérarchie_de_dates_have_années5"
 			        }
 			      ]
 			    },
@@ -15889,7 +17700,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour4"
+			          "ID": "moises_have_jour5"
 			        },
 			        {
 			          "Attribute": {
@@ -15902,7 +17713,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises4"
+			          "ID": "jour_have_moises5"
 			        },
 			        {
 			          "Preposition": {
@@ -15955,7 +17766,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises4"
+			          "ID": "trimestres_have_moises5"
 			        },
 			        {
 			          "Attribute": {
@@ -15968,7 +17779,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres4"
+			          "ID": "moises_have_trimestres5"
 			        },
 			        {
 			          "Preposition": {
@@ -16021,7 +17832,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres4"
+			          "ID": "années_have_trimestres5"
 			        },
 			        {
 			          "Attribute": {
@@ -16034,7 +17845,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années4"
+			          "ID": "trimestres_have_années5"
 			        },
 			        {
 			          "Preposition": {
@@ -16087,7 +17898,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour4"
+			          "ID": "hiérarchie_de_dates_have_jour6"
 			        }
 			      ]
 			    },
@@ -16120,7 +17931,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises4"
+			          "ID": "hiérarchie_de_dates_have_moises6"
 			        }
 			      ]
 			    },
@@ -16153,7 +17964,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres5"
+			          "ID": "hiérarchie_de_dates_have_trimestres6"
 			        }
 			      ]
 			    },
@@ -16186,7 +17997,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années5"
+			          "ID": "hiérarchie_de_dates_have_années6"
 			        }
 			      ]
 			    },
@@ -16219,7 +18030,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "updated_at_have_hiérarchie_de_dates1"
+			          "ID": "updated_at_have_hiérarchie_de_dates2"
 			        }
 			      ]
 			    },
@@ -16252,7 +18063,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour5"
+			          "ID": "moises_have_jour6"
 			        },
 			        {
 			          "Attribute": {
@@ -16265,7 +18076,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises5"
+			          "ID": "jour_have_moises6"
 			        },
 			        {
 			          "Preposition": {
@@ -16318,7 +18129,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises5"
+			          "ID": "trimestres_have_moises6"
 			        },
 			        {
 			          "Attribute": {
@@ -16331,7 +18142,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres5"
+			          "ID": "moises_have_trimestres6"
 			        },
 			        {
 			          "Preposition": {
@@ -16384,7 +18195,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres5"
+			          "ID": "années_have_trimestres6"
 			        },
 			        {
 			          "Attribute": {
@@ -16397,7 +18208,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années5"
+			          "ID": "trimestres_have_années6"
 			        },
 			        {
 			          "Preposition": {
@@ -16450,7 +18261,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour5"
+			          "ID": "hiérarchie_de_dates_have_jour7"
 			        }
 			      ]
 			    },
@@ -16483,7 +18294,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises5"
+			          "ID": "hiérarchie_de_dates_have_moises7"
 			        }
 			      ]
 			    },
@@ -16516,7 +18327,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres6"
+			          "ID": "hiérarchie_de_dates_have_trimestres7"
 			        }
 			      ]
 			    },
@@ -16549,7 +18360,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années6"
+			          "ID": "hiérarchie_de_dates_have_années7"
 			        }
 			      ]
 			    },
@@ -16615,7 +18426,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour6"
+			          "ID": "moises_have_jour7"
 			        },
 			        {
 			          "Attribute": {
@@ -16628,7 +18439,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises6"
+			          "ID": "jour_have_moises7"
 			        },
 			        {
 			          "Preposition": {
@@ -16681,7 +18492,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises6"
+			          "ID": "trimestres_have_moises7"
 			        },
 			        {
 			          "Attribute": {
@@ -16694,7 +18505,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres6"
+			          "ID": "moises_have_trimestres7"
 			        },
 			        {
 			          "Preposition": {
@@ -16747,7 +18558,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres6"
+			          "ID": "années_have_trimestres7"
 			        },
 			        {
 			          "Attribute": {
@@ -16760,7 +18571,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années6"
+			          "ID": "trimestres_have_années7"
 			        },
 			        {
 			          "Preposition": {
@@ -16813,7 +18624,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour6"
+			          "ID": "hiérarchie_de_dates_have_jour8"
 			        }
 			      ]
 			    },
@@ -16846,7 +18657,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises6"
+			          "ID": "hiérarchie_de_dates_have_moises8"
 			        }
 			      ]
 			    },
@@ -16879,7 +18690,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres7"
+			          "ID": "hiérarchie_de_dates_have_trimestres8"
 			        }
 			      ]
 			    },
@@ -16912,7 +18723,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années7"
+			          "ID": "hiérarchie_de_dates_have_années8"
 			        }
 			      ]
 			    },
@@ -16978,7 +18789,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour7"
+			          "ID": "moises_have_jour8"
 			        },
 			        {
 			          "Attribute": {
@@ -16991,7 +18802,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises7"
+			          "ID": "jour_have_moises8"
 			        },
 			        {
 			          "Preposition": {
@@ -17044,7 +18855,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises7"
+			          "ID": "trimestres_have_moises8"
 			        },
 			        {
 			          "Attribute": {
@@ -17057,7 +18868,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres7"
+			          "ID": "moises_have_trimestres8"
 			        },
 			        {
 			          "Preposition": {
@@ -17110,7 +18921,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres7"
+			          "ID": "années_have_trimestres8"
 			        },
 			        {
 			          "Attribute": {
@@ -17123,7 +18934,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années7"
+			          "ID": "trimestres_have_années8"
 			        },
 			        {
 			          "Preposition": {
@@ -17176,7 +18987,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour7"
+			          "ID": "hiérarchie_de_dates_have_jour9"
 			        }
 			      ]
 			    },
@@ -17209,7 +19020,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises7"
+			          "ID": "hiérarchie_de_dates_have_moises9"
 			        }
 			      ]
 			    },
@@ -17242,7 +19053,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres8"
+			          "ID": "hiérarchie_de_dates_have_trimestres9"
 			        }
 			      ]
 			    },
@@ -17275,7 +19086,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années8"
+			          "ID": "hiérarchie_de_dates_have_années9"
 			        }
 			      ]
 			    },
@@ -17308,7 +19119,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "updated_at_have_hiérarchie_de_dates2"
+			          "ID": "updated_at_have_hiérarchie_de_dates3"
 			        }
 			      ]
 			    },
@@ -17341,7 +19152,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour8"
+			          "ID": "moises_have_jour9"
 			        },
 			        {
 			          "Attribute": {
@@ -17354,7 +19165,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises8"
+			          "ID": "jour_have_moises9"
 			        },
 			        {
 			          "Preposition": {
@@ -17407,7 +19218,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises8"
+			          "ID": "trimestres_have_moises9"
 			        },
 			        {
 			          "Attribute": {
@@ -17420,7 +19231,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres8"
+			          "ID": "moises_have_trimestres9"
 			        },
 			        {
 			          "Preposition": {
@@ -17473,7 +19284,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres8"
+			          "ID": "années_have_trimestres9"
 			        },
 			        {
 			          "Attribute": {
@@ -17486,7 +19297,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années8"
+			          "ID": "trimestres_have_années9"
 			        },
 			        {
 			          "Preposition": {
@@ -17539,7 +19350,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour8"
+			          "ID": "hiérarchie_de_dates_have_jour10"
 			        }
 			      ]
 			    },
@@ -17572,7 +19383,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises8"
+			          "ID": "hiérarchie_de_dates_have_moises10"
 			        }
 			      ]
 			    },
@@ -17605,7 +19416,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres9"
+			          "ID": "hiérarchie_de_dates_have_trimestres10"
 			        }
 			      ]
 			    },
@@ -17638,7 +19449,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années9"
+			          "ID": "hiérarchie_de_dates_have_années10"
 			        }
 			      ]
 			    },
@@ -17704,7 +19515,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour9"
+			          "ID": "moises_have_jour10"
 			        },
 			        {
 			          "Attribute": {
@@ -17717,7 +19528,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises9"
+			          "ID": "jour_have_moises10"
 			        },
 			        {
 			          "Preposition": {
@@ -17770,7 +19581,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises9"
+			          "ID": "trimestres_have_moises10"
 			        },
 			        {
 			          "Attribute": {
@@ -17783,7 +19594,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres9"
+			          "ID": "moises_have_trimestres10"
 			        },
 			        {
 			          "Preposition": {
@@ -17836,7 +19647,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres9"
+			          "ID": "années_have_trimestres10"
 			        },
 			        {
 			          "Attribute": {
@@ -17849,7 +19660,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années9"
+			          "ID": "trimestres_have_années10"
 			        },
 			        {
 			          "Preposition": {
@@ -17902,7 +19713,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour9"
+			          "ID": "hiérarchie_de_dates_have_jour11"
 			        }
 			      ]
 			    },
@@ -17935,7 +19746,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises9"
+			          "ID": "hiérarchie_de_dates_have_moises11"
 			        }
 			      ]
 			    },
@@ -17968,7 +19779,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres10"
+			          "ID": "hiérarchie_de_dates_have_trimestres11"
 			        }
 			      ]
 			    },
@@ -18001,7 +19812,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années10"
+			          "ID": "hiérarchie_de_dates_have_années11"
 			        }
 			      ]
 			    },
@@ -18034,7 +19845,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "updated_at_have_hiérarchie_de_dates3"
+			          "ID": "updated_at_have_hiérarchie_de_dates4"
 			        }
 			      ]
 			    },
@@ -18067,7 +19878,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour10"
+			          "ID": "moises_have_jour11"
 			        },
 			        {
 			          "Attribute": {
@@ -18080,7 +19891,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises10"
+			          "ID": "jour_have_moises11"
 			        },
 			        {
 			          "Preposition": {
@@ -18133,7 +19944,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises10"
+			          "ID": "trimestres_have_moises11"
 			        },
 			        {
 			          "Attribute": {
@@ -18146,7 +19957,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres10"
+			          "ID": "moises_have_trimestres11"
 			        },
 			        {
 			          "Preposition": {
@@ -18199,7 +20010,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres10"
+			          "ID": "années_have_trimestres11"
 			        },
 			        {
 			          "Attribute": {
@@ -18212,7 +20023,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années10"
+			          "ID": "trimestres_have_années11"
 			        },
 			        {
 			          "Preposition": {
@@ -18265,7 +20076,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour10"
+			          "ID": "hiérarchie_de_dates_have_jour12"
 			        }
 			      ]
 			    },
@@ -18298,7 +20109,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises10"
+			          "ID": "hiérarchie_de_dates_have_moises12"
 			        }
 			      ]
 			    },
@@ -18331,7 +20142,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres11"
+			          "ID": "hiérarchie_de_dates_have_trimestres12"
 			        }
 			      ]
 			    },
@@ -18364,7 +20175,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années11"
+			          "ID": "hiérarchie_de_dates_have_années12"
 			        }
 			      ]
 			    },
@@ -18430,7 +20241,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour11"
+			          "ID": "moises_have_jour12"
 			        },
 			        {
 			          "Attribute": {
@@ -18443,7 +20254,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises11"
+			          "ID": "jour_have_moises12"
 			        },
 			        {
 			          "Preposition": {
@@ -18496,7 +20307,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises11"
+			          "ID": "trimestres_have_moises12"
 			        },
 			        {
 			          "Attribute": {
@@ -18509,7 +20320,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres11"
+			          "ID": "moises_have_trimestres12"
 			        },
 			        {
 			          "Preposition": {
@@ -18562,7 +20373,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres11"
+			          "ID": "années_have_trimestres12"
 			        },
 			        {
 			          "Attribute": {
@@ -18575,7 +20386,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années11"
+			          "ID": "trimestres_have_années12"
 			        },
 			        {
 			          "Preposition": {
@@ -18628,7 +20439,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour11"
+			          "ID": "hiérarchie_de_dates_have_jour13"
 			        }
 			      ]
 			    },
@@ -18661,7 +20472,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises11"
+			          "ID": "hiérarchie_de_dates_have_moises13"
 			        }
 			      ]
 			    },
@@ -18694,7 +20505,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres12"
+			          "ID": "hiérarchie_de_dates_have_trimestres13"
 			        }
 			      ]
 			    },
@@ -18727,7 +20538,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années12"
+			          "ID": "hiérarchie_de_dates_have_années13"
 			        }
 			      ]
 			    },
@@ -18793,7 +20604,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour12"
+			          "ID": "moises_have_jour13"
 			        },
 			        {
 			          "Attribute": {
@@ -18806,7 +20617,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises12"
+			          "ID": "jour_have_moises13"
 			        },
 			        {
 			          "Preposition": {
@@ -18859,7 +20670,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises12"
+			          "ID": "trimestres_have_moises13"
 			        },
 			        {
 			          "Attribute": {
@@ -18872,7 +20683,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres12"
+			          "ID": "moises_have_trimestres13"
 			        },
 			        {
 			          "Preposition": {
@@ -18925,7 +20736,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres12"
+			          "ID": "années_have_trimestres13"
 			        },
 			        {
 			          "Attribute": {
@@ -18938,7 +20749,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années12"
+			          "ID": "trimestres_have_années13"
 			        },
 			        {
 			          "Preposition": {
@@ -18991,7 +20802,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour12"
+			          "ID": "hiérarchie_de_dates_have_jour14"
 			        }
 			      ]
 			    },
@@ -19024,7 +20835,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises12"
+			          "ID": "hiérarchie_de_dates_have_moises14"
 			        }
 			      ]
 			    },
@@ -19057,7 +20868,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres13"
+			          "ID": "hiérarchie_de_dates_have_trimestres14"
 			        }
 			      ]
 			    },
@@ -19090,7 +20901,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années13"
+			          "ID": "hiérarchie_de_dates_have_années14"
 			        }
 			      ]
 			    },
@@ -19156,7 +20967,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour13"
+			          "ID": "moises_have_jour14"
 			        },
 			        {
 			          "Attribute": {
@@ -19169,7 +20980,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises13"
+			          "ID": "jour_have_moises14"
 			        },
 			        {
 			          "Preposition": {
@@ -19222,7 +21033,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises13"
+			          "ID": "trimestres_have_moises14"
 			        },
 			        {
 			          "Attribute": {
@@ -19235,7 +21046,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres13"
+			          "ID": "moises_have_trimestres14"
 			        },
 			        {
 			          "Preposition": {
@@ -19288,7 +21099,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres13"
+			          "ID": "années_have_trimestres14"
 			        },
 			        {
 			          "Attribute": {
@@ -19301,7 +21112,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années13"
+			          "ID": "trimestres_have_années14"
 			        },
 			        {
 			          "Preposition": {
@@ -19354,7 +21165,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour13"
+			          "ID": "hiérarchie_de_dates_have_jour15"
 			        }
 			      ]
 			    },
@@ -19387,7 +21198,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises13"
+			          "ID": "hiérarchie_de_dates_have_moises15"
 			        }
 			      ]
 			    },
@@ -19420,7 +21231,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres14"
+			          "ID": "hiérarchie_de_dates_have_trimestres15"
 			        }
 			      ]
 			    },
@@ -19453,7 +21264,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années14"
+			          "ID": "hiérarchie_de_dates_have_années15"
 			        }
 			      ]
 			    },
@@ -19519,7 +21330,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour14"
+			          "ID": "moises_have_jour15"
 			        },
 			        {
 			          "Attribute": {
@@ -19532,7 +21343,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises14"
+			          "ID": "jour_have_moises15"
 			        },
 			        {
 			          "Preposition": {
@@ -19585,7 +21396,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises14"
+			          "ID": "trimestres_have_moises15"
 			        },
 			        {
 			          "Attribute": {
@@ -19598,7 +21409,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres14"
+			          "ID": "moises_have_trimestres15"
 			        },
 			        {
 			          "Preposition": {
@@ -19651,7 +21462,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres14"
+			          "ID": "années_have_trimestres15"
 			        },
 			        {
 			          "Attribute": {
@@ -19664,7 +21475,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années14"
+			          "ID": "trimestres_have_années15"
 			        },
 			        {
 			          "Preposition": {
@@ -19717,7 +21528,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour14"
+			          "ID": "hiérarchie_de_dates_have_jour16"
 			        }
 			      ]
 			    },
@@ -19750,7 +21561,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises14"
+			          "ID": "hiérarchie_de_dates_have_moises16"
 			        }
 			      ]
 			    },
@@ -19783,7 +21594,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres15"
+			          "ID": "hiérarchie_de_dates_have_trimestres16"
 			        }
 			      ]
 			    },
@@ -19816,7 +21627,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années15"
+			          "ID": "hiérarchie_de_dates_have_années16"
 			        }
 			      ]
 			    },
@@ -19849,7 +21660,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "updated_at_have_hiérarchie_de_dates4"
+			          "ID": "updated_at_have_hiérarchie_de_dates5"
 			        }
 			      ]
 			    },
@@ -19882,7 +21693,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour15"
+			          "ID": "moises_have_jour16"
 			        },
 			        {
 			          "Attribute": {
@@ -19895,7 +21706,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises15"
+			          "ID": "jour_have_moises16"
 			        },
 			        {
 			          "Preposition": {
@@ -19948,7 +21759,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises15"
+			          "ID": "trimestres_have_moises16"
 			        },
 			        {
 			          "Attribute": {
@@ -19961,7 +21772,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres15"
+			          "ID": "moises_have_trimestres16"
 			        },
 			        {
 			          "Preposition": {
@@ -20014,7 +21825,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres15"
+			          "ID": "années_have_trimestres16"
 			        },
 			        {
 			          "Attribute": {
@@ -20027,7 +21838,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années15"
+			          "ID": "trimestres_have_années16"
 			        },
 			        {
 			          "Preposition": {
@@ -20080,7 +21891,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour15"
+			          "ID": "hiérarchie_de_dates_have_jour17"
 			        }
 			      ]
 			    },
@@ -20113,7 +21924,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises15"
+			          "ID": "hiérarchie_de_dates_have_moises17"
 			        }
 			      ]
 			    },
@@ -20146,7 +21957,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres16"
+			          "ID": "hiérarchie_de_dates_have_trimestres17"
 			        }
 			      ]
 			    },
@@ -20179,7 +21990,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années16"
+			          "ID": "hiérarchie_de_dates_have_années17"
 			        }
 			      ]
 			    },
@@ -20245,7 +22056,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour16"
+			          "ID": "moises_have_jour17"
 			        },
 			        {
 			          "Attribute": {
@@ -20258,7 +22069,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises16"
+			          "ID": "jour_have_moises17"
 			        },
 			        {
 			          "Preposition": {
@@ -20311,7 +22122,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises16"
+			          "ID": "trimestres_have_moises17"
 			        },
 			        {
 			          "Attribute": {
@@ -20324,7 +22135,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres16"
+			          "ID": "moises_have_trimestres17"
 			        },
 			        {
 			          "Preposition": {
@@ -20377,7 +22188,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres16"
+			          "ID": "années_have_trimestres17"
 			        },
 			        {
 			          "Attribute": {
@@ -20390,7 +22201,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années16"
+			          "ID": "trimestres_have_années17"
 			        },
 			        {
 			          "Preposition": {
@@ -20443,7 +22254,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour16"
+			          "ID": "hiérarchie_de_dates_have_jour18"
 			        }
 			      ]
 			    },
@@ -20476,7 +22287,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises16"
+			          "ID": "hiérarchie_de_dates_have_moises18"
 			        }
 			      ]
 			    },
@@ -20509,7 +22320,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres17"
+			          "ID": "hiérarchie_de_dates_have_trimestres18"
 			        }
 			      ]
 			    },
@@ -20542,7 +22353,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années17"
+			          "ID": "hiérarchie_de_dates_have_années18"
 			        }
 			      ]
 			    },
@@ -20608,7 +22419,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour17"
+			          "ID": "moises_have_jour18"
 			        },
 			        {
 			          "Attribute": {
@@ -20621,7 +22432,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises17"
+			          "ID": "jour_have_moises18"
 			        },
 			        {
 			          "Preposition": {
@@ -20674,7 +22485,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises17"
+			          "ID": "trimestres_have_moises18"
 			        },
 			        {
 			          "Attribute": {
@@ -20687,7 +22498,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres17"
+			          "ID": "moises_have_trimestres18"
 			        },
 			        {
 			          "Preposition": {
@@ -20740,7 +22551,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres17"
+			          "ID": "années_have_trimestres18"
 			        },
 			        {
 			          "Attribute": {
@@ -20753,7 +22564,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années17"
+			          "ID": "trimestres_have_années18"
 			        },
 			        {
 			          "Preposition": {
@@ -20806,7 +22617,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour17"
+			          "ID": "hiérarchie_de_dates_have_jour19"
 			        }
 			      ]
 			    },
@@ -20839,7 +22650,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises17"
+			          "ID": "hiérarchie_de_dates_have_moises19"
 			        }
 			      ]
 			    },
@@ -20872,7 +22683,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres18"
+			          "ID": "hiérarchie_de_dates_have_trimestres19"
 			        }
 			      ]
 			    },
@@ -20905,7 +22716,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années18"
+			          "ID": "hiérarchie_de_dates_have_années19"
 			        }
 			      ]
 			    },
@@ -20971,7 +22782,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour18"
+			          "ID": "moises_have_jour19"
 			        },
 			        {
 			          "Attribute": {
@@ -20984,7 +22795,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises18"
+			          "ID": "jour_have_moises19"
 			        },
 			        {
 			          "Preposition": {
@@ -21037,7 +22848,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises18"
+			          "ID": "trimestres_have_moises19"
 			        },
 			        {
 			          "Attribute": {
@@ -21050,7 +22861,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres18"
+			          "ID": "moises_have_trimestres19"
 			        },
 			        {
 			          "Preposition": {
@@ -21103,7 +22914,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres18"
+			          "ID": "années_have_trimestres19"
 			        },
 			        {
 			          "Attribute": {
@@ -21116,7 +22927,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années18"
+			          "ID": "trimestres_have_années19"
 			        },
 			        {
 			          "Preposition": {
@@ -21169,7 +22980,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour18"
+			          "ID": "hiérarchie_de_dates_have_jour20"
 			        }
 			      ]
 			    },
@@ -21202,7 +23013,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises18"
+			          "ID": "hiérarchie_de_dates_have_moises20"
 			        }
 			      ]
 			    },
@@ -21235,7 +23046,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres19"
+			          "ID": "hiérarchie_de_dates_have_trimestres20"
 			        }
 			      ]
 			    },
@@ -21268,7 +23079,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années19"
+			          "ID": "hiérarchie_de_dates_have_années20"
 			        }
 			      ]
 			    },
@@ -21334,7 +23145,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour19"
+			          "ID": "moises_have_jour20"
 			        },
 			        {
 			          "Attribute": {
@@ -21347,7 +23158,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises19"
+			          "ID": "jour_have_moises20"
 			        },
 			        {
 			          "Preposition": {
@@ -21400,7 +23211,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises19"
+			          "ID": "trimestres_have_moises20"
 			        },
 			        {
 			          "Attribute": {
@@ -21413,7 +23224,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres19"
+			          "ID": "moises_have_trimestres20"
 			        },
 			        {
 			          "Preposition": {
@@ -21466,7 +23277,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres19"
+			          "ID": "années_have_trimestres20"
 			        },
 			        {
 			          "Attribute": {
@@ -21479,7 +23290,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années19"
+			          "ID": "trimestres_have_années20"
 			        },
 			        {
 			          "Preposition": {
@@ -21532,7 +23343,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour19"
+			          "ID": "hiérarchie_de_dates_have_jour21"
 			        }
 			      ]
 			    },
@@ -21565,7 +23376,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises19"
+			          "ID": "hiérarchie_de_dates_have_moises21"
 			        }
 			      ]
 			    },
@@ -21598,7 +23409,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres20"
+			          "ID": "hiérarchie_de_dates_have_trimestres21"
 			        }
 			      ]
 			    },
@@ -21631,7 +23442,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années20"
+			          "ID": "hiérarchie_de_dates_have_années21"
 			        }
 			      ]
 			    },
@@ -21664,7 +23475,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "updated_at_have_hiérarchie_de_dates5"
+			          "ID": "updated_at_have_hiérarchie_de_dates6"
 			        }
 			      ]
 			    },
@@ -21697,7 +23508,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_jour20"
+			          "ID": "moises_have_jour21"
 			        },
 			        {
 			          "Attribute": {
@@ -21710,7 +23521,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jour_have_moises20"
+			          "ID": "jour_have_moises21"
 			        },
 			        {
 			          "Preposition": {
@@ -21763,7 +23574,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises20"
+			          "ID": "trimestres_have_moises21"
 			        },
 			        {
 			          "Attribute": {
@@ -21776,7 +23587,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres20"
+			          "ID": "moises_have_trimestres21"
 			        },
 			        {
 			          "Preposition": {
@@ -21829,7 +23640,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "années_have_trimestres20"
+			          "ID": "années_have_trimestres21"
 			        },
 			        {
 			          "Attribute": {
@@ -21842,7 +23653,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_années20"
+			          "ID": "trimestres_have_années21"
 			        },
 			        {
 			          "Preposition": {
@@ -21895,7 +23706,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour20"
+			          "ID": "hiérarchie_de_dates_have_jour22"
 			        }
 			      ]
 			    },
@@ -21928,7 +23739,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises20"
+			          "ID": "hiérarchie_de_dates_have_moises22"
 			        }
 			      ]
 			    },
@@ -21961,7 +23772,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres21"
+			          "ID": "hiérarchie_de_dates_have_trimestres22"
 			        }
 			      ]
 			    },
@@ -21994,7 +23805,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années21"
+			          "ID": "hiérarchie_de_dates_have_années22"
 			        }
 			      ]
 			    },
@@ -22031,7 +23842,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "language_pillar_has_fact_answer": {
+			    "language_pillar_has_pillar": {
 			      "Binding": {
 			        "ConceptualEntity": "LANGUAGE_PILLAR"
 			      },
@@ -22042,9 +23853,9 @@ cultureInfo fr-FR
 			            "Entity": "language_pillar"
 			          }
 			        },
-			        "fact_answer": {
+			        "pillar": {
 			          "Target": {
-			            "Entity": "fact_answer"
+			            "Entity": "pillar"
 			          }
 			        }
 			      },
@@ -22055,16 +23866,75 @@ cultureInfo fr-FR
 			              "Role": "language_pillar"
 			            },
 			            "Object": {
-			              "Role": "fact_answer"
+			              "Role": "pillar"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "language_pillars_have_fact_answers"
+			          "ID": "language_pillars_have_pillars"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "pillar"
+			            },
+			            "Object": {
+			              "Role": "language_pillar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pillars_have_language_pillars"
 			        }
 			      ]
 			    },
-			    "language_question_has_fact_answer": {
+			    "language_pillar_has_language": {
+			      "Binding": {
+			        "ConceptualEntity": "LANGUAGE_PILLAR"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "language_pillar": {
+			          "Target": {
+			            "Entity": "language_pillar"
+			          }
+			        },
+			        "language": {
+			          "Target": {
+			            "Entity": "language"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "language_pillar"
+			            },
+			            "Object": {
+			              "Role": "language"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "language_pillars_have_languages"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "language"
+			            },
+			            "Object": {
+			              "Role": "language_pillar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "languages_have_language_pillars"
+			        }
+			      ]
+			    },
+			    "language_question_has_question": {
 			      "Binding": {
 			        "ConceptualEntity": "LANGUAGE_QUESTION"
 			      },
@@ -22075,9 +23945,9 @@ cultureInfo fr-FR
 			            "Entity": "language_question"
 			          }
 			        },
-			        "fact_answer": {
+			        "question": {
 			          "Target": {
-			            "Entity": "fact_answer"
+			            "Entity": "question"
 			          }
 			        }
 			      },
@@ -22088,16 +23958,75 @@ cultureInfo fr-FR
 			              "Role": "language_question"
 			            },
 			            "Object": {
-			              "Role": "fact_answer"
+			              "Role": "question"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "language_questions_have_fact_answers"
+			          "ID": "language_questions_have_questions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "question"
+			            },
+			            "Object": {
+			              "Role": "language_question"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "questions_have_language_questions"
 			        }
 			      ]
 			    },
-			    "language_answer_has_fact_answer": {
+			    "language_question_has_language": {
+			      "Binding": {
+			        "ConceptualEntity": "LANGUAGE_QUESTION"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "language_question": {
+			          "Target": {
+			            "Entity": "language_question"
+			          }
+			        },
+			        "language": {
+			          "Target": {
+			            "Entity": "language"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "language_question"
+			            },
+			            "Object": {
+			              "Role": "language"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "language_questions_have_languages"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "language"
+			            },
+			            "Object": {
+			              "Role": "language_question"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "languages_have_language_questions"
+			        }
+			      ]
+			    },
+			    "language_answer_has_answer": {
 			      "Binding": {
 			        "ConceptualEntity": "LANGUAGE_ANSWER"
 			      },
@@ -22108,9 +24037,9 @@ cultureInfo fr-FR
 			            "Entity": "language_answer"
 			          }
 			        },
-			        "fact_answer": {
+			        "answer": {
 			          "Target": {
-			            "Entity": "fact_answer"
+			            "Entity": "answer"
 			          }
 			        }
 			      },
@@ -22121,12 +24050,71 @@ cultureInfo fr-FR
 			              "Role": "language_answer"
 			            },
 			            "Object": {
-			              "Role": "fact_answer"
+			              "Role": "answer"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "language_answers_have_fact_answers"
+			          "ID": "language_answers_have_answers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "answer"
+			            },
+			            "Object": {
+			              "Role": "language_answer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "answers_have_language_answers"
+			        }
+			      ]
+			    },
+			    "language_answer_has_language": {
+			      "Binding": {
+			        "ConceptualEntity": "LANGUAGE_ANSWER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "language_answer": {
+			          "Target": {
+			            "Entity": "language_answer"
+			          }
+			        },
+			        "language": {
+			          "Target": {
+			            "Entity": "language"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "language_answer"
+			            },
+			            "Object": {
+			              "Role": "language"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "language_answers_have_languages"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "language"
+			            },
+			            "Object": {
+			              "Role": "language_answer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "languages_have_language_answers"
 			        }
 			      ]
 			    },
@@ -22544,6 +24532,725 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "campaign_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "CAMPAIGN"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "campaign": {
+			          "Target": {
+			            "Entity": "campaign"
+			          }
+			        },
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "campaign"
+			            },
+			            "Object": {
+			              "Role": "date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "campaigns_have_dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "campaign"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_campaigns"
+			        }
+			      ]
+			    },
+			    "date_has_date_id": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.date_id": {
+			          "Target": {
+			            "Entity": "date.date_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.date_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_date_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Name": {
+			              "Role": "date.date_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_ids_are_names_IDs_of_dates"
+			        }
+			      ]
+			    },
+			    "date_has_day_of_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.day_of_year": {
+			          "Target": {
+			            "Entity": "date.day_of_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.day_of_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_day_of_year"
+			        }
+			      ]
+			    },
+			    "date_has_week_of_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.week_of_year": {
+			          "Target": {
+			            "Entity": "date.week_of_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.week_of_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_week_of_year"
+			        }
+			      ]
+			    },
+			    "date_has_day_of_week": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.day_of_week": {
+			          "Target": {
+			            "Entity": "date.day_of_week"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.day_of_week"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_day_of_week"
+			        }
+			      ]
+			    },
+			    "date_has_day_of_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.day_of_month": {
+			          "Target": {
+			            "Entity": "date.day_of_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.day_of_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_day_of_month"
+			        }
+			      ]
+			    },
+			    "date_has_month_name": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.month_name": {
+			          "Target": {
+			            "Entity": "date.month_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.month_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_month_names"
+			        }
+			      ]
+			    },
+			    "date_has_month_number": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.month_number": {
+			          "Target": {
+			            "Entity": "date.month_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.month_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_month_numbers"
+			        }
+			      ]
+			    },
+			    "date_has_year_number": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.year_number": {
+			          "Target": {
+			            "Entity": "date.year_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.year_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_year_numbers"
+			        }
+			      ]
+			    },
+			    "date_has_fulldate": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.fulldate": {
+			          "Target": {
+			            "Entity": "date.fulldate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_fulldates"
+			        }
+			      ]
+			    },
+			    "answer_has_max_weight": {
+			      "Binding": {
+			        "ConceptualEntity": "ANSWER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "answer": {
+			          "Target": {
+			            "Entity": "answer"
+			          }
+			        },
+			        "answer.max_weight": {
+			          "Target": {
+			            "Entity": "answer.max_weight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "answer"
+			            },
+			            "Object": {
+			              "Role": "answer.max_weight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "answers_have_max_weights"
+			        }
+			      ]
+			    },
+			    "fact_answer_has_somme_ID011": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_ANSWERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_answer": {
+			          "Target": {
+			            "Entity": "fact_answer"
+			          }
+			        },
+			        "fact_answer.somme_ID011": {
+			          "Target": {
+			            "Entity": "fact_answer.somme_ID011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_answer"
+			            },
+			            "Object": {
+			              "Role": "fact_answer.somme_ID011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_answers_have_somme_ID011"
+			        }
+			      ]
+			    },
+			    "fact_answer_has_avg_score": {
+			      "Binding": {
+			        "ConceptualEntity": "FACT_ANSWERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_answer": {
+			          "Target": {
+			            "Entity": "fact_answer"
+			          }
+			        },
+			        "fact_answer.avg_score": {
+			          "Target": {
+			            "Entity": "fact_answer.avg_score"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_answer"
+			            },
+			            "Object": {
+			              "Role": "fact_answer.avg_score"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_answers_have_avg_score"
+			        }
+			      ]
+			    },
+			    "answer_has_fact_answer_avg_score": {
+			      "Binding": {
+			        "ConceptualEntity": "ANSWER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "answer": {
+			          "Target": {
+			            "Entity": "answer"
+			          }
+			        },
+			        "fact_answer.avg_score": {
+			          "Target": {
+			            "Entity": "fact_answer.avg_score"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "answer"
+			            },
+			            "Object": {
+			              "Role": "fact_answer.avg_score"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "answers_have_avg_score"
+			        }
+			      ]
+			    },
+			    "site_has_temperature": {
+			      "Binding": {
+			        "ConceptualEntity": "SITE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "site": {
+			          "Target": {
+			            "Entity": "site"
+			          }
+			        },
+			        "site.temperature": {
+			          "Target": {
+			            "Entity": "site.temperature"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "site"
+			            },
+			            "Object": {
+			              "Role": "site.temperature"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sites_have_temperatures"
+			        }
+			      ]
+			    },
+			    "site_has_secondary_activity": {
+			      "Binding": {
+			        "ConceptualEntity": "SITE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "site": {
+			          "Target": {
+			            "Entity": "site"
+			          }
+			        },
+			        "site.secondary_activity": {
+			          "Target": {
+			            "Entity": "site.secondary_activity"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "site"
+			            },
+			            "Object": {
+			              "Role": "site.secondary_activity"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sites_have_secondary_activities"
+			        }
+			      ]
+			    },
+			    "site_has_main_activity": {
+			      "Binding": {
+			        "ConceptualEntity": "SITE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "site": {
+			          "Target": {
+			            "Entity": "site"
+			          }
+			        },
+			        "site.main_activity": {
+			          "Target": {
+			            "Entity": "site.main_activity"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "site"
+			            },
+			            "Object": {
+			              "Role": "site.main_activity"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sites_have_main_activities"
+			        }
+			      ]
+			    },
+			    "site_has_vertical": {
+			      "Binding": {
+			        "ConceptualEntity": "SITE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "site": {
+			          "Target": {
+			            "Entity": "site"
+			          }
+			        },
+			        "site.vertical": {
+			          "Target": {
+			            "Entity": "site.vertical"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "site"
+			            },
+			            "Object": {
+			              "Role": "site.vertical"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sites_have_verticals"
+			        }
+			      ]
+			    },
+			    "site_has_code_sap": {
+			      "Binding": {
+			        "ConceptualEntity": "SITE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "site": {
+			          "Target": {
+			            "Entity": "site"
+			          }
+			        },
+			        "site.code_sap": {
+			          "Target": {
+			            "Entity": "site.code_sap"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "site"
+			            },
+			            "Object": {
+			              "Role": "site.code_sap"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sites_have_code_saps"
+			        }
+			      ]
+			    },
+			    "site_has_site_name_manual": {
+			      "Binding": {
+			        "ConceptualEntity": "SITE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "site": {
+			          "Target": {
+			            "Entity": "site"
+			          }
+			        },
+			        "site.site_name_manual": {
+			          "Target": {
+			            "Entity": "site.site_name_manual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "site"
+			            },
+			            "Object": {
+			              "Role": "site.site_name_manual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sites_have_site_name_manuals"
+			        }
+			      ]
+			    },
+			    "campaign_has_start_date_id": {
+			      "Binding": {
+			        "ConceptualEntity": "CAMPAIGN"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "campaign": {
+			          "Target": {
+			            "Entity": "campaign"
+			          }
+			        },
+			        "campaign.start_date_id": {
+			          "Target": {
+			            "Entity": "campaign.start_date_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "campaign"
+			            },
+			            "Object": {
+			              "Role": "campaign.start_date_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "campaigns_have_start_date_ids"
+			        }
+			      ]
+			    },
 			    "fact_answer_has_moyenne_scores_par_pillier_site": {
 			      "Binding": {
 			        "ConceptualEntity": "FACT_ANSWERS"
@@ -22574,39 +25281,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_answers_have_moyenne_scores_par_pillier_site"
-			        }
-			      ]
-			    },
-			    "fact_answer_has_moyenne_scores_par_pillier": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_ANSWERS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_answer": {
-			          "Target": {
-			            "Entity": "fact_answer"
-			          }
-			        },
-			        "fact_answer.moyenne_scores_par_pillier": {
-			          "Target": {
-			            "Entity": "fact_answer.moyenne_scores_par_pillier"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_answer"
-			            },
-			            "Object": {
-			              "Role": "fact_answer.moyenne_scores_par_pillier"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_answers_have_moyenne_scores_par_pillier"
 			        }
 			      ]
 			    },
@@ -22672,7 +25346,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_answers_have_nombre_reponses_par_question"
+			          "ID": "fact_answers_have_somme_ID010"
 			        }
 			      ]
 			    },
@@ -22900,105 +25574,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "fact_answer_has_score_moyen_global_pourcentage": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_ANSWERS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_answer": {
-			          "Target": {
-			            "Entity": "fact_answer"
-			          }
-			        },
-			        "fact_answer.score_moyen_global_pourcentage": {
-			          "Target": {
-			            "Entity": "fact_answer.score_moyen_global_pourcentage"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_answer"
-			            },
-			            "Object": {
-			              "Role": "fact_answer.score_moyen_global_pourcentage"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_answers_have_score_moyen_global_pourcentage"
-			        }
-			      ]
-			    },
-			    "fact_answer_has_total_points_obtenus": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_ANSWERS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_answer": {
-			          "Target": {
-			            "Entity": "fact_answer"
-			          }
-			        },
-			        "fact_answer.total_points_obtenus": {
-			          "Target": {
-			            "Entity": "fact_answer.total_points_obtenus"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_answer"
-			            },
-			            "Object": {
-			              "Role": "fact_answer.total_points_obtenus"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_answers_have_total_points_obtenus"
-			        }
-			      ]
-			    },
-			    "fact_answer_has_total_points_disponibles": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_ANSWERS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_answer": {
-			          "Target": {
-			            "Entity": "fact_answer"
-			          }
-			        },
-			        "fact_answer.total_points_disponibles": {
-			          "Target": {
-			            "Entity": "fact_answer.total_points_disponibles"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_answer"
-			            },
-			            "Object": {
-			              "Role": "fact_answer.total_points_disponibles"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_answers_have_total_points_disponibles"
-			        }
-			      ]
-			    },
 			    "fact_answer_has_NombreQuestionnairesRemplis_total_for_CAMPAIGN_SITE_ID": {
 			      "Binding": {
 			        "ConceptualEntity": "FACT_ANSWERS"
@@ -23131,39 +25706,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "fact_answer_has_somme_ID010": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_ANSWERS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_answer": {
-			          "Target": {
-			            "Entity": "fact_answer"
-			          }
-			        },
-			        "fact_answer.somme_ID010": {
-			          "Target": {
-			            "Entity": "fact_answer.somme_ID010"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_answer"
-			            },
-			            "Object": {
-			              "Role": "fact_answer.somme_ID010"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_answers_have_somme_ID010"
-			        }
-			      ]
-			    },
 			    "fact_answer_has_score": {
 			      "Binding": {
 			        "ConceptualEntity": "FACT_ANSWERS"
@@ -23197,15 +25739,48 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "fact_answer_has_max_score": {
+			    "answer_has_fact_answer_score": {
 			      "Binding": {
-			        "ConceptualEntity": "FACT_ANSWERS"
+			        "ConceptualEntity": "ANSWER"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_answer": {
+			        "answer": {
 			          "Target": {
-			            "Entity": "fact_answer"
+			            "Entity": "answer"
+			          }
+			        },
+			        "fact_answer.score": {
+			          "Target": {
+			            "Entity": "fact_answer.score"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "answer"
+			            },
+			            "Object": {
+			              "Role": "fact_answer.score"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "answers_have_score"
+			        }
+			      ]
+			    },
+			    "answer_has_fact_answer_max_score": {
+			      "Binding": {
+			        "ConceptualEntity": "ANSWER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "answer": {
+			          "Target": {
+			            "Entity": "answer"
 			          }
 			        },
 			        "fact_answer.max_score": {
@@ -23218,7 +25793,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_answer"
+			              "Role": "answer"
 			            },
 			            "Object": {
 			              "Role": "fact_answer.max_score"
@@ -23226,7 +25801,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_answers_have_max_score"
+			          "ID": "answers_have_max_score"
 			        }
 			      ]
 			    },
@@ -23789,39 +26364,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ID_are_names_IDs_of_answers"
-			        }
-			      ]
-			    },
-			    "fact_answer_has_ratio_questions_answers": {
-			      "Binding": {
-			        "ConceptualEntity": "FACT_ANSWERS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_answer": {
-			          "Target": {
-			            "Entity": "fact_answer"
-			          }
-			        },
-			        "fact_answer.ratio_questions_answers": {
-			          "Target": {
-			            "Entity": "fact_answer.ratio_questions_answers"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_answer"
-			            },
-			            "Object": {
-			              "Role": "fact_answer.ratio_questions_answers"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_answers_have_ratio_questions_answers"
 			        }
 			      ]
 			    },
@@ -28211,435 +30753,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "theme_created_at_hiérarchie_de_date_has_theme_created_at_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.created_at.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "theme.created_at.hiérarchie_de_date"
-			          }
-			        },
-			        "theme.created_at.mois": {
-			          "Target": {
-			            "Entity": "theme.created_at.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.created_at.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "theme.created_at.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises21"
-			        }
-			      ]
-			    },
-			    "theme_created_at_hiérarchie_de_date_has_theme_created_at_jour": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.created_at.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "theme.created_at.hiérarchie_de_date"
-			          }
-			        },
-			        "theme.created_at.jour": {
-			          "Target": {
-			            "Entity": "theme.created_at.jour"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.created_at.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "theme.created_at.jour"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour21"
-			        }
-			      ]
-			    },
-			    "theme_created_at_année_has_theme_created_at_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.created_at.année": {
-			          "Target": {
-			            "Entity": "theme.created_at.année"
-			          }
-			        },
-			        "theme.created_at.trimestre": {
-			          "Target": {
-			            "Entity": "theme.created_at.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.created_at.année"
-			            },
-			            "Object": {
-			              "Role": "theme.created_at.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "années_have_trimestres21"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.created_at.trimestre"
-			            },
-			            "Object": {
-			              "Role": "theme.created_at.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_années21"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "theme.created_at.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "theme.created_at.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_années21"
-			        }
-			      ]
-			    },
-			    "theme_created_at_trimestre_has_theme_created_at_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.created_at.trimestre": {
-			          "Target": {
-			            "Entity": "theme.created_at.trimestre"
-			          }
-			        },
-			        "theme.created_at.mois": {
-			          "Target": {
-			            "Entity": "theme.created_at.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.created_at.trimestre"
-			            },
-			            "Object": {
-			              "Role": "theme.created_at.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises21"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.created_at.mois"
-			            },
-			            "Object": {
-			              "Role": "theme.created_at.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres21"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "theme.created_at.mois"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "theme.created_at.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_are_in_trimestres21"
-			        }
-			      ]
-			    },
-			    "theme_created_at_mois_has_theme_created_at_jour": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.created_at.mois": {
-			          "Target": {
-			            "Entity": "theme.created_at.mois"
-			          }
-			        },
-			        "theme.created_at.jour": {
-			          "Target": {
-			            "Entity": "theme.created_at.jour"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.created_at.mois"
-			            },
-			            "Object": {
-			              "Role": "theme.created_at.jour"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_have_jour21"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.created_at.jour"
-			            },
-			            "Object": {
-			              "Role": "theme.created_at.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jour_have_moises21"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "theme.created_at.jour"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "theme.created_at.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jour_are_in_moises21"
-			        }
-			      ]
-			    },
-			    "theme_updated_at_has_hiérarchie_de_date": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.updated_at": {
-			          "Target": {
-			            "Entity": "theme.updated_at"
-			          }
-			        },
-			        "theme.updated_at.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "theme.updated_at.hiérarchie_de_date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.updated_at"
-			            },
-			            "Object": {
-			              "Role": "theme.updated_at.hiérarchie_de_date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "updated_at_have_hiérarchie_de_dates6"
-			        }
-			      ]
-			    },
-			    "theme_updated_at_hiérarchie_de_date_has_theme_updated_at_année": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.updated_at.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "theme.updated_at.hiérarchie_de_date"
-			          }
-			        },
-			        "theme.updated_at.année": {
-			          "Target": {
-			            "Entity": "theme.updated_at.année"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.updated_at.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "theme.updated_at.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années22"
-			        }
-			      ]
-			    },
-			    "theme_updated_at_hiérarchie_de_date_has_theme_updated_at_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.updated_at.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "theme.updated_at.hiérarchie_de_date"
-			          }
-			        },
-			        "theme.updated_at.trimestre": {
-			          "Target": {
-			            "Entity": "theme.updated_at.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.updated_at.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "theme.updated_at.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres22"
-			        }
-			      ]
-			    },
-			    "theme_updated_at_hiérarchie_de_date_has_theme_updated_at_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.updated_at.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "theme.updated_at.hiérarchie_de_date"
-			          }
-			        },
-			        "theme.updated_at.mois": {
-			          "Target": {
-			            "Entity": "theme.updated_at.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.updated_at.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "theme.updated_at.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises22"
-			        }
-			      ]
-			    },
-			    "theme_updated_at_hiérarchie_de_date_has_theme_updated_at_jour": {
-			      "Binding": {
-			        "ConceptualEntity": "THEME"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "theme.updated_at.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "theme.updated_at.hiérarchie_de_date"
-			          }
-			        },
-			        "theme.updated_at.jour": {
-			          "Target": {
-			            "Entity": "theme.updated_at.jour"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "theme.updated_at.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "theme.updated_at.jour"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour22"
-			        }
-			      ]
-			    },
 			    "theme_updated_at_année_has_theme_updated_at_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "THEME"
@@ -30287,6 +32400,369 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "jour_are_in_moises26"
+			        }
+			      ]
+			    },
+			    "date_fulldate_has_hiérarchie_de_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date.fulldate": {
+			          "Target": {
+			            "Entity": "date.fulldate"
+			          }
+			        },
+			        "date.fulldate.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "date.fulldate.hiérarchie_de_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.hiérarchie_de_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fulldates_have_hiérarchie_de_dates"
+			        }
+			      ]
+			    },
+			    "date_fulldate_hiérarchie_de_date_has_date_fulldate_année": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date.fulldate.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "date.fulldate.hiérarchie_de_date"
+			          }
+			        },
+			        "date.fulldate.année": {
+			          "Target": {
+			            "Entity": "date.fulldate.année"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_années27"
+			        }
+			      ]
+			    },
+			    "date_fulldate_hiérarchie_de_date_has_date_fulldate_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date.fulldate.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "date.fulldate.hiérarchie_de_date"
+			          }
+			        },
+			        "date.fulldate.trimestre": {
+			          "Target": {
+			            "Entity": "date.fulldate.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_trimestres27"
+			        }
+			      ]
+			    },
+			    "date_fulldate_hiérarchie_de_date_has_date_fulldate_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date.fulldate.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "date.fulldate.hiérarchie_de_date"
+			          }
+			        },
+			        "date.fulldate.mois": {
+			          "Target": {
+			            "Entity": "date.fulldate.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_moises27"
+			        }
+			      ]
+			    },
+			    "date_fulldate_hiérarchie_de_date_has_date_fulldate_jour": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date.fulldate.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "date.fulldate.hiérarchie_de_date"
+			          }
+			        },
+			        "date.fulldate.jour": {
+			          "Target": {
+			            "Entity": "date.fulldate.jour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_jour27"
+			        }
+			      ]
+			    },
+			    "date_fulldate_année_has_date_fulldate_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date.fulldate.année": {
+			          "Target": {
+			            "Entity": "date.fulldate.année"
+			          }
+			        },
+			        "date.fulldate.trimestre": {
+			          "Target": {
+			            "Entity": "date.fulldate.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.année"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "années_have_trimestres27"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.trimestre"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_années27"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "date.fulldate.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "date.fulldate.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_années27"
+			        }
+			      ]
+			    },
+			    "date_fulldate_trimestre_has_date_fulldate_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date.fulldate.trimestre": {
+			          "Target": {
+			            "Entity": "date.fulldate.trimestre"
+			          }
+			        },
+			        "date.fulldate.mois": {
+			          "Target": {
+			            "Entity": "date.fulldate.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.trimestre"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_moises27"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.mois"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_trimestres27"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "date.fulldate.mois"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "date.fulldate.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_are_in_trimestres27"
+			        }
+			      ]
+			    },
+			    "date_fulldate_mois_has_date_fulldate_jour": {
+			      "Binding": {
+			        "ConceptualEntity": "DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date.fulldate.mois": {
+			          "Target": {
+			            "Entity": "date.fulldate.mois"
+			          }
+			        },
+			        "date.fulldate.jour": {
+			          "Target": {
+			            "Entity": "date.fulldate.jour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.mois"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_jour27"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date.fulldate.jour"
+			            },
+			            "Object": {
+			              "Role": "date.fulldate.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_have_moises27"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "date.fulldate.jour"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "date.fulldate.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_are_in_moises27"
 			        }
 			      ]
 			    }

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "7ca1bc0a002b32b20a43",
+  "position": {
+    "x": 0,
+    "y": 601.78012998777217,
+    "z": 28750,
+    "height": 37.870741131015087,
+    "width": 40
+  },
+  "visual": {
+    "visualType": "image",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "thermometer2221696861897442.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "83a5329d6d0e43407d21",
+  "howCreated": "InsertVisualButton"
+}

@@ -98,12 +98,14 @@ table THEME
 		annotation UnderlyingDateTimeDataType = Date
 
 	column ORDER
-		dataType: double
+		dataType: int64
 		lineageTag: e4179668-5335-4740-a2df-ca9900041370
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ORDER
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

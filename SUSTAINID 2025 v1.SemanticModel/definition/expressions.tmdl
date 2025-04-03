@@ -5,3 +5,10 @@ expression DB_NAME = "DB_DEV_GRP" meta [IsParameterQuery=true, List={"DB_DEV_GRP
 
 	annotation PBI_ResultType = Text
 
+expression 'replace us-arg' = "United States" meta [IsParameterQuery=true, List={1, "United States"}, DefaultValue=..., Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 54780594-8007-496b-92d0-d49e91fbc1d1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

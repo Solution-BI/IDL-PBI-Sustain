@@ -12,6 +12,7 @@ table COUNTRY
 	column SURNAME
 		dataType: string
 		lineageTag: 92a321ab-ad26-4f8b-aca5-fd4271d94b95
+		dataCategory: County
 		summarizeBy: none
 		sourceColumn: SURNAME
 

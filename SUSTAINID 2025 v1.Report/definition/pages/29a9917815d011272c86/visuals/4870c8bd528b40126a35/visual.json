@@ -1,33 +1,46 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "f6be91ea04590057aebc",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "4870c8bd528b40126a35",
   "position": {
-    "x": 352,
-    "y": 176,
-    "z": 25000,
-    "height": 120,
-    "width": 680,
-    "tabOrder": 25000
+    "x": 0,
+    "y": 485.09909909909908,
+    "z": 1000,
+    "height": 234.90090090090092,
+    "width": 896
   },
   "visual": {
-    "visualType": "cardVisual",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Data": {
+        "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "FACT_ANSWERS"
+                      "Entity": "COUNTRY"
                     }
                   },
-                  "Property": "ScoreMoyenGlobalPourcentage"
+                  "Property": "NAME"
                 }
               },
-              "queryRef": "FACT_ANSWERS.ScoreMoyenGlobalPourcentage",
-              "nativeQueryRef": "ScoreMoyenGlobalPourcentage"
+              "queryRef": "COUNTRY.NAME",
+              "nativeQueryRef": "NAME"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SITE"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "SITE.NAME",
+              "nativeQueryRef": "NAME1"
             },
             {
               "field": {
@@ -37,25 +50,11 @@
                       "Entity": "FACT_ANSWERS"
                     }
                   },
-                  "Property": "TotalPointsObtenus"
+                  "Property": "AvgScore"
                 }
               },
-              "queryRef": "FACT_ANSWERS.TotalPointsObtenus",
-              "nativeQueryRef": "TotalPointsObtenus"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "FACT_ANSWERS"
-                    }
-                  },
-                  "Property": "TotalPointsDisponibles"
-                }
-              },
-              "queryRef": "FACT_ANSWERS.TotalPointsDisponibles",
-              "nativeQueryRef": "TotalPointsDisponibles"
+              "queryRef": "FACT_ANSWERS.AvgScore",
+              "nativeQueryRef": "AvgScore"
             }
           ]
         }
@@ -70,13 +69,12 @@
                     "Entity": "FACT_ANSWERS"
                   }
                 },
-                "Property": "ScoreMoyenGlobalPourcentage"
+                "Property": "AvgScore"
               }
             },
             "direction": "Descending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "drillFilterOtherVisuals": true

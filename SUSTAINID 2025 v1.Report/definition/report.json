@@ -13,6 +13,25 @@
     }
   },
   "layoutOptimization": "None",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "24c04a07429691896b4e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "LANGUAGE"
+              }
+            },
+            "Property": "NAME"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
+  },
   "objects": {
     "section": [
       {
@@ -110,6 +129,16 @@
         {
           "name": "thermometer2221696861897442.png",
           "path": "thermometer2221696861897442.png",
+          "type": "Image"
+        },
+        {
+          "name": "speedometer6834807844616582.png",
+          "path": "speedometer6834807844616582.png",
+          "type": "Image"
+        },
+        {
+          "name": "divide9882536206724641.png",
+          "path": "divide9882536206724641.png",
           "type": "Image"
         }
       ]

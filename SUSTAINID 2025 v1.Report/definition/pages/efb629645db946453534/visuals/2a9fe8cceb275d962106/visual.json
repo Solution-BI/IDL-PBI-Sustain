@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "2a9fe8cceb275d962106",
   "position": {
     "x": 808,
@@ -23,7 +23,7 @@
                       "Entity": "FACT_ANSWERS"
                     }
                   },
-                  "Property": "NombreReponsesParQuestion"
+                  "Property": "SommeID010"
                 }
               },
               "queryRef": "FACT_ANSWERS.NombreReponsesParQuestion",
@@ -42,7 +42,7 @@
                     "Entity": "FACT_ANSWERS"
                   }
                 },
-                "Property": "NombreReponsesParQuestion"
+                "Property": "SommeID010"
               }
             },
             "direction": "Descending"

@@ -18,12 +18,14 @@ table ANSWER
 		annotation SummarizationSetBy = Automatic
 
 	column WEIGHT
-		dataType: double
+		dataType: int64
 		lineageTag: a429b3ed-4228-4123-b0f4-20b27854503b
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: WEIGHT
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -117,6 +119,18 @@ table ANSWER
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column MAX_WEIGHT
+		dataType: int64
+		lineageTag: 642653ff-d9ca-4335-b8b7-405fa01082b1
+		summarizeBy: none
+		sourceColumn: MAX_WEIGHT
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition ANSWER = m
 		mode: import
 		source =
@@ -124,7 +138,7 @@ table ANSWER
 				    Source = Snowflake.Databases("UY39352-IDLOGISTICS.snowflakecomputing.com","WH_DEV_GRP"),
 				    DB_DEV_GRP_Database = Source{[Name="DB_DEV_GRP",Kind="Database"]}[Data],
 				    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
-				    ANSWER_Table = DWH_SUSTAIN_ID_Schema{[Name="ANSWER",Kind="Table"]}[Data]
+				    ANSWER_Table = DWH_SUSTAIN_ID_Schema{[Name="DIM_ANSWER",Kind="Table"]}[Data]
 				in
 				    ANSWER_Table
 

@@ -1,0 +1,167 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "a41d72684db76ae7231a",
+  "position": {
+    "x": 176,
+    "y": 16,
+    "z": 3000,
+    "height": 64,
+    "width": 1104,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "enlightenWorldFlagsE887F52F76244B1C927F80CF9724AEF6",
+    "query": {
+      "queryState": {
+        "code": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "COUNTRY"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "COUNTRY.NAME1",
+              "nativeQueryRef": "NAME1"
+            }
+          ]
+        },
+        "name": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "COUNTRY"
+                    }
+                  },
+                  "Property": "SURNAME"
+                }
+              },
+              "queryRef": "COUNTRY.NAME",
+              "nativeQueryRef": "NAME",
+              "format": "G"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "datalabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "textsize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "minWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "47L"
+                }
+              }
+            },
+            "minHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "22L"
+                }
+              }
+            },
+            "margin": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            },
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wrap'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
