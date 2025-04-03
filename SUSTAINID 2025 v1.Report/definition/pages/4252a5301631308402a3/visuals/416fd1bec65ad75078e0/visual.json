@@ -1,0 +1,103 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "416fd1bec65ad75078e0",
+  "position": {
+    "x": 368,
+    "y": 208,
+    "z": 26002,
+    "height": 176,
+    "width": 288,
+    "tabOrder": 26002
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "QUESTION"
+                    }
+                  },
+                  "Property": "CODE"
+                }
+              },
+              "queryRef": "QUESTION.CODE",
+              "nativeQueryRef": "CODE"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Sum_ID010_Site_surf_mezz_office"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Sum_ID010_Site_surf_mezz_office",
+              "nativeQueryRef": "Sum_ID010_Site_surf_mezz_office"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "10769738a87e3eecd5c3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "QUESTION"
+              }
+            },
+            "Property": "CODE"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "q",
+              "Entity": "QUESTION",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "StartsWith": {
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "CODE"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "'ID.0'"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

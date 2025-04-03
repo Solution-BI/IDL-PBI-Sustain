@@ -23,7 +23,7 @@
                       "Entity": "FACT_ANSWERS"
                     }
                   },
-                  "Property": "SommeID010"
+                  "Property": "Sum_ID010_Site_surf_mezz_office"
                 }
               },
               "queryRef": "FACT_ANSWERS.NombreReponsesParQuestion",
@@ -42,7 +42,7 @@
                     "Entity": "FACT_ANSWERS"
                   }
                 },
-                "Property": "SommeID010"
+                "Property": "Sum_ID010_Site_surf_mezz_office"
               }
             },
             "direction": "Descending"

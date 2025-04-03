@@ -12853,16 +12853,6 @@ cultureInfo fr-FR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "RATIO QUESTIONS REMPLIS": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -13697,7 +13687,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "SommeID010"
+			          "ConceptualProperty": "Sum_ID010_Site_surf_mezz_office"
 			        }
 			      },
 			      "State": "Generated",
@@ -14859,7 +14849,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "FACT_ANSWERS",
-			          "ConceptualProperty": "SommeID011"
+			          "ConceptualProperty": "Sum_ID011_Site_surf_mezz"
 			        }
 			      },
 			      "State": "Generated",

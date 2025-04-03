@@ -67,7 +67,7 @@ table FACT_ANSWERS
 
 		changedProperty = FormatString
 
-	measure SommeID010 = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.010"))
+	measure Sum_ID010_Site_surf_mezz_office = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.010"))
 		displayFolder: Measures
 		lineageTag: fcd8a9ef-1b35-4377-90fd-ca1ca40e78ac
 
@@ -114,10 +114,52 @@ table FACT_ANSWERS
 		displayFolder: Measures
 		lineageTag: 7a105a96-7823-4009-b706-cd9a050d3abc
 
-	measure SommeID011 = CALCULATE(COUNTROWS(FACT_ANSWERS), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.011"))
+	measure Sum_ID011_Site_surf_mezz = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.011"))
 		formatString: 0
 		displayFolder: Measures
 		lineageTag: 47055ebb-87b5-408f-b67d-c17f712c9933
+
+	measure Sum_ID012_office_surface = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.012"))
+		displayFolder: Measures
+		lineageTag: 8d46bf7e-5042-4757-a004-9ad970bf2388
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sum_ID013_total_land_area = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.013"))
+		displayFolder: Measures
+		lineageTag: f5f2bbf8-eb93-4547-883f-365ecfe2b5ab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sum_ID014_land_area = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.014"))
+		displayFolder: Measures
+		lineageTag: 6c6b0a74-18d0-4cd1-8e5d-890c6fb3659d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sum_ID015_solar_panel_rs = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.015"))
+		displayFolder: Measures
+		lineageTag: 6ab85c33-a4a1-4094-a108-e4f36283d015
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sum_ID016_roof_surface_solar_pan = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.016"))
+		displayFolder: Measures
+		lineageTag: bd5b6ce8-497d-43bf-9a64-9829fd08a094
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sum_ID017_solar_shaded_parking = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.017"))
+		displayFolder: Measures
+		lineageTag: 13fcefc3-66ae-4d34-8848-4e66dc04039e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sum_ID018_shaded_area = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.015"))
+		displayFolder: Measures
+		lineageTag: 22751e49-9d31-4501-94f1-96aaf685befc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column COUNTRY_ID
 		dataType: string
