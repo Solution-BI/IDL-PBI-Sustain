@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
-  "name": "5fe9ed0cbe0e51003900",
+  "name": "34d31e6c3f3b7ef48d93",
   "position": {
-    "x": 8,
-    "y": 168.09906219711547,
-    "z": 26750,
-    "height": 39.092377941692995,
-    "width": 32
+    "x": 944,
+    "y": 112,
+    "z": 12000,
+    "height": 32,
+    "width": 32,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "image",
@@ -19,7 +20,7 @@
                 "ResourcePackageItem": {
                   "PackageName": "RegisteredResources",
                   "PackageType": 1,
-                  "ItemName": "location5356557505609774.png"
+                  "ItemName": "european-union6270033221753695.png"
                 }
               }
             }
@@ -29,6 +30,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "83a5329d6d0e43407d21",
   "howCreated": "InsertVisualButton"
 }

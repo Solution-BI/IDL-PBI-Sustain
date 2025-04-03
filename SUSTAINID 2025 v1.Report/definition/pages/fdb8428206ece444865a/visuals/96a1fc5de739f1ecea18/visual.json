@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
-  "name": "7ca1bc0a002b32b20a43",
+  "name": "96a1fc5de739f1ecea18",
   "position": {
     "x": 144,
-    "y": 768,
-    "z": 19000,
-    "height": 36,
+    "y": 320,
+    "z": 28000,
+    "height": 38,
     "width": 48,
-    "tabOrder": 21000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "ResourcePackageItem": {
                   "PackageName": "RegisteredResources",
                   "PackageType": 1,
-                  "ItemName": "thermometer2221696861897442.png"
+                  "ItemName": "sap962975958413798.png"
                 }
               }
             }

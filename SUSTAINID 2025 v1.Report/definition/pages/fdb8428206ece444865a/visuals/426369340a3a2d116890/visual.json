@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "426369340a3a2d116890",
   "position": {
-    "x": 400,
-    "y": 608.00000000000011,
-    "z": 8004,
-    "height": 160,
-    "width": 176,
-    "tabOrder": 7004
+    "x": 357,
+    "y": 248.8888888888888,
+    "z": 11000,
+    "height": 213.33333333333326,
+    "width": 315
   },
   "visual": {
     "visualType": "gauge",
@@ -86,7 +85,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'SOCIETAL'"
+                  "Value": "'COMMUNITY'"
                 }
               }
             }
@@ -96,18 +95,19 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "4c98da1e34b14905d383",
   "filterConfig": {
     "filters": [
       {
-        "name": "684d8513c8326106c902",
+        "name": "75e4b61705476221c04f",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "LANGUAGE_PILLAR"
+                "Entity": "PILLAR"
               }
             },
-            "Property": "VALUE"
+            "Property": "NAME"
           }
         },
         "type": "Categorical",
@@ -115,8 +115,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "l",
-              "Entity": "LANGUAGE_PILLAR",
+              "Name": "p",
+              "Entity": "PILLAR",
               "Type": 0
             }
           ],
@@ -129,10 +129,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "l"
+                            "Source": "p"
                           }
                         },
-                        "Property": "VALUE"
+                        "Property": "NAME"
                       }
                     }
                   ],
@@ -140,7 +140,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'SOCIETAL'"
+                          "Value": "'COMMUNITY'"
                         }
                       }
                     ]

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "f1ab64022d69131e36ad",
   "position": {
-    "x": 800,
-    "y": 544,
-    "z": 6000,
-    "height": 272,
-    "width": 224,
-    "tabOrder": 5000
+    "x": 224,
+    "y": 352,
+    "z": 4000,
+    "height": 496,
+    "width": 320,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "tableEx",
@@ -27,10 +27,28 @@
                 }
               },
               "queryRef": "SITE.NAME",
-              "nativeQueryRef": "NAME"
+              "nativeQueryRef": "SITES",
+              "displayName": "SITES"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "SITE"
+                  }
+                },
+                "Property": "NAME"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -40,7 +58,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "161.8D"
+                  "Value": "304.9163351438526D"
                 }
               }
             }

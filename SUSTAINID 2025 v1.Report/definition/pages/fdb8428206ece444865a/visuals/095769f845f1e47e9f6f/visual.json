@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
-  "name": "14506501c089e3da3066",
+  "name": "095769f845f1e47e9f6f",
   "position": {
-    "x": 544,
-    "y": 112,
-    "z": 7000,
+    "x": 0,
+    "y": 656,
+    "z": 22000,
     "height": 64,
     "width": 144,
-    "tabOrder": 13000
+    "tabOrder": 24000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "CAMPAIGN"
+                      "Entity": "SITE"
                     }
                   },
-                  "Property": "NAME"
+                  "Property": "VERTICAL"
                 }
               },
-              "queryRef": "CAMPAIGN.NAME",
-              "nativeQueryRef": "ANNÉE",
-              "active": true,
-              "displayName": "ANNÉE"
+              "queryRef": "SITE.VERTICAL",
+              "nativeQueryRef": "VERTICAL",
+              "active": true
             }
           ]
         }
@@ -52,13 +51,6 @@
       "items": [
         {
           "properties": {
-            "outlineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
             "textSize": {
               "expr": {
                 "Literal": {
@@ -66,7 +58,7 @@
                 }
               }
             },
-            "padding": {
+            "outlineStyle": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
@@ -85,47 +77,6 @@
                   "Value": "1D"
                 }
               }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "c",
-                    "Entity": "CAMPAIGN",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "c"
-                                }
-                              },
-                              "Property": "NAME"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'2025 Campaign'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
             }
           }
         }
@@ -133,10 +84,17 @@
       "header": [
         {
           "properties": {
-            "outlineStyle": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "'CAMPAIGN'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
@@ -161,17 +119,10 @@
                 }
               }
             },
-            "show": {
+            "outlineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'CAMPAIGN'"
+                  "Value": "0D"
                 }
               }
             }
@@ -186,29 +137,17 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
+            },
+            "width": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "1D"
                 }
               }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
+            },
             "color": {
               "solid": {
                 "color": {
@@ -224,7 +163,7 @@
           }
         }
       ],
-      "title": [
+      "dropShadow": [
         {
           "properties": {
             "show": {
@@ -233,11 +172,63 @@
                   "Value": "true"
                 }
               }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Campaign'"
+                  "Value": "'Vertical'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
@@ -258,19 +249,6 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "5D"
                 }
               }
             }
@@ -332,7 +310,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }

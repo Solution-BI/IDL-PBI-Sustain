@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "99f34d133cce165bdc1b",
   "position": {
-    "x": 192,
-    "y": 432,
-    "z": 8001,
-    "height": 144,
-    "width": 176,
-    "tabOrder": 7001
+    "x": 0,
+    "y": 0,
+    "z": 8000,
+    "height": 205.71428571428567,
+    "width": 308
   },
   "visual": {
     "visualType": "gauge",
@@ -139,18 +138,19 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "4c98da1e34b14905d383",
   "filterConfig": {
     "filters": [
       {
-        "name": "a8fba366a29397e079cc",
+        "name": "73f083d63c801e8af035",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "LANGUAGE_PILLAR"
+                "Entity": "PILLAR"
               }
             },
-            "Property": "VALUE"
+            "Property": "NAME"
           }
         },
         "type": "Categorical",
@@ -158,8 +158,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "l",
-              "Entity": "LANGUAGE_PILLAR",
+              "Name": "p",
+              "Entity": "PILLAR",
               "Type": 0
             }
           ],
@@ -172,10 +172,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "l"
+                            "Source": "p"
                           }
                         },
-                        "Property": "VALUE"
+                        "Property": "NAME"
                       }
                     }
                   ],
@@ -193,14 +193,7 @@
             }
           ]
         },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {}
-            }
-          ]
-        }
+        "howCreated": "User"
       }
     ]
   }

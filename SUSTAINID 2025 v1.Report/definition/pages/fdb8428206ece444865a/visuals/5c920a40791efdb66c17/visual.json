@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
-  "name": "0366adf64320210408e5",
+  "name": "5c920a40791efdb66c17",
   "position": {
-    "x": 160,
-    "y": 92,
-    "z": 4000,
-    "height": 768,
-    "width": 16,
-    "tabOrder": 4000
+    "x": 0,
+    "y": 176,
+    "z": 10000,
+    "height": 16,
+    "width": 1280,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "shape",
@@ -31,7 +31,7 @@
             "shapeAngle": {
               "expr": {
                 "Literal": {
-                  "Value": "90L"
+                  "Value": "0L"
                 }
               }
             }

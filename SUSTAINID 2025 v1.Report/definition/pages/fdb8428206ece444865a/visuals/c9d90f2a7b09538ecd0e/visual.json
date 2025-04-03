@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "c9d90f2a7b09538ecd0e",
   "position": {
-    "x": 416,
-    "y": 432,
-    "z": 8003,
-    "height": 144,
-    "width": 160,
-    "tabOrder": 7003
+    "x": 391.99999999999994,
+    "y": 0,
+    "z": 10000,
+    "height": 205.71428571428567,
+    "width": 280
   },
   "visual": {
     "visualType": "gauge",
@@ -104,7 +103,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'COMMON RSE'"
+                  "Value": "'COMMON CSR'"
                 }
               }
             }
@@ -114,18 +113,19 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "4c98da1e34b14905d383",
   "filterConfig": {
     "filters": [
       {
-        "name": "1b22e1b00a8930027a10",
+        "name": "1b2cbb863dd4b6a375d1",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "LANGUAGE_PILLAR"
+                "Entity": "PILLAR"
               }
             },
-            "Property": "VALUE"
+            "Property": "NAME"
           }
         },
         "type": "Categorical",
@@ -133,8 +133,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "l",
-              "Entity": "LANGUAGE_PILLAR",
+              "Name": "p",
+              "Entity": "PILLAR",
               "Type": 0
             }
           ],
@@ -147,10 +147,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "l"
+                            "Source": "p"
                           }
                         },
-                        "Property": "VALUE"
+                        "Property": "NAME"
                       }
                     }
                   ],
@@ -158,7 +158,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'COMMUN RSE'"
+                          "Value": "'COMMON CSR'"
                         }
                       }
                     ]
