@@ -27,14 +27,14 @@ table FACT_ANSWERS
 		displayFolder: Measures
 		lineageTag: 52dd8bcc-22a8-4c7d-971f-abb580febbdd
 
-	measure SommeID010
+	measure 'Surface Au Sol'
 		displayFolder: Measures
 		lineageTag: 33cb2172-a02f-4e3f-86b7-f33e3248fe4c
 
 	measure NombreQuestionnairesRemplis =
 			
 			CALCULATE(
-			    COUNTROWS(FACT_ANSWERS),
+			    DISTINCTCOUNTNOBLANK(FACT_ANSWERS[CAMPAIGN_SITE_ID]),
 			    CAMPAIGN_SITE[IS_FINISHED] = 1
 			)
 		formatString: 0
@@ -43,7 +43,9 @@ table FACT_ANSWERS
 
 	measure NombreTotalQuestionnairesEnvoyes =
 			
-			COUNTROWS(FACT_ANSWERS)
+			CALCULATE(
+				DISTINCTCOUNTNOBLANK(FACT_ANSWERS[CAMPAIGN_SITE_ID])
+			)
 		formatString: 0
 		displayFolder: Measures
 		lineageTag: 0d5d9c6c-8b63-47de-bec7-a0fb7671edb8
@@ -52,9 +54,8 @@ table FACT_ANSWERS
 			
 			DIVIDE(
 			    [NombreQuestionnairesRemplis],
-			    [NombreTotalQuestionnairesEnvoyes],
-			    0
-			) * 100
+			    [NombreTotalQuestionnairesEnvoyes]
+			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Measures
 		lineageTag: 7dbd4d17-7b0d-42f0-9e4e-d8caf9323aea
@@ -62,8 +63,7 @@ table FACT_ANSWERS
 	measure 'NombreQuestionnairesRemplis total for CAMPAIGN_SITE_ID' =
 			
 			CALCULATE(
-				[NombreQuestionnairesRemplis],
-				ALLSELECTED('FACT_ANSWERS'[CAMPAIGN_SITE_ID])
+				DISTINCTCOUNTNOBLANK(FACT_ANSWERS[CAMPAIGN_SITE_ID])
 			)
 		formatString: 0
 		displayFolder: Measures

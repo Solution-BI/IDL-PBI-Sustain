@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "56afd32887366ee07e5e",
+  "position": {
+    "x": 34.285714285714285,
+    "y": 360,
+    "z": 4000,
+    "height": 332.85714285714289,
+    "width": 995.71428571428578,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "COUNTRY"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "COUNTRY.NAME",
+              "nativeQueryRef": "NAME"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "NombreQuestionnairesRemplis"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.NombreQuestionnairesRemplis",
+              "nativeQueryRef": "NombreQuestionnairesRemplis"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "NombreQuestionnairesRemplis total for CAMPAIGN_SITE_ID"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.NombreQuestionnairesRemplis total for CAMPAIGN_SITE_ID",
+              "nativeQueryRef": "NombreQuestionnairesRemplis total for CAMPAIGN_SITE_ID"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "RatioRemplisPourcentage"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.RatioRemplisPourcentage",
+              "nativeQueryRef": "RatioRemplisPourcentage"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

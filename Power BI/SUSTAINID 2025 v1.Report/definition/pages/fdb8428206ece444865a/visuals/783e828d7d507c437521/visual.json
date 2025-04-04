@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "783e828d7d507c437521",
   "position": {
-    "x": 13.684210526315795,
-    "y": 0,
-    "z": 29000,
-    "height": 32,
-    "width": 32,
-    "tabOrder": 3000
+    "x": 208.71227346177278,
+    "y": 96.780224557871065,
+    "z": 6000,
+    "height": 34.444444444444443,
+    "width": 35.555555555555557,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "image",
@@ -35,7 +35,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Campaign'"
+                  "Value": "'Campaign Image'"
                 }
               }
             }
@@ -45,6 +45,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "83a5329d6d0e43407d21",
+  "parentGroupName": "0f3855b5bde5c0744c09",
   "howCreated": "InsertVisualButton"
 }

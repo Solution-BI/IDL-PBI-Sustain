@@ -52,7 +52,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -129,6 +129,11 @@
         {
           "name": "thermometer2221696861897442.png",
           "path": "thermometer2221696861897442.png",
+          "type": "Image"
+        },
+        {
+          "name": "48463332545790471514513.png",
+          "path": "48463332545790471514513.png",
           "type": "Image"
         }
       ]

@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 28500,
-    "height": 56,
-    "width": 160,
-    "tabOrder": 15000
+    "z": 2000,
+    "height": 56.25,
+    "width": 210,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -274,5 +274,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "5834e47e981cc8770ea4"
+  "parentGroupName": "0f3855b5bde5c0744c09"
 }

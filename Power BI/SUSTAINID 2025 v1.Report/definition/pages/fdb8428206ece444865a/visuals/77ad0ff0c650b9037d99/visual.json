@@ -3,11 +3,11 @@
   "name": "77ad0ff0c650b9037d99",
   "position": {
     "x": 0,
-    "y": 139.92035217035226,
-    "z": 22000,
-    "height": 56.36363636363636,
-    "width": 160,
-    "tabOrder": 1000
+    "y": 166.53331851282866,
+    "z": 1000,
+    "height": 56.666666666666664,
+    "width": 210,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -246,7 +246,7 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "5834e47e981cc8770ea4",
+  "parentGroupName": "0f3855b5bde5c0744c09",
   "filterConfig": {
     "filters": [
       {

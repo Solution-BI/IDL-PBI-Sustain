@@ -105,14 +105,6 @@ table SITE
 
 		annotation SummarizationSetBy = Automatic
 
-	column SITE_NAME_MANUAL
-		dataType: string
-		lineageTag: b890df2e-3d49-45c6-a6f9-ec28d15479c2
-		summarizeBy: none
-		sourceColumn: SITE_NAME_MANUAL
-
-		annotation SummarizationSetBy = Automatic
-
 	column CODE_SAP
 		dataType: string
 		lineageTag: ef5ab20a-28ad-4692-8203-534fe17581ac
@@ -150,6 +142,14 @@ table SITE
 		lineageTag: 027a3ffe-453d-4e8a-ad9f-b7f8c26b7f46
 		summarizeBy: none
 		sourceColumn: TEMPERATURE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODE_SITE
+		dataType: string
+		lineageTag: d32762e3-121e-4b5b-8781-8ee5a7e7c9e2
+		summarizeBy: none
+		sourceColumn: CODE_SITE
 
 		annotation SummarizationSetBy = Automatic
 

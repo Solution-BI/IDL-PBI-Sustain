@@ -3,10 +3,10 @@
   "name": "14506501c089e3da3066",
   "position": {
     "x": 0,
-    "y": 69.46017608517613,
-    "z": 21000,
-    "height": 57,
-    "width": 160,
+    "y": 79.866651846161972,
+    "z": 0,
+    "height": 56.666666666666664,
+    "width": 210,
     "tabOrder": 0
   },
   "visual": {
@@ -83,6 +83,13 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -239,7 +246,7 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "5834e47e981cc8770ea4",
+  "parentGroupName": "0f3855b5bde5c0744c09",
   "filterConfig": {
     "filters": [
       {
