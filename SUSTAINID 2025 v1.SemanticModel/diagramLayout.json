@@ -1,0 +1,229 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 921.5999755859375,
+        "y": 76.800003051757813
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 2347.4039292850775,
+            "y": 28.540516501043058
+          },
+          "nodeIndex": "ANSWER",
+          "nodeLineageTag": "5202b6e2-ef0d-497a-9886-850018fe156b",
+          "size": {
+            "height": 347.39065754803926,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 2049.9182167196395,
+            "y": 3.2829670329671821
+          },
+          "nodeIndex": "CAMPAIGN",
+          "nodeLineageTag": "576ebbc1-b28e-428f-9ab0-86c7c4a41d25",
+          "size": {
+            "height": 317.26799199793908,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1776.1922200152817,
+            "y": 5.297443784286024
+          },
+          "nodeIndex": "CAMPAIGN_SITE",
+          "nodeLineageTag": "ecb7ef5e-f0bf-46ce-bfb4-d703898403a4",
+          "size": {
+            "height": 205.63733258895559,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 906.5581948283841,
+            "y": 748.51136058459372
+          },
+          "nodeIndex": "CATEGORY",
+          "nodeLineageTag": "10dee437-28cb-4d8a-93f7-8d8815a171a9",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1213.7119413048424,
+            "y": 0
+          },
+          "nodeIndex": "COUNTRY",
+          "nodeLineageTag": "1cda4c68-f847-4d6a-bed0-f2dbd38398b8",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1485.9905945365949,
+            "y": 829.61132618838758
+          },
+          "nodeIndex": "PILLAR",
+          "nodeLineageTag": "c19fe176-9100-4e64-b0f7-335dd7feb694",
+          "size": {
+            "height": 304.87179487179503,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 923.634702183202,
+            "y": 146.51364991934022
+          },
+          "nodeIndex": "QUESTION",
+          "nodeLineageTag": "37b0b0bb-a454-46d4-b02d-b12efdcfb59d",
+          "size": {
+            "height": 450.5583144123292,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 1491.5791720451771,
+            "y": 0
+          },
+          "nodeIndex": "SITE",
+          "nodeLineageTag": "2381ef30-e632-430f-ac21-7363fac02a4a",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1213.5577925883529,
+            "y": 785.82631815875607
+          },
+          "nodeIndex": "THEME",
+          "nodeLineageTag": "4ed387cb-cb58-45fe-9217-0dbd211f0c33",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1608.04117832553,
+            "y": 490.92448182407139
+          },
+          "nodeIndex": "FACT_ANSWERS",
+          "nodeLineageTag": "9717762e-33ad-4b09-954b-a7f0f35d106b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 2167.7692271018745,
+            "y": 796.27994769156419
+          },
+          "nodeIndex": "LANGUAGE_ANSWER",
+          "nodeLineageTag": "18b4b63d-cb10-4606-8821-70116f10554a",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1847.1538424864912,
+            "y": 832.66456307617955
+          },
+          "nodeIndex": "LANGUAGE_QUESTION",
+          "nodeLineageTag": "96255a06-f5c1-4184-a9e7-8492190817a8",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 2497.7692271018759,
+            "y": 1116.0107169223336
+          },
+          "nodeIndex": "LANGUAGE",
+          "nodeLineageTag": "835bc4cf-831e-4f22-bec4-46afcbe79513",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1728.5960633802106,
+            "y": 1344.8367242483409
+          },
+          "nodeIndex": "LANGUAGE_PILLAR",
+          "nodeLineageTag": "e7f22cff-14b6-4db3-b939-9c0630c866c4",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 2624.0378685518263,
+            "y": 335.24156053009131
+          },
+          "nodeIndex": "DATE",
+          "nodeLineageTag": "f8be9aec-5c79-4b88-967e-629ac5779ecf",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 2001.4796737234421,
+            "y": 648.41836212417047
+          },
+          "nodeIndex": "LanguageSelected",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Toutes les tables",
+      "zoomValue": 50,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Toutes les tables",
+  "defaultDiagram": "Toutes les tables"
+}
