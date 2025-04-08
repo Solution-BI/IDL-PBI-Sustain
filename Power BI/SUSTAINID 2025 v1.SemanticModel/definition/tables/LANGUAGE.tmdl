@@ -2,10 +2,13 @@ table LANGUAGE
 	lineageTag: 835bc4cf-831e-4f22-bec4-46afcbe79513
 
 	column ID
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: d1304310-2796-47bf-858e-84eba8b8f5f4
 		summarizeBy: none
 		sourceColumn: ID
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 

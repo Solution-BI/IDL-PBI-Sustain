@@ -58,6 +58,7 @@ ref table LANGUAGE
 ref table LANGUAGE_PILLAR
 ref table DATE
 ref table LocalDateTable_ee48f3ea-af80-4efa-9c3f-984c3d44b72a
+ref table LanguageSelected
 
 ref cultureInfo fr-FR
 

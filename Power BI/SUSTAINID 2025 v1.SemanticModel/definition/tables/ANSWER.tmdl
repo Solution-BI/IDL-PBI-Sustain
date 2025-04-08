@@ -1,6 +1,18 @@
 table ANSWER
 	lineageTag: 5202b6e2-ef0d-497a-9886-850018fe156b
 
+	measure 'Translated answer' = ```
+			
+			var selectedQuestion =  TREATAS({SELECTEDVALUE(ANSWER[ID])},LANGUAGE_ANSWER[ANSWER_ID])
+			return 
+			CALCULATE(
+			    DISTINCT(LANGUAGE_ANSWER[VALUE]),
+			    selectedQuestion,
+			    USERELATIONSHIP(ANSWER[ID],LANGUAGE_ANSWER[ANSWER_ID])
+			)
+			```
+		lineageTag: de257035-634f-412a-9590-ba7eceacba37
+
 	column ID
 		dataType: string
 		lineageTag: 440c23f1-d5ab-4b92-8c50-9ee88fb2bcbe

@@ -20,35 +20,17 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "LANGUAGE_QUESTION"
+                      "Entity": "QUESTION"
                     }
                   },
-                  "Property": "LABEL"
+                  "Property": "Translated label"
                 }
               },
-              "queryRef": "LANGUAGE_QUESTION.LABEL",
-              "nativeQueryRef": "QUESTIONS",
-              "displayName": "QUESTIONS"
+              "queryRef": "QUESTION.Translated Description",
+              "nativeQueryRef": "Translated Description"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "LANGUAGE_QUESTION"
-                  }
-                },
-                "Property": "LABEL"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "visualContainerObjects": {

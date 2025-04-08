@@ -198,10 +198,12 @@ relationship 1a51e6c4-4d5a-5283-2b8b-3a2fa1503e5d
 	toColumn: PILLAR.ID
 
 relationship ad23ab54-0246-d725-b91f-83b72f5c2b45
+	isActive: false
 	fromColumn: LANGUAGE_ANSWER.ANSWER_ID
 	toColumn: ANSWER.ID
 
 relationship 0c12016c-6d7f-342d-4b04-ded997576725
+	isActive: false
 	fromColumn: LANGUAGE_QUESTION.QUESTION_ID
 	toColumn: QUESTION.ID
 

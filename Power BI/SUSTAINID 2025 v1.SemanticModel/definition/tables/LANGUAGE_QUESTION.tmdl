@@ -2,18 +2,24 @@ table LANGUAGE_QUESTION
 	lineageTag: 96255a06-f5c1-4184-a9e7-8492190817a8
 
 	column LANGUAGE_ID
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 416922a6-fa3a-434f-a02f-f6ef150c3d0a
 		summarizeBy: none
 		sourceColumn: LANGUAGE_ID
 
+		changedProperty = DataType
+
 		annotation SummarizationSetBy = Automatic
 
 	column QUESTION_ID
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 8d6ff74c-8d3c-4ad2-b793-29f39b68fd0c
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: QUESTION_ID
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 

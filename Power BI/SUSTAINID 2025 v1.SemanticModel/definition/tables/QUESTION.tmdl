@@ -1,11 +1,30 @@
 table QUESTION
 	lineageTag: 37b0b0bb-a454-46d4-b02d-b12efdcfb59d
 
+	measure 'Translated label' =
+			
+			CALCULATE(
+			    TOPN(1, VALUES(LANGUAGE_QUESTION[LABEL])),
+			    FILTER(
+			        LANGUAGE_QUESTION,
+			        LANGUAGE_QUESTION[LANGUAGE_ID] = SELECTEDVALUE('LANGUAGE'[ID])
+			    ),
+			    USERELATIONSHIP(QUESTION[ID], LANGUAGE_QUESTION[QUESTION_ID])
+			)
+		lineageTag: 3f958586-a7af-4d37-bae7-f12b4d6d5ba4
+
+	measure 'Selected Language' = SELECTEDVALUE('LANGUAGE'[ID])
+		formatString: 0
+		lineageTag: 2f8e24dc-e468-473a-bbf5-90bac6fd7ce7
+
 	column ID
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 8c3d7efb-9abc-4900-a3b9-6daf25072db3
 		summarizeBy: none
 		sourceColumn: ID
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -136,6 +155,24 @@ table QUESTION
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Translated Label Measure' =
+			
+			VAR SelectedLanguageID = SELECTEDVALUE(LanguageSelection[LanguageID])
+			RETURN
+			CALCULATE(
+			    FIRSTNONBLANK(LANGUAGE_QUESTION[LABEL], TRUE()),
+			    FILTER(
+			        LANGUAGE_QUESTION,
+			        LANGUAGE_QUESTION[LANGUAGE_ID] = SelectedLanguageID &&
+			        LANGUAGE_QUESTION[QUESTION_ID] = SELECTEDVALUE(QUESTION[ID])
+			    ),
+			    USERELATIONSHIP(QUESTION[ID], LANGUAGE_QUESTION[QUESTION_ID])
+			)
+		lineageTag: 2df5f583-74bc-4a3f-b27d-b6b64540ba44
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
 
 	partition QUESTION = m
 		mode: import

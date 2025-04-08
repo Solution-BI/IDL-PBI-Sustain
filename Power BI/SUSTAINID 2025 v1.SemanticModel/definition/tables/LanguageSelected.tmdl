@@ -1,0 +1,37 @@
+table LanguageSelected
+	lineageTag: 0a70ea5f-78c0-447d-ba82-b4daf7895fef
+
+	column LANGUAGE_ID
+		formatString: 0
+		lineageTag: 1efcb39f-f59b-4afe-9673-609a981be2c8
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [LANGUAGE_ID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LANGUAGE_NAME
+		lineageTag: f3c99e81-e683-47a7-b997-92521ad32a31
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [LANGUAGE_NAME]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LanguageSelected = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "LANGUAGE_ID", INTEGER,
+				    "LANGUAGE_NAME", STRING,
+				    {
+				        {1, "English"},
+				        {2, "French"},
+				        {3, "Spanish"}
+				        -- Add more languages as needed
+				    }
+				)
+
+	annotation PBI_Id = 74bc493ebee14144926b73ade2b341a8
+
