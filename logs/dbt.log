@@ -1,0 +1,31 @@
+[0m15:50:43.586147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BC6DB2E0F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BC714D3AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BC7260FDD0>]}
+
+
+============================== 15:50:43.623589 | dcfc4e8d-ff26-4874-90e9-97959a353f04 ==============================
+[0m15:50:43.623589 [info ] [MainThread]: Running with dbt=1.9.3
+[0m15:50:43.623589 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\vincent.cotineau\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init IDL-PBI-Sustain', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:50:43.877398 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/vincent.cotineau/.dbt')}
+[0m15:50:43.877398 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m15:51:08.578418 [debug] [MainThread]: Starter project path: C:\Users\vincent.cotineau\Documents\Repos\IDL-PBI-Sustain\dbt-env\Lib\site-packages\dbt\include\starter_project
+[0m15:51:08.615538 [info ] [MainThread]: 
+Your new dbt project "IDL_PBI_Sustain" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:51:08.627957 [info ] [MainThread]: Setting up your profile.
+[0m15:56:40.765233 [info ] [MainThread]: Profile IDL_PBI_Sustain written to C:\Users\vincent.cotineau\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:56:40.770907 [debug] [MainThread]: Command `dbt init` succeeded at 15:56:40.770907 after 357.40 seconds
+[0m15:56:40.770907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BC6E9413D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BC7339BF80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BC6FCCFD40>]}
+[0m15:56:40.773368 [debug] [MainThread]: Flushing usage events
+[0m15:56:41.070631 [debug] [MainThread]: An error was encountered while trying to flush usage events

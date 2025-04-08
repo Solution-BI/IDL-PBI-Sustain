@@ -1,0 +1,168 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "a41d72684db76ae7231a",
+  "position": {
+    "x": 9.9999999999999716,
+    "y": 2.1428571428571388,
+    "z": 8000,
+    "height": 76,
+    "width": 1006,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "enlightenWorldFlagsE887F52F76244B1C927F80CF9724AEF6",
+    "query": {
+      "queryState": {
+        "code": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "COUNTRY"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "COUNTRY.NAME1",
+              "nativeQueryRef": "NAME1"
+            }
+          ]
+        },
+        "name": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "COUNTRY"
+                    }
+                  },
+                  "Property": "SURNAME"
+                }
+              },
+              "queryRef": "COUNTRY.NAME",
+              "nativeQueryRef": "NAME",
+              "format": "G"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "datalabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "textsize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "minWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "42L"
+                }
+              }
+            },
+            "minHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "22L"
+                }
+              }
+            },
+            "margin": {
+              "expr": {
+                "Literal": {
+                  "Value": "9L"
+                }
+              }
+            },
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wrap'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "0c11f7551b8677d3e57d"
+}

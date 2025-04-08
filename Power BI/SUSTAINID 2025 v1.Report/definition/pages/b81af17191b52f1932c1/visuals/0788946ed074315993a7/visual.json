@@ -1,0 +1,472 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "0788946ed074315993a7",
+  "position": {
+    "x": 272,
+    "y": 192.00000000000003,
+    "z": 12000,
+    "height": 512,
+    "width": 992,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SITE"
+                    }
+                  },
+                  "Property": "NAME"
+                }
+              },
+              "queryRef": "SITE.NAME",
+              "nativeQueryRef": "SITES",
+              "displayName": "SITES"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Site surface"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Site surface",
+              "nativeQueryRef": "Site surface",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Site surface avec mezzanine"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Site surface avec mezzanine",
+              "nativeQueryRef": "Site surface avec mezzanine",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Office surface"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Office surface",
+              "nativeQueryRef": "Office surface",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Total land area"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Total land area",
+              "nativeQueryRef": "Total land area",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Available land area"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Available land area",
+              "nativeQueryRef": "Available land area",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Solar panel roof surface"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Solar panel roof surface",
+              "nativeQueryRef": "Solar panel roof surface",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Roof surface solar panel"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Roof surface solar panel",
+              "nativeQueryRef": "Roof surface solar panel",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Solar shaded parking"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Solar shaded parking",
+              "nativeQueryRef": "Solar shaded parking",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "Shaded area (Parking)"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.Shaded area (Parking)",
+              "nativeQueryRef": "Shaded area (Parking)",
+              "format": "0"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "SITE"
+                  }
+                },
+                "Property": "NAME"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "76.1129159657793D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_ANSWERS.Site surface"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.54791114614471D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_ANSWERS.Site surface avec mezzanine"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "188.87892517143666D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "SITE.NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.4295140361821D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_ANSWERS.Solar panel roof surface"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "108.66317804547973D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_ANSWERS.Available land area"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "87.09348154009106D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_ANSWERS.Total land area"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "82.38049909628342D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_ANSWERS.Roof surface solar panel"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.3757032134397D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_ANSWERS.Solar shaded parking"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.35246686905946D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_ANSWERS.Shaded area (Parking)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#094780'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#094780'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#094780'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#094780'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "FACT_ANSWERS.Site surface"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

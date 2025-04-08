@@ -1,0 +1,63 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["ANSWER","CAMPAIGN_SITE","CATEGORY","CAMPAIGN","COUNTRY","PILLAR","QUESTION","SITE","THEME","FACT_ANSWERS","DB_NAME","LANGUAGE_ANSWER","LANGUAGE_QUESTION","LANGUAGE","LANGUAGE_PILLAR","DATE"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.141.1253.0 (25.03)+74f9999a1e95f78c739f3ea2b96ba340e9ba8729
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_7c51c407-5540-45fb-a0b4-9156c190dbe8
+ref table CAMPAIGN_SITE
+ref table CATEGORY
+ref table LocalDateTable_2fcc14cb-82ef-4b83-acac-f933624b4879
+ref table LocalDateTable_0f25cb67-c54f-4835-9ceb-05ccf314fba6
+ref table LocalDateTable_192eb0b6-9120-45e8-a504-666332e7d4ce
+ref table CAMPAIGN
+ref table LocalDateTable_0aad3da0-9a2f-4989-b2f7-0cc76f67e195
+ref table LocalDateTable_9d05c692-fdb6-4c5a-a41c-59ec7b1fde8f
+ref table LocalDateTable_488f44f8-dddc-419e-9d22-df417f3eedb9
+ref table LocalDateTable_768e8e1b-f7e1-4156-9686-b7300b2b5705
+ref table LocalDateTable_714c941c-2ce7-470b-84e9-a35a73202930
+ref table COUNTRY
+ref table LocalDateTable_ecbfb2e4-6608-4038-86a1-7a38382a20e6
+ref table LocalDateTable_4590d250-7019-4045-a185-96de46e068d7
+ref table LocalDateTable_9c747105-1f56-4fb4-84b2-4a05bdeac470
+ref table LocalDateTable_3fed34b1-5ddf-435e-b2d9-bd8ac14b876c
+ref table PILLAR
+ref table LocalDateTable_28ce1ae5-7620-492d-9fc6-36c53795baf0
+ref table LocalDateTable_c4ca646c-5be6-467b-a2bb-42c26b82ee66
+ref table LocalDateTable_fdb5ea37-c688-434d-949b-68a5ae369263
+ref table QUESTION
+ref table LocalDateTable_734984b2-4889-40e6-be9a-6fc76f26cf46
+ref table LocalDateTable_ea29176c-afd9-4a48-b0df-c6a2571b4662
+ref table LocalDateTable_bafda898-93f1-4120-b008-c016e4eb19e9
+ref table SITE
+ref table LocalDateTable_fb379a9a-0bf5-477c-8453-1f140d0c3539
+ref table LocalDateTable_c6465fdb-b02d-44ac-b784-1fc5412bfb9d
+ref table LocalDateTable_9214fa93-1e18-4f5b-8469-4ea75dbea0fd
+ref table THEME
+ref table LocalDateTable_ffebb91b-bf5d-47c1-8084-6b314062bd4f
+ref table LocalDateTable_a618a4c4-7f92-4e0b-87f9-50a570070ebd
+ref table LocalDateTable_54603a49-f471-416b-b59c-d247be04bd35
+ref table FACT_ANSWERS
+ref table ANSWER
+ref table LocalDateTable_dd8b731d-b512-496d-abcf-44414a320678
+ref table LocalDateTable_5fe092f8-f310-43bb-8a9d-8efe77722e6f
+ref table LocalDateTable_51c98240-b135-4ebf-bcee-ce8b641df77f
+ref table LANGUAGE_ANSWER
+ref table LANGUAGE_QUESTION
+ref table LANGUAGE
+ref table LANGUAGE_PILLAR
+ref table DATE
+ref table LocalDateTable_ee48f3ea-af80-4efa-9c3f-984c3d44b72a
+
+ref cultureInfo fr-FR
+

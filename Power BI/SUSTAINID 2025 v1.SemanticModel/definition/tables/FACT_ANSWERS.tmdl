@@ -1,0 +1,645 @@
+table FACT_ANSWERS
+	lineageTag: 9717762e-33ad-4b09-954b-a7f0f35d106b
+
+	measure RatioQuestionsAnswers = DISTINCTCOUNT(FACT_ANSWERS[ANSWER_ID])/DISTINCTCOUNT(FACT_ANSWERS[QUESTION_ID])
+		displayFolder: Measures
+		lineageTag: d5190fe1-d044-4e76-bf4f-971b0aab9e47
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure MaxScore =
+			CALCULATE(
+			    MAX(ANSWER[MAX_WEIGHT]),
+			    ALL(SITE),
+			    ALL(CAMPAIGN)
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: efa4c691-ab7a-4074-8bf1-fd92583ab15e
+
+	measure Score = ```
+			DIVIDE(
+			    SUMX(FACT_ANSWERS,FACT_ANSWERS[WEIGHT])+0, 
+			    FACT_ANSWERS[MaxScore]
+			)
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 52dd8bcc-22a8-4c7d-971f-abb580febbdd
+
+	measure 'Surface Au Sol'
+		displayFolder: Measures
+		lineageTag: 33cb2172-a02f-4e3f-86b7-f33e3248fe4c
+
+	measure NombreQuestionnairesRemplis =
+			
+			CALCULATE(
+			    DISTINCTCOUNTNOBLANK(FACT_ANSWERS[CAMPAIGN_SITE_ID]),
+			    CAMPAIGN_SITE[IS_FINISHED] = 1
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: f3c82865-5412-45bb-a044-a329daf77670
+
+	measure NombreTotalQuestionnairesEnvoyes =
+			
+			CALCULATE(
+				DISTINCTCOUNTNOBLANK(FACT_ANSWERS[CAMPAIGN_SITE_ID])
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 0d5d9c6c-8b63-47de-bec7-a0fb7671edb8
+
+	measure RatioRemplisPourcentage =
+			
+			DIVIDE(
+			    [NombreQuestionnairesRemplis],
+			    [NombreTotalQuestionnairesEnvoyes]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 7dbd4d17-7b0d-42f0-9e4e-d8caf9323aea
+
+	measure 'NombreQuestionnairesRemplis total for CAMPAIGN_SITE_ID' =
+			
+			CALCULATE(
+				DISTINCTCOUNTNOBLANK(FACT_ANSWERS[CAMPAIGN_SITE_ID])
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: f5326679-0a79-495e-9a48-b6fb0f954ad2
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "TotalForSelectedCategory"
+				}
+
+		changedProperty = FormatString
+
+	measure TotalPointsDisponibles =
+			
+			SUMX(
+			    ANSWER,
+			    IF(
+			        ANSWER[IS_NA] = 0,
+			        ANSWER[WEIGHT],
+			        0
+			    )
+			)
+		displayFolder: Measures
+		lineageTag: ab03ba9b-58ce-4c3e-b711-a7641f6a6f1c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TotalPointsObtenus =
+			
+			SUM(FACT_ANSWERS[WEIGHT])
+		displayFolder: Measures
+		lineageTag: b252eedf-d8c3-45e3-b85f-ace7604cb99f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ScoreMoyenGlobalPourcentage =
+			
+			DIVIDE(
+			    [TotalPointsObtenus],
+			    [TotalPointsDisponibles],
+			    0
+			) * 100
+		displayFolder: Measures
+		lineageTag: 124b84bd-039d-4190-9cba-2ca842cdb7b5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure NombreReponsesParQuestion =
+			
+			VAR QuestionSelectionnee = SELECTEDVALUE(QUESTION[ID])
+			RETURN
+			    IF(
+			        ISBLANK(QuestionSelectionnee),
+			        0, -- Si aucune question n'est sélectionnée
+			        IF(
+			            CALCULATE(COUNTROWS(ANSWER), FACT_ANSWERS[QUESTION_ID] = QuestionSelectionnee) = 0,
+			            0, -- Si la question sélectionnée n'a pas de réponse
+			            CALCULATE(COUNTROWS(ANSWER), FACT_ANSWERS[QUESTION_ID] = QuestionSelectionnee) -- Retourne le nombre de réponses
+			        )
+			    )
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: fcd8a9ef-1b35-4377-90fd-ca1ca40e78ac
+
+	measure TotalResponses = ```
+			
+			VAR FilteredAnswers =
+			    FILTER(
+			        'FACT_ANSWERS',
+			        'FACT_ANSWERS'[QUESTION_ID] IN 
+			            SELECTCOLUMNS(FILTER('QUESTION', 'QUESTION'[CODE] >= "ID.010" && 'QUESTION'[CODE] <= "ID.018"), "QUESTION_ID", 'QUESTION'[ID])
+			    )
+			RETURN
+			    SUMX(
+			        FilteredAnswers,
+			        IFERROR(VALUE('FACT_ANSWERS'[ANSWER_VALUE]), 0)
+			    )
+			```
+		displayFolder: Measures
+		lineageTag: 4e49ca2f-c889-4f86-b373-6ab268b43cf5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure MoyenneScoresParPillier =
+			
+			CALCULATE(
+			    AVERAGEX(
+			        FILTER(FACT_ANSWERS, FACT_ANSWERS[PILLAR_ID] = SELECTEDVALUE(PILLAR[ID])),
+			        FACT_ANSWERS[WEIGHT]
+			    )
+			)
+		displayFolder: Measures
+		lineageTag: cc3d0aef-88fc-4ee6-9240-3257c834270b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure MoyenneScoresParPillier_Site =
+			
+			CALCULATE(
+			    AVERAGEX(
+			        FILTER(
+			            FACT_ANSWERS,
+			            FACT_ANSWERS[PILLAR_ID] = SELECTEDVALUE(PILLAR[ID]) &&
+			            FACT_ANSWERS[SITE_ID] = SELECTEDVALUE(SITE[ID])
+			        ),
+			        FACT_ANSWERS[WEIGHT]
+			    )
+			)
+		displayFolder: Measures
+		lineageTag: ced56a2f-3527-4120-b1a9-d1493ca8b6e7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure AvgScore = CALCULATE(AVERAGEX(FACT_ANSWERS,FACT_ANSWERS[Score]), KEEPFILTERS('LANGUAGE'))
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 7a105a96-7823-4009-b706-cd9a050d3abc
+
+	measure 'Site surface' = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.010"))
+		displayFolder: Measures
+		lineageTag: f4e82084-bd7a-4a49-ab66-5e97ba54f57c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Site surface avec mezzanine' = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.011"))
+		displayFolder: Measures
+		lineageTag: 4d858f4e-4722-4dd6-8eec-2c2984b2b953
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Office surface' = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.012"))
+		displayFolder: Measures
+		lineageTag: b73cf088-a41e-44d4-b086-7c535b86d6a9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total land area' = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.013"))
+		displayFolder: Measures
+		lineageTag: a9253157-16e0-440d-a560-0ab3826efe79
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Available land area' = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.014"))
+		displayFolder: Measures
+		lineageTag: 08a3d715-23d5-4f9a-988b-93908177512e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Solar panel roof surface' = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.015"))
+		displayFolder: Measures
+		lineageTag: 3247250e-cd24-45cc-b8c1-82b645dd4157
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Roof surface solar panel' = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.016"))
+		displayFolder: Measures
+		lineageTag: 2a901925-4801-4895-9232-34135fd80582
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Solar shaded parking' = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.017"))
+		displayFolder: Measures
+		lineageTag: d01c6945-fbf7-41bb-a8f0-82d2f31960f8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Shaded area (Parking)' = CALCULATE(SUMX(FACT_ANSWERS, IFERROR(VALUE(FACT_ANSWERS[ANSWER_VALUE]), 0)), FILTER(FACT_ANSWERS,RELATED(QUESTION[CODE]) = "ID.015"))
+		displayFolder: Measures
+		lineageTag: a2239bdb-ae79-4d3e-bb43-626a09254b76
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nombre de site' = CALCULATE(DISTINCTCOUNT(SITE[ID]), REMOVEFILTERS(SITE))
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 37a6a725-2e7c-4537-b95b-4545244b9632
+
+	measure 'Nombre Vertical' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_ID]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.004"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 9bb7cef7-2f3e-442a-8738-d593d160541f
+
+	measure 'Proportion Vertical' =
+			
+			DIVIDE([Nombre Vertical], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 21da9324-83d3-4cc9-bbda-a56918b9e24d
+
+	measure 'Nombre Main activity' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_VALUE]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.005"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 12d751e5-d6ce-4e25-bbeb-ea1ea0165868
+
+	measure 'Proportion main activity' =
+			
+			DIVIDE([Nombre Main activity], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 5dbbd283-91dd-4fc8-bf5e-3cb8c6221d27
+
+	measure 'Nombre Secondary activity' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_VALUE]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.006"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 08c02015-1362-42c6-9cac-950a3c82684c
+
+	measure 'Proportion Secondary Activity' =
+			
+			DIVIDE([Nombre Secondary activity], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 25d92bb2-3ed3-4783-a431-1dc6fcbb2a9d
+
+	measure 'Nombre Temperature' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_ID]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.009"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 64e1f30e-5b07-4dcc-959e-5e72ee45a279
+
+	measure 'Proportion Temperature' =
+			
+			DIVIDE([Nombre Temperature], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 91244166-c2c7-4666-aa2e-6e2001a51f35
+
+	measure 'Nombre Energy Management device' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_VALUE]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.019"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 40d113b1-2f95-4977-b5c3-3c8f9e012bdf
+
+	measure 'Proportion Energy Management Device' =
+			
+			DIVIDE([Nombre Energy Management device], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 6b509ec3-a0d2-41fe-886d-9b7d050c4ae5
+
+	measure 'Nombre Energy Storage' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_VALUE]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.020"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: be8818e6-6364-4e74-873c-6323341ac841
+
+	measure 'Proportion Energy Storage' =
+			
+			DIVIDE([Nombre Energy Storage], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: bd17c52c-f2df-47ab-9cf7-a90b31f9d116
+
+	measure 'Nombre Presence generator' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_VALUE]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.021"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 01332992-db70-4e9a-afa2-8510e9d2eebd
+
+	measure 'Proportion Presence generator' =
+			
+			DIVIDE([Nombre Presence generator], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 4e897b68-6360-4b09-85a6-3e05ca89f5f4
+
+	measure 'Nombre Construction type' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_ID]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.022"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: f2bc918d-bb33-46c8-9fd4-c23a2163eb0a
+
+	measure 'Proportion Construction type' =
+			
+			DIVIDE([Nombre Construction type], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: 63178b08-3291-4c9c-8eac-d4bbfc12dfae
+
+	measure 'Nombre Env Certification' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_ID]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.023"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: b5725c24-5037-488c-9327-0a815239d221
+
+	measure 'Proportion Env certification' =
+			
+			DIVIDE([Nombre Env Certification], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: c8d61cc0-1318-490b-bc1f-927fd4739076
+
+	measure 'Nombre Environment Risk Zone' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_VALUE]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.024"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 5f91e2a2-76f6-46a5-b9ed-96cfe41e6707
+
+	measure 'Proportion Environement Risk Zone' =
+			
+			DIVIDE([Nombre Environment Risk Zone], [Nombre de site], 0)
+		displayFolder: Measures
+		lineageTag: c877b05a-7e4f-4256-96a5-019037c906d3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nombre Security Building Class' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_ID]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.025"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: c28973a0-ce37-4c7b-9e71-cd4dd0641191
+
+	measure 'Proportion Security Building Class' =
+			
+			DIVIDE([Nombre Security Building Class], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: d64239ed-fb0d-40d6-bd02-e89d49570a7f
+
+	measure 'Nombre Performance certif energy' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_ID]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.026"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 8e3560f3-2be0-487a-868b-ef12b12dd4f1
+
+	measure 'Proportion Perform Certif Energy' =
+			
+			DIVIDE([Nombre Performance certif energy], [Nombre de site], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Measures
+		lineageTag: b8607e43-684e-4b1d-87c8-0c9668177630
+
+	measure 'Nombre Intramural Canteen' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_VALUE]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.028"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: 64046cc6-f2c9-4821-8dfa-b9003805a39e
+
+	measure 'Proportion Intramural Canteen' =
+			
+			DIVIDE([Nombre Intramural Canteen], [Nombre de site], 0)
+		displayFolder: Measures
+		lineageTag: 62148ac2-fc83-420e-a182-19d31337ff38
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nombre Operation Type' =
+			
+			CALCULATE(
+			    COUNT(FACT_ANSWERS[ANSWER_ID]),
+			    FILTER(
+			        FACT_ANSWERS,
+			        RELATED(QUESTION[CODE]) = "ID.029"
+			    )
+			)
+		formatString: 0
+		displayFolder: Measures
+		lineageTag: e965e650-3d40-45eb-853d-b46c6852a509
+
+	measure 'Proportion Operation Type' =
+			
+			DIVIDE([Nombre Operation Type], [Nombre de site], 0)
+		displayFolder: Measures
+		lineageTag: ff52ff3e-d8f8-40b1-9eab-8f8252b0cfe4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COUNTRY_ID
+		dataType: string
+		displayFolder: Details
+		lineageTag: c7aeef56-a06d-4c2a-81af-f5dbc553761b
+		summarizeBy: none
+		sourceColumn: COUNTRY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_ID
+		dataType: string
+		displayFolder: Details
+		lineageTag: fae01c71-f0f1-4d00-84a4-7f4f96600e63
+		summarizeBy: none
+		sourceColumn: SITE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CAMPAIGN_ID
+		dataType: string
+		displayFolder: Details
+		lineageTag: d71a60bb-a2db-43bc-993a-115e45379f71
+		summarizeBy: none
+		sourceColumn: CAMPAIGN_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PILLAR_ID
+		dataType: string
+		displayFolder: Details
+		lineageTag: c88211f2-476b-4dca-a0eb-2bb539247d1e
+		summarizeBy: none
+		sourceColumn: PILLAR_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column THEME_ID
+		dataType: string
+		displayFolder: Details
+		lineageTag: f7335d96-fca2-4150-93d8-3670a9c97c3c
+		summarizeBy: none
+		sourceColumn: THEME_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_ID
+		dataType: string
+		displayFolder: Details
+		lineageTag: 979dfb0b-bffe-41a3-86c2-14a290cd95bf
+		summarizeBy: none
+		sourceColumn: CATEGORY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column QUESTION_ID
+		dataType: string
+		displayFolder: Details
+		lineageTag: 14cfd092-9c20-40bd-a44b-1917e16fa0a6
+		summarizeBy: none
+		sourceColumn: QUESTION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANSWER_ID
+		dataType: string
+		displayFolder: Details
+		lineageTag: 23f3cffc-4f94-40e7-a4db-97b56c742f1e
+		summarizeBy: none
+		sourceColumn: ANSWER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column WEIGHT
+		dataType: int64
+		displayFolder: Details
+		lineageTag: 904109e8-c619-4fae-a3f2-c72b9b3addcd
+		summarizeBy: none
+		sourceColumn: WEIGHT
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CAMPAIGN_SITE_ID
+		dataType: string
+		displayFolder: Details
+		lineageTag: 6f5e9951-0ba1-4f59-a777-a44aff7518a7
+		summarizeBy: none
+		sourceColumn: CAMPAIGN_SITE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANSWER_VALUE
+		dataType: string
+		displayFolder: Details
+		lineageTag: 96a11b2a-d1cd-4dd9-a75c-497f50768dd4
+		summarizeBy: none
+		sourceColumn: ANSWER_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FACT_ANSWERS = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("UY39352-IDLOGISTICS.snowflakecomputing.com","WH_DEV_GRP"),
+				    DB_DEV_GRP_Database = Source{[Name=DB_NAME,Kind="Database"]}[Data],
+				    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name="DWH_SUSTAIN_ID",Kind="Schema"]}[Data],
+				    FACT_ANSWERS_Table = DWH_SUSTAIN_ID_Schema{[Name="FACT_ANSWERS",Kind="Table"]}[Data]
+				in
+				    FACT_ANSWERS_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

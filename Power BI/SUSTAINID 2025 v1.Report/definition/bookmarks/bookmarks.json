@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "e8d0017dd7625710c193"
+    },
+    {
+      "name": "ec6c5b306abe3ca20e4a"
+    },
+    {
+      "name": "32b0d87c4a00a17cc7a0"
+    },
+    {
+      "name": "7adfd7aff94384ef16a9",
+      "displayName": "Questions Details",
+      "children": [
+        "bcd021f07b09d8792734",
+        "7fb440df11c137e9c827",
+        "ae02b088bb15ed4505a9",
+        "9c1b14b2505facd1fb60"
+      ]
+    }
+  ]
+}

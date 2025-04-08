@@ -1,0 +1,170 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "e06097780e301174db6e",
+  "position": {
+    "x": 61.887950882578629,
+    "y": 87.569345466505851,
+    "z": 2000,
+    "height": 174.85801995395241,
+    "width": 399.81580966999229,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "gauge",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_ANSWERS"
+                    }
+                  },
+                  "Property": "AvgScore"
+                }
+              },
+              "queryRef": "FACT_ANSWERS.AvgScore",
+              "nativeQueryRef": "World average score",
+              "displayName": "World average score"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_ANSWERS"
+                  }
+                },
+                "Property": "AvgScore"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "target": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#47ED4F'"
+                    }
+                  }
+                }
+              }
+            },
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "FACT_ANSWERS"
+                            }
+                          },
+                          "Property": "AvgScore"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient3": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#EF3333'"
+                              }
+                            },
+                            "value": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          },
+                          "mid": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#F2E422'"
+                              }
+                            },
+                            "value": {
+                              "Literal": {
+                                "Value": "0.1D"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#86D848'"
+                              }
+                            },
+                            "value": {
+                              "Literal": {
+                                "Value": "1D"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "target": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "0c11f7551b8677d3e57d"
+}

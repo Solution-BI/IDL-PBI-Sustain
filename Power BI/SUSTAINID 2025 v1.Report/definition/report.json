@@ -1,0 +1,136 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.2.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU10",
+      "reportVersionAtImport": "5.61",
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Storm",
+      "reportVersionAtImport": "5.61",
+      "type": "SharedResources"
+    }
+  },
+  "layoutOptimization": "None",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "24c04a07429691896b4e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "LANGUAGE"
+              }
+            },
+            "Property": "NAME"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "advanceCardE03760C5AB684758B56AA29F9E6C257B",
+    "InforiverFilterF39DAE8D57A743EF89F5C3809DEE2B69",
+    "enlightenWorldFlagsE887F52F76244B1C927F80CF9724AEF6"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
+          "type": "BaseTheme"
+        },
+        {
+          "name": "Storm",
+          "path": "BuiltInThemes/Storm.json",
+          "type": "CustomTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Screenshot_2025-03-21_11111413357216317949439.png",
+          "path": "Screenshot_2025-03-21_11111413357216317949439.png",
+          "type": "Image"
+        },
+        {
+          "name": "shuttle8623717551441217.png",
+          "path": "shuttle8623717551441217.png",
+          "type": "Image"
+        },
+        {
+          "name": "calendar6516768425399286.png",
+          "path": "calendar6516768425399286.png",
+          "type": "Image"
+        },
+        {
+          "name": "location5356557505609774.png",
+          "path": "location5356557505609774.png",
+          "type": "Image"
+        },
+        {
+          "name": "system688417175229741.png",
+          "path": "system688417175229741.png",
+          "type": "Image"
+        },
+        {
+          "name": "48463332545790471514513.png",
+          "path": "48463332545790471514513.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}
