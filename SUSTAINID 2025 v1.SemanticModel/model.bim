@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"ANSWER\",\"CAMPAIGN_SITE\",\"CATEGORY\",\"CAMPAIGN\",\"COUNTRY\",\"PILLAR\",\"QUESTION\",\"SITE\",\"THEME\",\"FACT_ANSWERS\",\"DB_NAME\",\"LANGUAGE_ANSWER\",\"LANGUAGE_QUESTION\",\"LANGUAGE\",\"LANGUAGE_PILLAR\",\"DATE\"]"
+        "value": "[\"DB_NAME\",\"ANSWER\",\"CAMPAIGN_SITE\",\"CATEGORY\",\"CAMPAIGN\",\"COUNTRY\",\"PILLAR\",\"QUESTION\",\"SITE\",\"THEME\",\"FACT_ANSWERS\",\"LANGUAGE_ANSWER\",\"LANGUAGE_QUESTION\",\"LANGUAGE\",\"LANGUAGE_PILLAR\",\"DATE\",\"LANGUAGE_CATEGORY\",\"LANGUAGE_THEME\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.141.1253.0 (25.03)+74f9999a1e95f78c739f3ea2b96ba340e9ba8729"
+        "value": "2.141.1451.0 (25.03)+5007b75f0f7edbed506e31fcb76584cd6d711788"
       },
       {
         "name": "PBI_ProTooling",
@@ -33690,6 +33690,20 @@
         "isActive": false,
         "toColumn": "ID",
         "toTable": "QUESTION"
+      },
+      {
+        "name": "AutoDetected_4559b00b-9404-4ac1-9ab8-5b0f63506b5c",
+        "fromColumn": "CATEGORY_ID",
+        "fromTable": "LANGUAGE_CATEGORY",
+        "toColumn": "ID",
+        "toTable": "CATEGORY"
+      },
+      {
+        "name": "AutoDetected_c4fb894c-7d6c-4086-af7a-b897e368abf3",
+        "fromColumn": "THEME_ID",
+        "fromTable": "LANGUAGE_THEME",
+        "toColumn": "ID",
+        "toTable": "THEME"
       }
     ],
     "sourceQueryCulture": "fr-FR",
@@ -34186,6 +34200,24 @@
           }
         ],
         "lineageTag": "10dee437-28cb-4d8a-93f7-8d8815a171a9",
+        "measures": [
+          {
+            "name": "Translated category",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    TOPN(1, VALUES(LANGUAGE_CATEGORY[VALUE])),",
+              "    FILTER(",
+              "        LANGUAGE_CATEGORY,",
+              "        LANGUAGE_CATEGORY[LANGUAGE_ID] = SELECTEDVALUE('LANGUAGE'[ID])",
+              "    ),",
+              "    USERELATIONSHIP(CATEGORY[ID], LANGUAGE_CATEGORY[CATEGORY_ID])",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "5fb621ab-6076-4e47-bb5a-9fdf02db72ce"
+          }
+        ],
         "partitions": [
           {
             "name": "CATEGORY",
@@ -37317,6 +37349,24 @@
           }
         ],
         "lineageTag": "c19fe176-9100-4e64-b0f7-335dd7feb694",
+        "measures": [
+          {
+            "name": "Translated pillar",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    TOPN(1, VALUES(LANGUAGE_PILLAR[VALUE])),",
+              "    FILTER(",
+              "        LANGUAGE_PILLAR,",
+              "        LANGUAGE_PILLAR[LANGUAGE_ID] = SELECTEDVALUE('LANGUAGE'[ID])",
+              "    ),",
+              "    USERELATIONSHIP(PILLAR[ID], LANGUAGE_PILLAR[PILLAR_ID])",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "83f88c26-335e-40f9-af14-7f25ee3416f9"
+          }
+        ],
         "partitions": [
           {
             "name": "PILLAR",
@@ -38187,32 +38237,6 @@
                 "relationship": "aa443d29-57b4-422b-b5cc-e25991b5e304"
               }
             ]
-          },
-          {
-            "name": "Translated Label Measure",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "expression": [
-              "",
-              "VAR SelectedLanguageID = SELECTEDVALUE(LanguageSelection[LanguageID])",
-              "RETURN",
-              "CALCULATE(",
-              "    FIRSTNONBLANK(LANGUAGE_QUESTION[LABEL], TRUE()),",
-              "    FILTER(",
-              "        LANGUAGE_QUESTION,",
-              "        LANGUAGE_QUESTION[LANGUAGE_ID] = SelectedLanguageID &&",
-              "        LANGUAGE_QUESTION[QUESTION_ID] = SELECTEDVALUE(QUESTION[ID])",
-              "    ),",
-              "    USERELATIONSHIP(QUESTION[ID], LANGUAGE_QUESTION[QUESTION_ID])",
-              ")"
-            ],
-            "lineageTag": "2df5f583-74bc-4a3f-b27d-b6b64540ba44",
-            "summarizeBy": "none",
-            "type": "calculated"
           }
         ],
         "lineageTag": "37b0b0bb-a454-46d4-b02d-b12efdcfb59d",
@@ -38231,12 +38255,6 @@
               ")"
             ],
             "lineageTag": "3f958586-a7af-4d37-bae7-f12b4d6d5ba4"
-          },
-          {
-            "name": "Selected Language",
-            "expression": "SELECTEDVALUE('LANGUAGE'[ID])",
-            "formatString": "0",
-            "lineageTag": "2f8e24dc-e468-473a-bbf5-90bac6fd7ce7"
           }
         ],
         "partitions": [
@@ -39975,6 +39993,24 @@
           }
         ],
         "lineageTag": "4ed387cb-cb58-45fe-9217-0dbd211f0c33",
+        "measures": [
+          {
+            "name": "Translated theme",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    TOPN(1, VALUES(LANGUAGE_THEME[VALUE])),",
+              "    FILTER(",
+              "        LANGUAGE_THEME,",
+              "        LANGUAGE_THEME[LANGUAGE_ID] = SELECTEDVALUE('LANGUAGE'[ID])",
+              "    ),",
+              "    USERELATIONSHIP(THEME[ID], LANGUAGE_THEME[THEME_ID])",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "00cc5169-7da8-4690-af29-55303ff9d859"
+          }
+        ],
         "partitions": [
           {
             "name": "THEME",
@@ -40772,6 +40808,37 @@
             "lineageTag": "96a11b2a-d1cd-4dd9-a75c-497f50768dd4",
             "sourceColumn": "ANSWER_VALUE",
             "summarizeBy": "none"
+          },
+          {
+            "name": "ExtractYearFromAnswer",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "displayFolder": "Details",
+            "expression": [
+              "",
+              "VAR DatePart =",
+              "    IF(",
+              "        ISERROR(DATEVALUE(LEFT([ANSWER_VALUE], 10))),",
+              "        BLANK(),",
+              "        LEFT([ANSWER_VALUE], 10)",
+              "    )",
+              "RETURN",
+              "IF(",
+              "    NOT(ISBLANK(DatePart)),",
+              "    YEAR(DATEVALUE(DatePart)),",
+              "    BLANK() // Or use a fallback value like 0 or \"N/A\"",
+              ")"
+            ],
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "c2d8a99a-8f8a-4ba2-8e86-ca56a35e4e47",
+            "summarizeBy": "sum",
+            "type": "calculated"
           }
         ],
         "lineageTag": "9717762e-33ad-4b09-954b-a7f0f35d106b",
@@ -41034,6 +41101,57 @@
             "expression": "CALCULATE(AVERAGEX(FACT_ANSWERS,FACT_ANSWERS[Score]), KEEPFILTERS('LANGUAGE'))",
             "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
             "lineageTag": "7a105a96-7823-4009-b706-cd9a050d3abc"
+          },
+          {
+            "name": "CountAnswersByYear",
+            "displayFolder": "Measures",
+            "expression": [
+              "",
+              "COUNTROWS(",
+              "    FILTER(",
+              "        FACT_ANSWERS,",
+              "        NOT(ISBLANK([ExtractYearFromAnswer]))",
+              "    )",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "96f35933-2001-4123-86d0-34cee234b489"
+          },
+          {
+            "name": "CountSiteOpenedByYear",
+            "displayFolder": "Measures",
+            "expression": [
+              "CALCULATE(",
+              "    SUMX(FACT_ANSWERS,[CountAnswersByYear]),",
+              "    QUESTION[CODE] = \"ID.007\"",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "a9300a9f-b12f-463d-912f-a388ac48bef2"
+          },
+          {
+            "name": "CountLastAuditByYear",
+            "displayFolder": "Measures",
+            "expression": [
+              "CALCULATE(",
+              "    SUMX(FACT_ANSWERS,[CountAnswersByYear]),",
+              "    QUESTION[CODE] = \"ID.027\"",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "fd28287e-2eb7-4656-b93e-479182131353"
+          },
+          {
+            "name": "CountSiteBuiltByYear",
+            "displayFolder": "Measures",
+            "expression": [
+              "CALCULATE(",
+              "    SUMX(FACT_ANSWERS,[CountAnswersByYear]),",
+              "    QUESTION[CODE] = \"ID.008\"",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "4aa3ae5c-2b72-4041-88f4-61ad27c2aa44"
           }
         ],
         "partitions": [
@@ -41301,14 +41419,16 @@
             "name": "Translated answer",
             "expression": [
               "",
-              "var selectedQuestion =  TREATAS({SELECTEDVALUE(ANSWER[ID])},LANGUAGE_ANSWER[ANSWER_ID])",
-              "return ",
               "CALCULATE(",
-              "    DISTINCT(LANGUAGE_ANSWER[VALUE]),",
-              "    selectedQuestion,",
-              "    USERELATIONSHIP(ANSWER[ID],LANGUAGE_ANSWER[ANSWER_ID])",
+              "    TOPN(1, VALUES(LANGUAGE_ANSWER[VALUE])),",
+              "    FILTER(",
+              "        LANGUAGE_ANSWER,",
+              "        LANGUAGE_ANSWER[LANGUAGE_ID] = SELECTEDVALUE('LANGUAGE'[ID])",
+              "    ),",
+              "    USERELATIONSHIP(ANSWER[ID], LANGUAGE_ANSWER[ANSWER_ID])",
               ")"
             ],
+            "formatString": "0",
             "lineageTag": "de257035-634f-412a-9590-ba7eceacba37"
           }
         ],
@@ -41320,7 +41440,7 @@
               "expression": [
                 "let",
                 "    Source = Snowflake.Databases(\"UY39352-IDLOGISTICS.snowflakecomputing.com\",\"WH_DEV_GRP\"),",
-                "    DB_DEV_GRP_Database = Source{[Name=\"DB_DEV_GRP\",Kind=\"Database\"]}[Data],",
+                "    DB_DEV_GRP_Database = Source{[Name=DB_NAME,Kind=\"Database\"]}[Data],",
                 "    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name=\"DWH_SUSTAIN_ID\",Kind=\"Schema\"]}[Data],",
                 "    ANSWER_Table = DWH_SUSTAIN_ID_Schema{[Name=\"DIM_ANSWER\",Kind=\"Table\"]}[Data]",
                 "in",
@@ -41996,7 +42116,7 @@
               "expression": [
                 "let",
                 "    Source = Snowflake.Databases(\"UY39352-IDLOGISTICS.snowflakecomputing.com\",\"WH_DEV_GRP\"),",
-                "    DB_DEV_GRP_Database = Source{[Name=\"DB_DEV_GRP\",Kind=\"Database\"]}[Data],",
+                "    DB_DEV_GRP_Database = Source{[Name=DB_NAME,Kind=\"Database\"]}[Data],",
                 "    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name=\"DWH_SUSTAIN_ID\",Kind=\"Schema\"]}[Data],",
                 "    LANGUAGE_ANSWER_Table = DWH_SUSTAIN_ID_Schema{[Name=\"LANGUAGE_ANSWER\",Kind=\"Table\"]}[Data]",
                 "in",
@@ -42094,7 +42214,7 @@
               "expression": [
                 "let",
                 "    Source = Snowflake.Databases(\"UY39352-IDLOGISTICS.snowflakecomputing.com\",\"WH_DEV_GRP\"),",
-                "    DB_DEV_GRP_Database = Source{[Name=\"DB_DEV_GRP\",Kind=\"Database\"]}[Data],",
+                "    DB_DEV_GRP_Database = Source{[Name=DB_NAME,Kind=\"Database\"]}[Data],",
                 "    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name=\"DWH_SUSTAIN_ID\",Kind=\"Schema\"]}[Data],",
                 "    LANGUAGE_QUESTION_Table = DWH_SUSTAIN_ID_Schema{[Name=\"LANGUAGE_QUESTION\",Kind=\"Table\"]}[Data]",
                 "in",
@@ -42173,7 +42293,7 @@
               "expression": [
                 "let",
                 "    Source = Snowflake.Databases(\"UY39352-IDLOGISTICS.snowflakecomputing.com\",\"WH_DEV_GRP\"),",
-                "    DB_DEV_GRP_Database = Source{[Name=\"DB_DEV_GRP\",Kind=\"Database\"]}[Data],",
+                "    DB_DEV_GRP_Database = Source{[Name=DB_NAME,Kind=\"Database\"]}[Data],",
                 "    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name=\"DWH_SUSTAIN_ID\",Kind=\"Schema\"]}[Data],",
                 "    LANGUAGE_Table = DWH_SUSTAIN_ID_Schema{[Name=\"LANGUAGE\",Kind=\"Table\"]}[Data]",
                 "in",
@@ -42246,7 +42366,7 @@
               "expression": [
                 "let",
                 "    Source = Snowflake.Databases(\"UY39352-IDLOGISTICS.snowflakecomputing.com\",\"WH_DEV_GRP\"),",
-                "    DB_DEV_GRP_Database = Source{[Name=\"DB_DEV_GRP\",Kind=\"Database\"]}[Data],",
+                "    DB_DEV_GRP_Database = Source{[Name=DB_NAME,Kind=\"Database\"]}[Data],",
                 "    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name=\"DWH_SUSTAIN_ID\",Kind=\"Schema\"]}[Data],",
                 "    LANGUAGE_PILLAR_Table = DWH_SUSTAIN_ID_Schema{[Name=\"LANGUAGE_PILLAR\",Kind=\"Table\"]}[Data]",
                 "in",
@@ -42684,11 +42804,15 @@
         "showAsVariationsOnly": true
       },
       {
-        "name": "LanguageSelected",
+        "name": "LANGUAGE_CATEGORY",
         "annotations": [
           {
-            "name": "PBI_Id",
-            "value": "74bc493ebee14144926b73ade2b341a8"
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
           }
         ],
         "columns": [
@@ -42700,17 +42824,13 @@
                 "value": "Automatic"
               }
             ],
-            "dataType": "int64",
-            "formatString": "0",
-            "isDataTypeInferred": true,
-            "isNameInferred": true,
-            "lineageTag": "1efcb39f-f59b-4afe-9673-609a981be2c8",
-            "sourceColumn": "[LANGUAGE_ID]",
-            "summarizeBy": "count",
-            "type": "calculatedTableColumn"
+            "dataType": "string",
+            "lineageTag": "ce9fb05b-5426-43ae-b1ca-444c6dff5310",
+            "sourceColumn": "LANGUAGE_ID",
+            "summarizeBy": "none"
           },
           {
-            "name": "LANGUAGE_NAME",
+            "name": "CATEGORY_ID",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -42718,34 +42838,113 @@
               }
             ],
             "dataType": "string",
-            "isDataTypeInferred": true,
-            "isNameInferred": true,
-            "lineageTag": "f3c99e81-e683-47a7-b997-92521ad32a31",
-            "sourceColumn": "[LANGUAGE_NAME]",
-            "summarizeBy": "none",
-            "type": "calculatedTableColumn"
+            "lineageTag": "1ac448db-d03f-4109-825c-2af827a3384b",
+            "sourceColumn": "CATEGORY_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "VALUE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "33114ad2-4984-483e-bef4-bbecf60b12e1",
+            "sourceColumn": "VALUE",
+            "summarizeBy": "none"
           }
         ],
-        "lineageTag": "0a70ea5f-78c0-447d-ba82-b4daf7895fef",
+        "lineageTag": "70e08896-4bf7-4a17-a26a-00d15841e34f",
         "partitions": [
           {
-            "name": "LanguageSelected",
+            "name": "LANGUAGE_CATEGORY",
             "mode": "import",
             "source": {
               "expression": [
-                "",
-                "DATATABLE(",
-                "    \"LANGUAGE_ID\", INTEGER,",
-                "    \"LANGUAGE_NAME\", STRING,",
-                "    {",
-                "        {1, \"English\"},",
-                "        {2, \"French\"},",
-                "        {3, \"Spanish\"}",
-                "        -- Add more languages as needed",
-                "    }",
-                ")"
+                "let",
+                "    Source = Snowflake.Databases(\"UY39352-IDLOGISTICS.snowflakecomputing.com\",\"WH_DEV_GRP\"),",
+                "    DB_DEV_GRP_Database = Source{[Name=DB_NAME,Kind=\"Database\"]}[Data],",
+                "    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name=\"DWH_SUSTAIN_ID\",Kind=\"Schema\"]}[Data],",
+                "    LANGUAGE_CATEGORY_Table = DWH_SUSTAIN_ID_Schema{[Name=\"LANGUAGE_CATEGORY\",Kind=\"Table\"]}[Data]",
+                "in",
+                "    LANGUAGE_CATEGORY_Table"
               ],
-              "type": "calculated"
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LANGUAGE_THEME",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "LANGUAGE_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c778324c-993a-42c7-b810-87b8ce9d1cde",
+            "sourceColumn": "LANGUAGE_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "THEME_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "02cc85af-ecb0-4ba6-8495-ece296e010fa",
+            "sourceColumn": "THEME_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "VALUE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1bb6cba6-ad08-4cc6-9e4b-c496b9137527",
+            "sourceColumn": "VALUE",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d6b92423-4b08-493d-ad41-d4ae5d783d1e",
+        "partitions": [
+          {
+            "name": "LANGUAGE_THEME",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Snowflake.Databases(\"UY39352-IDLOGISTICS.snowflakecomputing.com\",\"WH_DEV_GRP\"),",
+                "    DB_DEV_GRP_Database = Source{[Name=#\"DB_NAME\",Kind=\"Database\"]}[Data],",
+                "    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name=\"DWH_SUSTAIN_ID\",Kind=\"Schema\"]}[Data],",
+                "    LANGUAGE_THEME_Table = DWH_SUSTAIN_ID_Schema{[Name=\"LANGUAGE_THEME\",Kind=\"Table\"]}[Data]",
+                "in",
+                "    LANGUAGE_THEME_Table"
+              ],
+              "type": "m"
             }
           }
         ]
