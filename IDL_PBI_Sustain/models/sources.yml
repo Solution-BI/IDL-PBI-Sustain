@@ -18,6 +18,8 @@ sources:
       - name: LANGUAGE_ANSWER
       - name: LANGUAGE_QUESTION
       - name: LANGUAGE_PILLAR
+      - name: LANGUAGE_CATEGORY
+      - name: LANGUAGE_THEME
       - name: EVALUATION
 
         
