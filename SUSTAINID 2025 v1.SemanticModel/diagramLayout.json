@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 24.000000953674316,
+        "x": 71.371825662075935,
         "y": 0
       },
       "nodes": [
@@ -32,7 +32,7 @@
             "height": 317.26799199793908,
             "width": 234
           },
-          "zIndex": 14
+          "zIndex": 11
         },
         {
           "location": {
@@ -45,7 +45,7 @@
             "height": 205.63733258895559,
             "width": 234
           },
-          "zIndex": 8
+          "zIndex": 6
         },
         {
           "location": {
@@ -62,7 +62,7 @@
         },
         {
           "location": {
-            "x": 1213.7119413048424,
+            "x": 1149.0473131774297,
             "y": 0
           },
           "nodeIndex": "COUNTRY",
@@ -84,7 +84,7 @@
             "height": 304.87179487179503,
             "width": 234
           },
-          "zIndex": 12
+          "zIndex": 9
         },
         {
           "location": {
@@ -110,7 +110,7 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 9
+          "zIndex": 7
         },
         {
           "location": {
@@ -127,42 +127,16 @@
         },
         {
           "location": {
-            "x": 1608.04117832553,
-            "y": 490.92448182407139
+            "x": 1563.444883065245,
+            "y": 502.07355563914257
           },
           "nodeIndex": "FACT_ANSWERS",
           "nodeLineageTag": "9717762e-33ad-4b09-954b-a7f0f35d106b",
           "size": {
-            "height": 300,
+            "height": 288.85092618492888,
             "width": 234
           },
-          "zIndex": 10
-        },
-        {
-          "location": {
-            "x": 2167.7692271018745,
-            "y": 796.27994769156419
-          },
-          "nodeIndex": "LANGUAGE_ANSWER",
-          "nodeLineageTag": "18b4b63d-cb10-4606-8821-70116f10554a",
-          "size": {
-            "height": 145,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 1847.1538424864912,
-            "y": 832.66456307617955
-          },
-          "nodeIndex": "LANGUAGE_QUESTION",
-          "nodeLineageTag": "96255a06-f5c1-4184-a9e7-8492190817a8",
-          "size": {
-            "height": 176,
-            "width": 234
-          },
-          "zIndex": 7
+          "zIndex": 12
         },
         {
           "location": {
@@ -175,20 +149,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 11
-        },
-        {
-          "location": {
-            "x": 1728.5960633802106,
-            "y": 1344.8367242483409
-          },
-          "nodeIndex": "LANGUAGE_PILLAR",
-          "nodeLineageTag": "e7f22cff-14b6-4db3-b939-9c0630c866c4",
-          "size": {
-            "height": 152,
-            "width": 234
-          },
-          "zIndex": 15
+          "zIndex": 8
         },
         {
           "location": {
@@ -201,11 +162,89 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 13
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1334.7650595821851,
+            "y": 1258.1671940476372
+          },
+          "nodeIndex": "Site Information",
+          "nodeLineageTag": "cf201cdd-8d8e-4577-9f1b-294e37a09a72",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1791.8770860001039,
+            "y": 1498.9871884531749
+          },
+          "nodeIndex": "Category Translation",
+          "nodeLineageTag": "fd5ee886-0ed6-4444-9723-bab97368a59a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1805.2559745781894,
+            "y": 1171.2044182900818
+          },
+          "nodeIndex": "Answer Translation",
+          "nodeLineageTag": "638a58b9-9bf1-4cf5-8e78-eaa94e3236de",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2059.4548575618119,
+            "y": 1088.7012720585553
+          },
+          "nodeIndex": "Question Translation",
+          "nodeLineageTag": "ec428224-fe68-46c8-ad2c-eba5e543a796",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2253.4487419440511,
+            "y": 651.6575785077647
+          },
+          "nodeIndex": "Pillar Translation",
+          "nodeLineageTag": "3575fba8-12b3-47d4-aff9-faccca9ac7fd",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1968.0324522782282,
+            "y": 852.3409071790461
+          },
+          "nodeIndex": "Theme Translation",
+          "nodeLineageTag": "3cec4c80-ca17-4cb4-a2e2-3cb313be1986",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Toutes les tables",
-      "zoomValue": 40,
+      "zoomValue": 44.846774565624095,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
