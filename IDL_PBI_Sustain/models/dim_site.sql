@@ -31,7 +31,7 @@ with site_information_formatted as (
      from {{ ref('fact_answers') }} fa
      left join {{ source('DWH_SUSTAIN_ID', 'QUESTION') }} q on q.id = fa.question_id
      where 1=1 
-     and q.code in ('ID.001','ID.002','ID.005', 'ID.006','ID.019','ID.020','ID.021','ID.024','ID.028')
+     and q.code in ('ID.001','ID.002','ID.005', 'ID.006','ID.019','ID.020','ID.021','ID.024','ID.028','ID.007','ID.008','ID.027')
 ), site_information_pivotted as (
     select 
         site_id,
@@ -43,10 +43,13 @@ with site_information_formatted as (
         INITCAP(energy_storage) as energy_storage,
         INITCAP(presence_generator) as presence_generator,
         INITCAP(site_in_env_risk_zone) as site_in_env_risk_zone,
-        INITCAP(intramural_canteen) as intramural_canteen
+        INITCAP(intramural_canteen) as intramural_canteen,
+        TO_DATE(date_site_opened_idl) as date_site_opened_idl,
+        TO_DATE(date_site_built) as date_site_built,
+        TO_DATE(date_last_cid_audit) as date_last_cid_audit
     from site_information
-        pivot(max(answer_value) for code in ('ID.001','ID.002','ID.005', 'ID.006','ID.019','ID.020','ID.021','ID.024','ID.028')) 
-            as p (site_id, code_site, code_sap, main_activity, secondary_activity, energy_management_device, energy_storage, presence_generator, site_in_env_risk_zone, intramural_canteen  )
+        pivot(max(answer_value) for code in ('ID.001','ID.002','ID.005', 'ID.006','ID.019','ID.020','ID.021','ID.024','ID.028','ID.007','ID.008','ID.027')) 
+            as p (site_id, code_site, code_sap, main_activity, secondary_activity, energy_management_device, energy_storage, presence_generator, site_in_env_risk_zone, intramural_canteen, date_site_opened_idl, date_site_built, date_last_cid_audit  )
 )
 select 
     s.* EXCLUDE (CREATED_AT, UPDATED_AT, DELETED_AT, CREATED_BY, UPDATED_BY, DELETED_BY),
@@ -66,7 +69,10 @@ select
     sifp.environment_certification,
     sifp.security_building_class,
     sifp.performance_certificate_energy,
-    sifp.type_of_operation
+    sifp.type_of_operation,
+    sip.date_site_opened_idl,
+    sip.date_site_built,
+    sip.date_last_cid_audit
 from {{ source('DWH_SUSTAIN_ID', 'SITE') }} s
 left join site_information_pivotted sip on s.id = sip.site_id
 left JOIN site_information_formatted_pivotted sifp ON s.id = sifp.site_id  
