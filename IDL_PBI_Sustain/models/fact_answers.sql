@@ -28,4 +28,6 @@ left join {{ source('DWH_SUSTAIN_ID', 'QUESTION') }} q on e.question_id = q.id
 left join {{ source('DWH_SUSTAIN_ID', 'THEME') }} t on q.theme_id = t.id
 left join {{ source('DWH_SUSTAIN_ID', 'PILLAR') }} p on t.pillar_id = p.id
 left join {{ source('DWH_SUSTAIN_ID', 'CATEGORY') }} ct on q.category_id = ct.id
+where 1=1
+and cs.id is not null
 group by all
