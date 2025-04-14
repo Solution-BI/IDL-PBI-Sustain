@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.141.1558.0 (25.03)+75b5f06a991f8f8a8a4d6b6fcd0f66e1ec2d6fdc"
+        "value": "2.141.1451.0 (25.03)+5007b75f0f7edbed506e31fcb76584cd6d711788"
       },
       {
         "name": "PBI_ProTooling",
@@ -41136,6 +41136,103 @@
           }
         ],
         "showAsVariationsOnly": true
+      },
+      {
+        "name": "HomeDimensionSlicer",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "21dd523a26594b138c7c0799fdeb435e"
+          }
+        ],
+        "columns": [
+          {
+            "name": "HomeDimensionSlicer",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": false,
+            "lineageTag": "c88e7ddf-5a73-40c2-854a-e435af47b1f3",
+            "relatedColumnDetails": {
+              "groupByColumns": [
+                {
+                  "groupingColumn": "HomeDimensionSlicer Champs"
+                }
+              ]
+            },
+            "sortByColumn": "HomeDimensionSlicer Commande",
+            "sourceColumn": "[Value1]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "HomeDimensionSlicer Champs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "extendedProperties": [
+              {
+                "name": "ParameterMetadata",
+                "type": "json",
+                "value": {
+                  "kind": 2,
+                  "version": 3
+                }
+              }
+            ],
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "ab75177d-3192-4e0a-a7f0-c12ed08747b4",
+            "sortByColumn": "HomeDimensionSlicer Commande",
+            "sourceColumn": "[Value2]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "HomeDimensionSlicer Commande",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": false,
+            "lineageTag": "a520bb78-b68c-4318-adb2-3f15052b0414",
+            "sourceColumn": "[Value3]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "c0a1cfd2-3cce-4432-88ac-79ccd9389575",
+        "partitions": [
+          {
+            "name": "HomeDimensionSlicer",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "{",
+                "    (\"Site\", NAMEOF('SITE'[NAME]), 0),",
+                "    (\"Country\", NAMEOF('COUNTRY'[SURNAME]), 1)",
+                "}"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
       }
     ]
   }
