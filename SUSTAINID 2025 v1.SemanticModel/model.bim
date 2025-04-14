@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.141.1451.0 (25.03)+5007b75f0f7edbed506e31fcb76584cd6d711788"
+        "value": "2.141.1558.0 (25.03)+75b5f06a991f8f8a8a4d6b6fcd0f66e1ec2d6fdc"
       },
       {
         "name": "PBI_ProTooling",
@@ -5307,16 +5307,6 @@
                   {
                     "surname": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Country": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -13523,6 +13513,159 @@
                   }
                 ]
               },
+              "home_dimension_slicer": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "HomeDimensionSlicer"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "home dimension slicer": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "HomeDimensionSlicer": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "slicer": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "dimension slicer": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "home_dimension_slicer.HomeDimensionSlicer_champs": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "HomeDimensionSlicer",
+                    "ConceptualProperty": "HomeDimensionSlicer Champs"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "HomeDimensionSlicer champs": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "homedimensionslicer winner": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "homedimensionslicer victor": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "homedimensionslicer titleholder": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "homedimensionslicer champion": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "home_dimension_slicer.HomeDimensionSlicer_commande": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "HomeDimensionSlicer",
+                    "ConceptualProperty": "HomeDimensionSlicer Commande"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "HomeDimensionSlicer commande": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "home_dimension_slicer.home_dimension_slicer": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "HomeDimensionSlicer",
+                    "ConceptualProperty": "HomeDimensionSlicer"
+                  }
+                },
+                "NameType": "Name",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "home dimension slicer": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "home dimension slicer name": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "HomeDimensionSlicer": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "slicer": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "dimension slicer": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
               "language": {
                 "Definition": {
                   "Binding": {
@@ -19304,7 +19447,17 @@
                     }
                   },
                   {
-                    "Sites": {
+                    "Site": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "SITES": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -22466,7 +22619,7 @@
                         "Role": "campaign.end_date.année"
                       }
                     },
-                    "ID": "années_have_trimestres6",
+                    "ID": "années_have_trimestres5",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -22479,7 +22632,7 @@
                         "Role": "campaign.end_date.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_années6",
+                    "ID": "trimestres_have_années5",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -22598,7 +22751,7 @@
                         "Role": "campaign.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour6",
+                    "ID": "hiérarchie_de_dates_have_jour5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -22631,7 +22784,7 @@
                         "Role": "campaign.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises6",
+                    "ID": "hiérarchie_de_dates_have_moises5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23388,7 +23541,7 @@
                         "Role": "campaign.start_date.année"
                       }
                     },
-                    "ID": "années_have_trimestres5",
+                    "ID": "années_have_trimestres4",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23401,7 +23554,7 @@
                         "Role": "campaign.start_date.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_années5",
+                    "ID": "trimestres_have_années4",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23520,7 +23673,7 @@
                         "Role": "campaign.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour5",
+                    "ID": "hiérarchie_de_dates_have_jour4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23553,7 +23706,7 @@
                         "Role": "campaign.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises5",
+                    "ID": "hiérarchie_de_dates_have_moises4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24338,7 +24491,7 @@
                         "Role": "country.created_at.année"
                       }
                     },
-                    "ID": "années_have_trimestres4",
+                    "ID": "années_have_trimestres3",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24351,7 +24504,7 @@
                         "Role": "country.created_at.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_années4",
+                    "ID": "trimestres_have_années3",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24470,7 +24623,7 @@
                         "Role": "country.created_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour4",
+                    "ID": "hiérarchie_de_dates_have_jour3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24503,7 +24656,7 @@
                         "Role": "country.created_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises4",
+                    "ID": "hiérarchie_de_dates_have_moises3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24701,7 +24854,7 @@
                         "Role": "country.end_date.année"
                       }
                     },
-                    "ID": "années_have_trimestres3",
+                    "ID": "années_have_trimestres2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24714,7 +24867,7 @@
                         "Role": "country.end_date.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_années3",
+                    "ID": "trimestres_have_années2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24833,7 +24986,7 @@
                         "Role": "country.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour3",
+                    "ID": "hiérarchie_de_dates_have_jour2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24866,7 +25019,7 @@
                         "Role": "country.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises3",
+                    "ID": "hiérarchie_de_dates_have_moises2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25535,7 +25688,7 @@
                         "Role": "country.start_date.année"
                       }
                     },
-                    "ID": "années_have_trimestres2",
+                    "ID": "années_have_trimestres1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -25548,7 +25701,7 @@
                         "Role": "country.start_date.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_années2",
+                    "ID": "trimestres_have_années1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -25667,7 +25820,7 @@
                         "Role": "country.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour2",
+                    "ID": "hiérarchie_de_dates_have_jour1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25700,7 +25853,7 @@
                         "Role": "country.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises2",
+                    "ID": "hiérarchie_de_dates_have_moises1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25898,7 +26051,7 @@
                         "Role": "country.updated_at.année"
                       }
                     },
-                    "ID": "années_have_trimestres1",
+                    "ID": "années_have_trimestres",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -25911,7 +26064,7 @@
                         "Role": "country.updated_at.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_années1",
+                    "ID": "trimestres_have_années",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -26030,7 +26183,7 @@
                         "Role": "country.updated_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour1",
+                    "ID": "hiérarchie_de_dates_have_jour",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26063,7 +26216,7 @@
                         "Role": "country.updated_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises1",
+                    "ID": "hiérarchie_de_dates_have_moises",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26261,7 +26414,7 @@
                         "Role": "date.fulldate.année"
                       }
                     },
-                    "ID": "années_have_trimestres",
+                    "ID": "années_have_trimestres6",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -26274,7 +26427,7 @@
                         "Role": "date.fulldate.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_années",
+                    "ID": "trimestres_have_années6",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -26393,7 +26546,7 @@
                         "Role": "date.fulldate.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour",
+                    "ID": "hiérarchie_de_dates_have_jour6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26426,7 +26579,7 @@
                         "Role": "date.fulldate.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises",
+                    "ID": "hiérarchie_de_dates_have_moises6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -29479,6 +29632,84 @@
                 "SemanticSlots": {
                   "Where": {
                     "Role": "country"
+                  }
+                },
+                "State": "Generated"
+              },
+              "home_dimension_slicer_has_home_dimension_slicer": {
+                "Binding": {
+                  "ConceptualEntity": "HomeDimensionSlicer"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "home_dimension_slicer.home_dimension_slicer"
+                      },
+                      "Subject": {
+                        "Role": "home_dimension_slicer"
+                      }
+                    },
+                    "ID": "home_dimension_slicers_have_home_dimension_slicers",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "ID": "home_dimension_slicers_are_names_IDs_of_home_dimension_slicers",
+                    "Name": {
+                      "Name": {
+                        "Role": "home_dimension_slicer.home_dimension_slicer"
+                      },
+                      "Subject": {
+                        "Role": "home_dimension_slicer"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "home_dimension_slicer": {
+                    "Target": {
+                      "Entity": "home_dimension_slicer"
+                    }
+                  },
+                  "home_dimension_slicer.home_dimension_slicer": {
+                    "Target": {
+                      "Entity": "home_dimension_slicer.home_dimension_slicer"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "home_dimension_slicer_slice": {
+                "Binding": {
+                  "ConceptualEntity": "HomeDimensionSlicer"
+                },
+                "Phrasings": [
+                  {
+                    "ID": "home_dimension_slicers_slice",
+                    "State": "Generated",
+                    "Verb": {
+                      "Subject": {
+                        "Role": "home_dimension_slicer"
+                      },
+                      "Verbs": [
+                        {
+                          "slice": {
+                            "State": "Generated"
+                          }
+                        }
+                      ]
+                    },
+                    "Weight": 0.75
+                  }
+                ],
+                "Roles": {
+                  "home_dimension_slicer": {
+                    "Target": {
+                      "Entity": "home_dimension_slicer"
+                    }
                   }
                 },
                 "State": "Generated"
