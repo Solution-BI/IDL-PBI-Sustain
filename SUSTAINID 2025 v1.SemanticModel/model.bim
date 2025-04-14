@@ -217,6 +217,16 @@
                     "'deutsch_answer'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -232,16 +242,6 @@
                   {
                     "'english_answer'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -3541,6 +3541,16 @@
                     "'deutsch_category'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Category": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -3556,16 +3566,6 @@
                   {
                     "'english_category'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Category": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -5307,6 +5307,16 @@
                   {
                     "surname": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Country": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -14062,6 +14072,16 @@
                     "'deutsch_pillar'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Pillar": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -14077,16 +14097,6 @@
                   {
                     "'english_pillar'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Pillar": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -15394,6 +15404,16 @@
                     "'deutsch_question'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -15409,16 +15429,6 @@
                   {
                     "'english_question'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -19447,7 +19457,7 @@
                     }
                   },
                   {
-                    "Site": {
+                    "Site Name": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -19457,7 +19467,7 @@
                     }
                   },
                   {
-                    "SITES": {
+                    "Site": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -20940,6 +20950,16 @@
                     "'deutsch_theme'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Theme": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -20955,16 +20975,6 @@
                   {
                     "'english_theme'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Theme": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -22751,7 +22761,7 @@
                         "Role": "campaign.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour5",
+                    "ID": "hiérarchie_de_dates_have_jour6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -22784,7 +22794,7 @@
                         "Role": "campaign.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises5",
+                    "ID": "hiérarchie_de_dates_have_moises6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23673,7 +23683,7 @@
                         "Role": "campaign.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour4",
+                    "ID": "hiérarchie_de_dates_have_jour5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23706,7 +23716,7 @@
                         "Role": "campaign.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises4",
+                    "ID": "hiérarchie_de_dates_have_moises5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24623,7 +24633,7 @@
                         "Role": "country.created_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour3",
+                    "ID": "hiérarchie_de_dates_have_jour4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24656,7 +24666,7 @@
                         "Role": "country.created_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises3",
+                    "ID": "hiérarchie_de_dates_have_moises4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24986,7 +24996,7 @@
                         "Role": "country.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour2",
+                    "ID": "hiérarchie_de_dates_have_jour3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25019,7 +25029,7 @@
                         "Role": "country.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises2",
+                    "ID": "hiérarchie_de_dates_have_moises3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25820,7 +25830,7 @@
                         "Role": "country.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour1",
+                    "ID": "hiérarchie_de_dates_have_jour2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25853,7 +25863,7 @@
                         "Role": "country.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises1",
+                    "ID": "hiérarchie_de_dates_have_moises2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26183,7 +26193,7 @@
                         "Role": "country.updated_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour",
+                    "ID": "hiérarchie_de_dates_have_jour1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26216,7 +26226,7 @@
                         "Role": "country.updated_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises",
+                    "ID": "hiérarchie_de_dates_have_moises1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26546,7 +26556,7 @@
                         "Role": "date.fulldate.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour6",
+                    "ID": "hiérarchie_de_dates_have_jour",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26579,7 +26589,7 @@
                         "Role": "date.fulldate.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises6",
+                    "ID": "hiérarchie_de_dates_have_moises",
                     "State": "Generated",
                     "Weight": 0.99
                   }
