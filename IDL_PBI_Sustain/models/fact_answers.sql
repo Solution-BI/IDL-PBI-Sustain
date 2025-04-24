@@ -7,6 +7,8 @@ select
     t.id as theme_id,
     ct.id as category_id,
     q.id as question_id,
+    max(c.end_date) over (partition by site_id) as last_campaign_end_date,
+    iff(c.end_date = last_campaign_end_date,1,0) as last_campaign_flag,
     (case 
         when q.type = 'YES_NO' then iff(cast(ae.other_answer as boolean) is not null,ae.other_answer,null)
         when q.type = 'NUMERIC' then 
