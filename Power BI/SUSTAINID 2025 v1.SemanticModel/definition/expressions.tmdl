@@ -1,7 +1,0 @@
-expression DB_NAME = "DB_DEV_GRP" meta [IsParameterQuery=true, List={"DB_DEV_GRP", "DB_PRD_GRP"}, DefaultValue="DB_DEV_GRP", Type="Text", IsParameterQueryRequired=true]
-	lineageTag: 9b895a7c-630d-4b28-9536-ba1c6e647a61
-
-	annotation PBI_NavigationStepName = Navigation
-
-	annotation PBI_ResultType = Text
-
