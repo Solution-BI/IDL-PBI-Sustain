@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.141.1558.0 (25.03)+75b5f06a991f8f8a8a4d6b6fcd0f66e1ec2d6fdc"
+        "value": "2.142.928.0 (25.04)+de52df9f0bb74ad93a80d89c52d63fe6d07e0e1b"
       },
       {
         "name": "PBI_ProTooling",
@@ -201,6 +201,16 @@
                     "'chinese_answer'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -243,6 +253,16 @@
                     "'english_answer'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -258,6 +278,16 @@
                   {
                     "'español_answer'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -275,6 +305,16 @@
                     "'français_answer'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -290,6 +330,16 @@
                   {
                     "'indonesia_answer'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -335,6 +385,16 @@
                   {
                     "'italiano_answer'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -531,6 +591,16 @@
                     "'nederlands_answer'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -547,6 +617,16 @@
                     "'polski_answer'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -562,6 +642,16 @@
                   {
                     "'português_answer'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -641,6 +731,16 @@
                   {
                     "'română_answer'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Answer": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -3541,16 +3641,6 @@
                     "'deutsch_category'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Category": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -3598,6 +3688,16 @@
                   {
                     "'français_category'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Category": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -13888,6 +13988,16 @@
                       "Type": "Noun",
                       "Weight": 0.714
                     }
+                  },
+                  {
+                    "Langage": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -14072,16 +14182,6 @@
                     "'deutsch_pillar'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Pillar": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -14129,6 +14229,16 @@
                   {
                     "'français_pillar'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Pillar": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -15276,6 +15386,16 @@
                     "'chinese_question'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -15430,6 +15550,16 @@
                     "'english_question'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -15445,6 +15575,16 @@
                   {
                     "'español_question'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -15462,6 +15602,16 @@
                     "'français_question'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -15477,6 +15627,16 @@
                   {
                     "'indonesia_question'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -15494,6 +15654,16 @@
                     "'italiano_question'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -15509,6 +15679,16 @@
                   {
                     "'nederlands_question'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -15526,6 +15706,16 @@
                     "'polski_question'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -15542,6 +15732,16 @@
                     "'português_question'": {
                       "State": "Generated"
                     }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
                   }
                 ]
               },
@@ -15557,6 +15757,16 @@
                   {
                     "'română_question'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Question": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -19457,7 +19667,7 @@
                     }
                   },
                   {
-                    "Site Name": {
+                    "Site": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -19467,7 +19677,7 @@
                     }
                   },
                   {
-                    "Site": {
+                    "Site Name": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -20950,16 +21160,6 @@
                     "'deutsch_theme'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Theme": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -21007,6 +21207,16 @@
                   {
                     "'français_theme'": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Theme": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -34727,6 +34937,7 @@
       },
       {
         "name": "AutoDetected_70640d94-c539-456a-80fc-5935e479a1a7",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "SITE_ID",
         "fromTable": "FACT_ANSWERS",
         "toColumn": "ID",
@@ -34734,6 +34945,7 @@
       },
       {
         "name": "AutoDetected_2de93a95-ccef-48ae-8087-72de9e7e2a80",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "QUESTION_ID",
         "fromTable": "FACT_ANSWERS",
         "toColumn": "ID",
@@ -34741,6 +34953,7 @@
       },
       {
         "name": "AutoDetected_1616b1c2-adc8-408e-8387-8acac5d0635b",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "CAMPAIGN_ID",
         "fromTable": "FACT_ANSWERS",
         "toColumn": "ID",
@@ -34748,6 +34961,7 @@
       },
       {
         "name": "AutoDetected_7ea20fce-9465-4ea2-92e8-12fc15bdc4db",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "CATEGORY_ID",
         "fromTable": "FACT_ANSWERS",
         "toColumn": "ID",
@@ -34755,6 +34969,7 @@
       },
       {
         "name": "AutoDetected_689489fa-99cb-447d-acf3-a3bf5888f3cd",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "PILLAR_ID",
         "fromTable": "FACT_ANSWERS",
         "toColumn": "ID",
@@ -34762,6 +34977,7 @@
       },
       {
         "name": "AutoDetected_0345060a-e0b0-4be5-b5c3-bf55d991252f",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "THEME_ID",
         "fromTable": "FACT_ANSWERS",
         "toColumn": "ID",
@@ -34769,6 +34985,7 @@
       },
       {
         "name": "ab617b0b-b688-b8a2-f052-d763e448bc96",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "COUNTRY_ID",
         "fromTable": "FACT_ANSWERS",
         "toColumn": "ID",
@@ -34776,6 +34993,7 @@
       },
       {
         "name": "AutoDetected_4471e2d8-3610-4efa-b7ba-2872bbadd39b",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "CAMPAIGN_SITE_ID",
         "fromTable": "FACT_ANSWERS",
         "toColumn": "ID",
@@ -34783,6 +35001,7 @@
       },
       {
         "name": "AutoDetected_836a7787-185b-4829-b083-4add3ae8ba0d",
+        "crossFilteringBehavior": "bothDirections",
         "fromColumn": "ANSWER_ID",
         "fromTable": "FACT_ANSWERS",
         "toColumn": "ID",
@@ -34880,6 +35099,14 @@
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
         "toTable": "LocalDateTable_4c267644-865d-4c9a-87c3-20a2b19759a1"
+      },
+      {
+        "name": "50d74ada-9451-440c-af60-8953848137f5",
+        "fromColumn": "LAST_CAMPAIGN_END_DATE",
+        "fromTable": "FACT_ANSWERS",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_7c0f50bc-e77c-4720-ac37-8a2523138f04"
       }
     ],
     "sourceQueryCulture": "fr-FR",
@@ -35246,7 +35473,7 @@
             "dataType": "double",
             "lineageTag": "576d14f5-f955-4b9c-851e-74a62d7a164f",
             "sourceColumn": "ORDER",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "'CHINESE_CATEGORY'",
@@ -38364,6 +38591,52 @@
             "lineageTag": "96a11b2a-d1cd-4dd9-a75c-497f50768dd4",
             "sourceColumn": "ANSWER_VALUE",
             "summarizeBy": "none"
+          },
+          {
+            "name": "LAST_CAMPAIGN_END_DATE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "094139bc-3acd-4775-9fa5-4668d0072490",
+            "sourceColumn": "LAST_CAMPAIGN_END_DATE",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Hiérarchie de dates",
+                  "table": "LocalDateTable_7c0f50bc-e77c-4720-ac37-8a2523138f04"
+                },
+                "isDefault": true,
+                "relationship": "50d74ada-9451-440c-af60-8953848137f5"
+              }
+            ]
+          },
+          {
+            "name": "LAST_CAMPAIGN_FLAG",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "d79002e5-e70b-4559-922c-f7a0453736e4",
+            "sourceColumn": "LAST_CAMPAIGN_FLAG",
+            "summarizeBy": "sum"
           }
         ],
         "lineageTag": "9717762e-33ad-4b09-954b-a7f0f35d106b",
@@ -41474,6 +41747,207 @@
             }
           }
         ]
+      },
+      {
+        "name": "LocalDateTable_7c0f50bc-e77c-4720-ac37-8a2523138f04",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "47187074-21bd-4089-b9f1-04df1798189b",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Année",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "381c2f35-2e8b-4e7a-b01c-525406ea52cc",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoMois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "cc919055-b195-4758-b280-a8a7be2976b0",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "3e472480-d901-4729-bc8c-06413f76abe8",
+            "sortByColumn": "NoMois",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoTrimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([NoMois] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "834a9569-805c-422a-95ec-b10145b21aad",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [NoTrimestre]",
+            "isHidden": true,
+            "lineageTag": "aae0f57f-ae2a-4a71-af84-8a4a0ead35b7",
+            "sortByColumn": "NoTrimestre",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Jour",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "01258f8a-17ee-4300-b92c-1ad36a2c87e1",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hiérarchie de dates",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Année",
+                "column": "Année",
+                "lineageTag": "6ccd2b65-f906-48dd-976d-857a653bf12a",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "8bdc7897-ad93-4c2e-9e93-8b566d2f0b01",
+                "ordinal": 1
+              },
+              {
+                "name": "Mois",
+                "column": "Mois",
+                "lineageTag": "062f6605-c527-421c-9810-217dc2fad54a",
+                "ordinal": 2
+              },
+              {
+                "name": "Jour",
+                "column": "Jour",
+                "lineageTag": "4ccb4cfe-6338-4705-852f-b97bf8cfb2d2",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "711f0859-6dbc-4f9b-b9a3-007e6c89ea3b"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "eb416fe9-26c4-4257-88c2-99605e5e753c",
+        "partitions": [
+          {
+            "name": "LocalDateTable_7c0f50bc-e77c-4720-ac37-8a2523138f04",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('FACT_ANSWERS'[LAST_CAMPAIGN_END_DATE])), 1, 1), Date(Year(MAX('FACT_ANSWERS'[LAST_CAMPAIGN_END_DATE])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
       }
     ]
   }
