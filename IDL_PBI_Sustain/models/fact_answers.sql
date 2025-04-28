@@ -7,8 +7,10 @@ select
     t.id as theme_id,
     ct.id as category_id,
     q.id as question_id,
-    max(c.end_date) over (partition by s.id,cs.status) as last_campaign_end_date,
-    iff(c.end_date = last_campaign_end_date and cs.status = 'FINISHED',1,0) as last_campaign_flag,
+    max(c.end_date) over (partition by s.id) as last_campaign_end_date,
+    max(c.end_date) over (partition by s.id,cs.status) as last_campaign_end_date_by_status,
+    iff(c.end_date = last_campaign_end_date,1,0) as last_campaign_flag,
+    iff(c.end_date = last_campaign_end_date_by_status and cs.status = 'FINISHED',1,0) as last_finished_campaign_flag,
     (case 
         when q.type = 'YES_NO' then iff(cast(ae.other_answer as boolean) is not null,ae.other_answer,null)
         when q.type = 'NUMERIC' then 
