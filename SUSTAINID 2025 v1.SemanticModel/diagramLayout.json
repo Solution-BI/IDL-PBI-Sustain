@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 71.371825662075935,
+        "x": 796.00001017252612,
         "y": 0
       },
       "nodes": [
@@ -241,10 +241,23 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2001.4796737234421,
+            "y": 749.49359422658745
+          },
+          "nodeIndex": "HomeDimensionSlicer",
+          "nodeLineageTag": "c0a1cfd2-3cce-4432-88ac-79ccd9389575",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Toutes les tables",
-      "zoomValue": 44.846774565624095,
+      "zoomValue": 60,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

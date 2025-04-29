@@ -7,10 +7,6 @@ select
     t.id as theme_id,
     ct.id as category_id,
     q.id as question_id,
-    max(c.end_date) over (partition by s.id) as last_campaign_end_date,
-    max(c.end_date) over (partition by s.id,cs.status) as last_campaign_end_date_by_status,
-    iff(c.end_date = last_campaign_end_date,1,0) as last_campaign_flag,
-    iff(c.end_date = last_campaign_end_date_by_status and cs.status = 'FINISHED',1,0) as last_finished_campaign_flag,
     (case 
         when q.type = 'YES_NO' then iff(cast(ae.other_answer as boolean) is not null,ae.other_answer,null)
         when q.type = 'NUMERIC' then 
@@ -32,6 +28,4 @@ left join {{ source('DWH_SUSTAIN_ID', 'QUESTION') }} q on e.question_id = q.id
 left join {{ source('DWH_SUSTAIN_ID', 'THEME') }} t on q.theme_id = t.id
 left join {{ source('DWH_SUSTAIN_ID', 'PILLAR') }} p on t.pillar_id = p.id
 left join {{ source('DWH_SUSTAIN_ID', 'CATEGORY') }} ct on q.category_id = ct.id
-where 1=1
-and cs.id is not null
-group by country.id,s.id,c.id,cs.id,p.id,t.id,ct.id,q.id,a.id,a.weight,c.end_date,cs.status,q.type,ae.other_answer
+group by all
