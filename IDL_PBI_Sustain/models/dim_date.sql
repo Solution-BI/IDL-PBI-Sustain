@@ -11,7 +11,7 @@ TO_DATE(MY_DATE) as fulldate
 ,DAYOFWEEK(MY_DATE) as day_of_week
 ,WEEKOFYEAR(MY_DATE) as week_of_year
 ,DAYOFYEAR(MY_DATE) as day_of_year
-,GET_DATE_SID(MY_DATE) as DATE_ID
+,{{ get_date_sid('MY_DATE') }} as DATE_ID
 FROM CTE_MY_DATE
 
 
