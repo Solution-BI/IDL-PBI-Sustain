@@ -13,3 +13,5 @@ select
     from raw_theme
     pivot(max(value) for translation in (any))
     
+
+

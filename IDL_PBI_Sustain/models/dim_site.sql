@@ -79,3 +79,4 @@ left JOIN site_information_formatted_pivotted sifp ON s.id = sifp.site_id
 where 1=1
 and code_site is not null 
 and code_sap is not null
+

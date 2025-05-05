@@ -13,3 +13,5 @@ select
     from raw_question
     pivot(max(label) for translation in (any))
     
+
+    

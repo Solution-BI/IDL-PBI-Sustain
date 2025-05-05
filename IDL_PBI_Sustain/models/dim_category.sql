@@ -12,4 +12,6 @@ select
     *,
     from raw_category
     pivot(max(value) for translation in (any))
+
+    
     

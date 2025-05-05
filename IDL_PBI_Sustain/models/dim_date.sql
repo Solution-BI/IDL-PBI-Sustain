@@ -13,3 +13,5 @@ TO_DATE(MY_DATE) as fulldate
 ,DAYOFYEAR(MY_DATE) as day_of_year
 ,GET_DATE_SID(MY_DATE) as DATE_ID
 FROM CTE_MY_DATE
+
+

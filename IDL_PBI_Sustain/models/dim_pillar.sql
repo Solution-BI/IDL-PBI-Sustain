@@ -13,3 +13,5 @@ select
     from raw_pillar
     pivot(max(value) for translation in (any))
     
+
+
