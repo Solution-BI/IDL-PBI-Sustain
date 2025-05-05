@@ -1,4 +1,7 @@
 select 
     *,
-    max(weight) over (partition by question_id) as max_weight
-from {{ source('DWH_SUSTAIN_ID', 'ANSWER') }}
+    from raw_answer
+    pivot(max(value) for translation in (any))
+    
+
+

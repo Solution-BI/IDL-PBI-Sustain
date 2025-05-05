@@ -28,4 +28,8 @@ left join {{ source('DWH_SUSTAIN_ID', 'QUESTION') }} q on e.question_id = q.id
 left join {{ source('DWH_SUSTAIN_ID', 'THEME') }} t on q.theme_id = t.id
 left join {{ source('DWH_SUSTAIN_ID', 'PILLAR') }} p on t.pillar_id = p.id
 left join {{ source('DWH_SUSTAIN_ID', 'CATEGORY') }} ct on q.category_id = ct.id
-group by all
+where 1=1
+and cs.id is not null
+group by country.id,s.id,c.id,cs.id,p.id,t.id,ct.id,q.id,a.id,a.weight,c.end_date,cs.status,q.type,ae.other_answer
+
+
