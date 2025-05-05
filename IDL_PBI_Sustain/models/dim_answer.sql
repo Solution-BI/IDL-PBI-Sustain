@@ -1,4 +1,5 @@
 with raw_answer as (
+    
     select 
         a.* EXCLUDE (CREATED_AT, UPDATED_AT, DELETED_AT, CREATED_BY, UPDATED_BY, DELETED_BY),
         max(weight) over (partition by question_id) as max_weight,
