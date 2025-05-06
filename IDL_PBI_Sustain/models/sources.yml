@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: DWH_SUSTAIN_ID
+    database: "{{'DB_PRD_GRP' if target.name == 'prd'  else 'DB_DEV_GRP'}}"
     schema: DWH_SUSTAIN_ID
     tables:
       - name: SITE
