@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.142.928.0 (25.04)+de52df9f0bb74ad93a80d89c52d63fe6d07e0e1b"
+        "value": "2.142.1277.0 (25.04)+014fde450f93691fc9537f0758d73d1c5df153ef"
       },
       {
         "name": "PBI_ProTooling",
@@ -25,6 +25,11 @@
         "name": "fr-FR",
         "linguisticMetadata": {
           "content": {
+            "Agents": {
+              "Internal": {
+                "Version": "1.0.0"
+              }
+            },
             "Entities": {
               "answer": {
                 "Definition": {
@@ -201,16 +206,6 @@
                     "'chinese_answer'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -226,16 +221,6 @@
                   {
                     "'deutsch_answer'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -253,16 +238,6 @@
                     "'english_answer'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -278,16 +253,6 @@
                   {
                     "'español_answer'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -330,16 +295,6 @@
                   {
                     "'indonesia_answer'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -385,16 +340,6 @@
                   {
                     "'italiano_answer'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -591,16 +536,6 @@
                     "'nederlands_answer'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -617,16 +552,6 @@
                     "'polski_answer'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -642,16 +567,6 @@
                   {
                     "'português_answer'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -731,16 +646,6 @@
                   {
                     "'română_answer'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Answer": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -5408,16 +5313,6 @@
                     "surname": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Country": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -7334,6 +7229,139 @@
                   }
                 ]
               },
+              "fact_answer.avg_score_new": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "FACT_ANSWERS",
+                    "ConceptualProperty": "AvgScore_New"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "avg score new": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "AvgScore_New": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "average score new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "avg notch new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "avg slash new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "avg groove new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "avg nick new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "avg cut new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "avg mark new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.492
+                    }
+                  },
+                  {
+                    "avg total new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  },
+                  {
+                    "avg tally new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  },
+                  {
+                    "avg grade new": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
+                    }
+                  },
+                  {
+                    "Average Score": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
               "fact_answer.campaign_id": {
                 "Definition": {
                   "Binding": {
@@ -7890,6 +7918,811 @@
                   "Value": "Hidden"
                 }
               },
+              "fact_answer.last_campaign_end_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "FACT_ANSWERS",
+                    "ConceptualProperty": "LAST_CAMPAIGN_END_DATE"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "last campaign end date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "LAST_CAMPAIGN_END_DATE": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  },
+                  {
+                    "campaign end date": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "last campaign end moment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "campaign end moment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "last campaign end period": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.748
+                    }
+                  },
+                  {
+                    "campaign end period": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  },
+                  {
+                    "last campaign culmination date": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.629
+                    }
+                  },
+                  {
+                    "last campaign completion date": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "last campaign conclusion date": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "last campaign expiration date": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "campaign culmination date": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.615
+                    }
+                  },
+                  {
+                    "last campaign cease date": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.61
+                    }
+                  }
+                ]
+              },
+              "fact_answer.last_campaign_end_date.année": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "FACT_ANSWERS",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "HierarchyLevel": "Année",
+                    "VariationSet": "Variation",
+                    "VariationSource": "LAST_CAMPAIGN_END_DATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "année": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "last campaign end date année": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "last campaign culmination date année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.64
+                    }
+                  },
+                  {
+                    "last campaign completion date année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign conclusion date année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign expiration date année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign end moment année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign cease date année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.621
+                    }
+                  },
+                  {
+                    "last campaign end time année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.621
+                    }
+                  },
+                  {
+                    "end campaign end date année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  },
+                  {
+                    "final campaign end date année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  },
+                  {
+                    "closing campaign end date année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  }
+                ]
+              },
+              "fact_answer.last_campaign_end_date.hiérarchie_de_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "FACT_ANSWERS",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "VariationSet": "Variation",
+                    "VariationSource": "LAST_CAMPAIGN_END_DATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "hiérarchie de date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "hiérarchie de moment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "hiérarchie de period": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  }
+                ]
+              },
+              "fact_answer.last_campaign_end_date.jour": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "FACT_ANSWERS",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "HierarchyLevel": "Jour",
+                    "VariationSet": "Variation",
+                    "VariationSource": "LAST_CAMPAIGN_END_DATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "jour": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "last campaign end date jour": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "last campaign culmination date jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.64
+                    }
+                  },
+                  {
+                    "last campaign completion date jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign conclusion date jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign expiration date jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign end moment jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign cease date jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.621
+                    }
+                  },
+                  {
+                    "last campaign end time jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.621
+                    }
+                  },
+                  {
+                    "end campaign end date jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  },
+                  {
+                    "final campaign end date jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  },
+                  {
+                    "closing campaign end date jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  }
+                ]
+              },
+              "fact_answer.last_campaign_end_date.mois": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "FACT_ANSWERS",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "HierarchyLevel": "Mois",
+                    "VariationSet": "Variation",
+                    "VariationSource": "LAST_CAMPAIGN_END_DATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "mois": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "last campaign end date mois": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "last campaign culmination date mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.64
+                    }
+                  },
+                  {
+                    "last campaign completion date mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign conclusion date mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign expiration date mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign end moment mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign cease date mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.621
+                    }
+                  },
+                  {
+                    "last campaign end time mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.621
+                    }
+                  },
+                  {
+                    "end campaign end date mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  },
+                  {
+                    "final campaign end date mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  },
+                  {
+                    "closing campaign end date mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  }
+                ]
+              },
+              "fact_answer.last_campaign_end_date.trimestre": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "FACT_ANSWERS",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "HierarchyLevel": "Trimestre",
+                    "VariationSet": "Variation",
+                    "VariationSource": "LAST_CAMPAIGN_END_DATE"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "trimestre": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "last campaign end date trimestre": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "last campaign culmination date trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.64
+                    }
+                  },
+                  {
+                    "last campaign completion date trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign conclusion date trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign expiration date trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign end moment trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.624
+                    }
+                  },
+                  {
+                    "last campaign cease date trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.621
+                    }
+                  },
+                  {
+                    "last campaign end time trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.621
+                    }
+                  },
+                  {
+                    "end campaign end date trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  },
+                  {
+                    "final campaign end date trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  },
+                  {
+                    "closing campaign end date trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.605
+                    }
+                  }
+                ]
+              },
+              "fact_answer.last_campaign_flag": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "FACT_ANSWERS",
+                    "ConceptualProperty": "LAST_CAMPAIGN_FLAG"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "last campaign flag": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "LAST_CAMPAIGN_FLAG": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "flag": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "campaign flag": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "end campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "final campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "closing campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "concluding campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "finishing campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "former campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "latest campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "latter campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "past campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "remaining campaign flag": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.591
+                    }
+                  }
+                ]
+              },
               "fact_answer.max_score": {
                 "Definition": {
                   "Binding": {
@@ -8009,22 +8842,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.461
-                    }
-                  }
-                ]
-              },
-              "fact_answer.mesure": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "FACT_ANSWERS",
-                    "ConceptualProperty": "Mesure"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "mesure": {
-                      "State": "Generated"
                     }
                   }
                 ]
@@ -12162,29 +12979,6 @@
                   }
                 ]
               },
-              "fact_answer.score_moyen_global_pourcentage": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "FACT_ANSWERS",
-                    "ConceptualProperty": "ScoreMoyenGlobalPourcentage"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "score moyen global pourcentage": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "ScoreMoyenGlobalPourcentage": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  }
-                ]
-              },
               "fact_answer.shaded_area_parking": {
                 "Definition": {
                   "Binding": {
@@ -13041,11 +13835,140 @@
                   }
                 ]
               },
-              "fact_answer.total_points_disponibles": {
+              "fact_answer.total_points1": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "FACT_ANSWERS",
-                    "ConceptualProperty": "TotalPointsDisponibles"
+                    "ConceptualProperty": "Total_Points"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total points": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Total_Points": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "points": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "aggregate point": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "overall point": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "total opinion": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total fact": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total idea": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total argument": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "total topic": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "opinion": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "fact": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "idea": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  }
+                ]
+              },
+              "fact_answer.total_points_disponibles1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "FACT_ANSWERS",
+                    "ConceptualProperty": "Total_Points_Disponibles"
                   }
                 },
                 "State": "Generated",
@@ -13056,7 +13979,7 @@
                     }
                   },
                   {
-                    "TotalPointsDisponibles": {
+                    "Total_Points_Disponibles": {
                       "State": "Generated",
                       "Type": "Noun",
                       "Weight": 0.99
@@ -13074,49 +13997,6 @@
                   },
                   {
                     "overall point disponible": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.591
-                    }
-                  }
-                ]
-              },
-              "fact_answer.total_points_obtenus": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "FACT_ANSWERS",
-                    "ConceptualProperty": "TotalPointsObtenus"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "total points obtenus": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "TotalPointsObtenus": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "aggregate point obtenus": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.591
-                    }
-                  },
-                  {
-                    "overall point obtenus": {
                       "Source": {
                         "Agent": "Thesaurus"
                       },
@@ -13987,16 +14867,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.714
-                    }
-                  },
-                  {
-                    "Langage": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -15386,16 +16256,6 @@
                     "'chinese_question'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -15524,16 +16384,6 @@
                     "'deutsch_question'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -15550,16 +16400,6 @@
                     "'english_question'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -15575,16 +16415,6 @@
                   {
                     "'español_question'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -15628,16 +16458,6 @@
                     "'indonesia_question'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -15653,16 +16473,6 @@
                   {
                     "'italiano_question'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -15680,16 +16490,6 @@
                     "'nederlands_question'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -15705,16 +16505,6 @@
                   {
                     "'polski_question'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -15732,16 +16522,6 @@
                     "'português_question'": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
                   }
                 ]
               },
@@ -15757,16 +16537,6 @@
                   {
                     "'română_question'": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "Question": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
                     }
                   }
                 ]
@@ -22938,7 +23708,7 @@
                         "Role": "campaign.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_années6",
+                    "ID": "hiérarchie_de_dates_have_années5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -22971,7 +23741,7 @@
                         "Role": "campaign.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour6",
+                    "ID": "hiérarchie_de_dates_have_jour5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23004,7 +23774,7 @@
                         "Role": "campaign.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises6",
+                    "ID": "hiérarchie_de_dates_have_moises5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23037,7 +23807,7 @@
                         "Role": "campaign.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres6",
+                    "ID": "hiérarchie_de_dates_have_trimestres5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23860,7 +24630,7 @@
                         "Role": "campaign.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_années5",
+                    "ID": "hiérarchie_de_dates_have_années4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23893,7 +24663,7 @@
                         "Role": "campaign.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour5",
+                    "ID": "hiérarchie_de_dates_have_jour4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23926,7 +24696,7 @@
                         "Role": "campaign.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises5",
+                    "ID": "hiérarchie_de_dates_have_moises4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23959,7 +24729,7 @@
                         "Role": "campaign.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres5",
+                    "ID": "hiérarchie_de_dates_have_trimestres4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24810,7 +25580,7 @@
                         "Role": "country.created_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_années4",
+                    "ID": "hiérarchie_de_dates_have_années3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24843,7 +25613,7 @@
                         "Role": "country.created_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour4",
+                    "ID": "hiérarchie_de_dates_have_jour3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24876,7 +25646,7 @@
                         "Role": "country.created_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises4",
+                    "ID": "hiérarchie_de_dates_have_moises3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24909,7 +25679,7 @@
                         "Role": "country.created_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres4",
+                    "ID": "hiérarchie_de_dates_have_trimestres3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25173,7 +25943,7 @@
                         "Role": "country.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_années3",
+                    "ID": "hiérarchie_de_dates_have_années2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25206,7 +25976,7 @@
                         "Role": "country.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour3",
+                    "ID": "hiérarchie_de_dates_have_jour2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25239,7 +26009,7 @@
                         "Role": "country.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises3",
+                    "ID": "hiérarchie_de_dates_have_moises2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25272,7 +26042,7 @@
                         "Role": "country.end_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres3",
+                    "ID": "hiérarchie_de_dates_have_trimestres2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26007,7 +26777,7 @@
                         "Role": "country.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_années2",
+                    "ID": "hiérarchie_de_dates_have_années1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26040,7 +26810,7 @@
                         "Role": "country.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour2",
+                    "ID": "hiérarchie_de_dates_have_jour1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26073,7 +26843,7 @@
                         "Role": "country.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises2",
+                    "ID": "hiérarchie_de_dates_have_moises1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26106,7 +26876,7 @@
                         "Role": "country.start_date.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres2",
+                    "ID": "hiérarchie_de_dates_have_trimestres1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26370,7 +27140,7 @@
                         "Role": "country.updated_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_années1",
+                    "ID": "hiérarchie_de_dates_have_années",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26403,7 +27173,7 @@
                         "Role": "country.updated_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour1",
+                    "ID": "hiérarchie_de_dates_have_jour",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26436,7 +27206,7 @@
                         "Role": "country.updated_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises1",
+                    "ID": "hiérarchie_de_dates_have_moises",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26469,7 +27239,7 @@
                         "Role": "country.updated_at.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres1",
+                    "ID": "hiérarchie_de_dates_have_trimestres",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26733,7 +27503,7 @@
                         "Role": "date.fulldate.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_années",
+                    "ID": "hiérarchie_de_dates_have_années6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26766,7 +27536,7 @@
                         "Role": "date.fulldate.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour",
+                    "ID": "hiérarchie_de_dates_have_jour6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26799,7 +27569,7 @@
                         "Role": "date.fulldate.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises",
+                    "ID": "hiérarchie_de_dates_have_moises6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -26832,7 +27602,7 @@
                         "Role": "date.fulldate.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres",
+                    "ID": "hiérarchie_de_dates_have_trimestres6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -27470,6 +28240,72 @@
                 },
                 "State": "Generated"
               },
+              "fact_answer_has_average_score_bakp": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.average_score_bakp"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer"
+                      }
+                    },
+                    "ID": "fact_answers_have_average_score_bakp",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer": {
+                    "Target": {
+                      "Entity": "fact_answer"
+                    }
+                  },
+                  "fact_answer.average_score_bakp": {
+                    "Target": {
+                      "Entity": "fact_answer.average_score_bakp"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_has_avg_score_new": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.avg_score_new"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer"
+                      }
+                    },
+                    "ID": "fact_answers_have_avg_score_new",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer": {
+                    "Target": {
+                      "Entity": "fact_answer"
+                    }
+                  },
+                  "fact_answer.avg_score_new": {
+                    "Target": {
+                      "Entity": "fact_answer.avg_score_new"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "fact_answer_has_campaign": {
                 "Binding": {
                   "ConceptualEntity": "FACT_ANSWERS"
@@ -27720,7 +28556,7 @@
                 },
                 "State": "Generated"
               },
-              "fact_answer_has_mesure": {
+              "fact_answer_has_last_campaign_end_date": {
                 "Binding": {
                   "ConceptualEntity": "FACT_ANSWERS"
                 },
@@ -27728,13 +28564,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "fact_answer.mesure"
+                        "Role": "fact_answer.last_campaign_end_date"
                       },
                       "Subject": {
                         "Role": "fact_answer"
                       }
                     },
-                    "ID": "fact_answers_have_mesure",
+                    "ID": "fact_answers_have_last_campaign_end_dates",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -27745,9 +28581,42 @@
                       "Entity": "fact_answer"
                     }
                   },
-                  "fact_answer.mesure": {
+                  "fact_answer.last_campaign_end_date": {
                     "Target": {
-                      "Entity": "fact_answer.mesure"
+                      "Entity": "fact_answer.last_campaign_end_date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_has_last_campaign_flag": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_flag"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer"
+                      }
+                    },
+                    "ID": "fact_answers_have_last_campaign_flags",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer": {
+                    "Target": {
+                      "Entity": "fact_answer"
+                    }
+                  },
+                  "fact_answer.last_campaign_flag": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_flag"
                     }
                   }
                 },
@@ -29231,7 +30100,7 @@
                 },
                 "State": "Generated"
               },
-              "fact_answer_has_score_moyen_global_pourcentage": {
+              "fact_answer_has_score_moyen": {
                 "Binding": {
                   "ConceptualEntity": "FACT_ANSWERS"
                 },
@@ -29239,13 +30108,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "fact_answer.score_moyen_global_pourcentage"
+                        "Role": "fact_answer.score_moyen"
                       },
                       "Subject": {
                         "Role": "fact_answer"
                       }
                     },
-                    "ID": "fact_answers_have_score_moyen_global_pourcentage",
+                    "ID": "fact_answers_have_score_moyen",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -29256,9 +30125,9 @@
                       "Entity": "fact_answer"
                     }
                   },
-                  "fact_answer.score_moyen_global_pourcentage": {
+                  "fact_answer.score_moyen": {
                     "Target": {
-                      "Entity": "fact_answer.score_moyen_global_pourcentage"
+                      "Entity": "fact_answer.score_moyen"
                     }
                   }
                 },
@@ -29619,6 +30488,72 @@
                 },
                 "State": "Generated"
               },
+              "fact_answer_has_total_points": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.total_points"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer"
+                      }
+                    },
+                    "ID": "fact_answers_have_total_points1",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer": {
+                    "Target": {
+                      "Entity": "fact_answer"
+                    }
+                  },
+                  "fact_answer.total_points": {
+                    "Target": {
+                      "Entity": "fact_answer.total_points"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_has_total_points1": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.total_points1"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer"
+                      }
+                    },
+                    "ID": "fact_answers_have_total_points",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer": {
+                    "Target": {
+                      "Entity": "fact_answer"
+                    }
+                  },
+                  "fact_answer.total_points1": {
+                    "Target": {
+                      "Entity": "fact_answer.total_points1"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "fact_answer_has_total_points_disponibles": {
                 "Binding": {
                   "ConceptualEntity": "FACT_ANSWERS"
@@ -29633,7 +30568,7 @@
                         "Role": "fact_answer"
                       }
                     },
-                    "ID": "fact_answers_have_total_points_disponibles",
+                    "ID": "fact_answers_have_total_points_disponibles1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -29652,7 +30587,7 @@
                 },
                 "State": "Generated"
               },
-              "fact_answer_has_total_points_obtenus": {
+              "fact_answer_has_total_points_disponibles1": {
                 "Binding": {
                   "ConceptualEntity": "FACT_ANSWERS"
                 },
@@ -29660,13 +30595,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "fact_answer.total_points_obtenus"
+                        "Role": "fact_answer.total_points_disponibles1"
                       },
                       "Subject": {
                         "Role": "fact_answer"
                       }
                     },
-                    "ID": "fact_answers_have_total_points_obtenus",
+                    "ID": "fact_answers_have_total_points_disponibles",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -29677,9 +30612,9 @@
                       "Entity": "fact_answer"
                     }
                   },
-                  "fact_answer.total_points_obtenus": {
+                  "fact_answer.total_points_disponibles1": {
                     "Target": {
-                      "Entity": "fact_answer.total_points_obtenus"
+                      "Entity": "fact_answer.total_points_disponibles1"
                     }
                   }
                 },
@@ -29852,6 +30787,369 @@
                 "SemanticSlots": {
                   "Where": {
                     "Role": "country"
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_last_campaign_end_date_année_has_fact_answer_last_campaign_end_date_trimestre": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.trimestre"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.année"
+                      }
+                    },
+                    "ID": "années_have_trimestres10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.année"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.trimestre"
+                      }
+                    },
+                    "ID": "trimestres_have_années10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "ID": "trimestres_are_in_années10",
+                    "Preposition": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.année"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.trimestre"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer.last_campaign_end_date.année": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.année"
+                    }
+                  },
+                  "fact_answer.last_campaign_end_date.trimestre": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.trimestre"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_last_campaign_end_date_has_hiérarchie_de_date": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date"
+                      }
+                    },
+                    "ID": "last_campaign_end_dates_have_hiérarchie_de_dates",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer.last_campaign_end_date": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date"
+                    }
+                  },
+                  "fact_answer.last_campaign_end_date.hiérarchie_de_date": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_last_campaign_end_date_hiérarchie_de_date_has_fact_answer_last_campaign_end_date_année": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.année"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                      }
+                    },
+                    "ID": "hiérarchie_de_dates_have_années10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer.last_campaign_end_date.année": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.année"
+                    }
+                  },
+                  "fact_answer.last_campaign_end_date.hiérarchie_de_date": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_last_campaign_end_date_hiérarchie_de_date_has_fact_answer_last_campaign_end_date_jour": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.jour"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                      }
+                    },
+                    "ID": "hiérarchie_de_dates_have_jour10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer.last_campaign_end_date.hiérarchie_de_date": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                    }
+                  },
+                  "fact_answer.last_campaign_end_date.jour": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.jour"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_last_campaign_end_date_hiérarchie_de_date_has_fact_answer_last_campaign_end_date_mois": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.mois"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                      }
+                    },
+                    "ID": "hiérarchie_de_dates_have_moises10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer.last_campaign_end_date.hiérarchie_de_date": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                    }
+                  },
+                  "fact_answer.last_campaign_end_date.mois": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.mois"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_last_campaign_end_date_hiérarchie_de_date_has_fact_answer_last_campaign_end_date_trimestre": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.trimestre"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                      }
+                    },
+                    "ID": "hiérarchie_de_dates_have_trimestres10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer.last_campaign_end_date.hiérarchie_de_date": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.hiérarchie_de_date"
+                    }
+                  },
+                  "fact_answer.last_campaign_end_date.trimestre": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.trimestre"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_last_campaign_end_date_mois_has_fact_answer_last_campaign_end_date_jour": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.jour"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.mois"
+                      }
+                    },
+                    "ID": "moises_have_jour10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.mois"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.jour"
+                      }
+                    },
+                    "ID": "jour_have_moises10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "ID": "jour_are_in_moises10",
+                    "Preposition": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.mois"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.jour"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer.last_campaign_end_date.jour": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.jour"
+                    }
+                  },
+                  "fact_answer.last_campaign_end_date.mois": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.mois"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "fact_answer_last_campaign_end_date_trimestre_has_fact_answer_last_campaign_end_date_mois": {
+                "Binding": {
+                  "ConceptualEntity": "FACT_ANSWERS"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.mois"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.trimestre"
+                      }
+                    },
+                    "ID": "trimestres_have_moises10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.trimestre"
+                      },
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.mois"
+                      }
+                    },
+                    "ID": "moises_have_trimestres10",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "ID": "moises_are_in_trimestres10",
+                    "Preposition": {
+                      "Object": {
+                        "Role": "fact_answer.last_campaign_end_date.trimestre"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "fact_answer.last_campaign_end_date.mois"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "fact_answer.last_campaign_end_date.mois": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.mois"
+                    }
+                  },
+                  "fact_answer.last_campaign_end_date.trimestre": {
+                    "Target": {
+                      "Entity": "fact_answer.last_campaign_end_date.trimestre"
+                    }
                   }
                 },
                 "State": "Generated"
@@ -34857,7 +36155,7 @@
                 "State": "Generated"
               }
             },
-            "Version": "3.5.0"
+            "Version": "4.1.0"
           },
           "contentType": "json"
         }
@@ -38749,62 +40047,6 @@
             "lineageTag": "f5326679-0a79-495e-9a48-b6fb0f954ad2"
           },
           {
-            "name": "TotalPointsDisponibles",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "displayFolder": "Measures",
-            "expression": [
-              "",
-              "SUMX(",
-              "    ANSWER,",
-              "    IF(",
-              "        ANSWER[IS_NA] = 0,",
-              "        ANSWER[WEIGHT],",
-              "        0",
-              "    )",
-              ")"
-            ],
-            "lineageTag": "ab03ba9b-58ce-4c3e-b711-a7641f6a6f1c"
-          },
-          {
-            "name": "TotalPointsObtenus",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "displayFolder": "Measures",
-            "expression": [
-              "",
-              "SUM(FACT_ANSWERS[WEIGHT])"
-            ],
-            "lineageTag": "b252eedf-d8c3-45e3-b85f-ace7604cb99f"
-          },
-          {
-            "name": "ScoreMoyenGlobalPourcentage",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "displayFolder": "Measures",
-            "expression": [
-              "",
-              "DIVIDE(",
-              "    [TotalPointsObtenus],",
-              "    [TotalPointsDisponibles],",
-              "    0",
-              ") * 100"
-            ],
-            "lineageTag": "124b84bd-039d-4190-9cba-2ca842cdb7b5"
-          },
-          {
             "name": "NombreReponsesParQuestion",
             "displayFolder": "Measures",
             "expression": [
@@ -39431,22 +40673,95 @@
             "lineageTag": "c5525466-cf43-43dd-b45c-8e6bfe95ba4e"
           },
           {
-            "name": "Mesure",
-            "annotations": [
-              {
-                "name": "43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c",
-                "value": "True"
-              }
-            ],
-            "displayFolder": "Measures",
-            "lineageTag": "e7d4eb92-11af-4000-878c-2058083dc96c"
-          },
-          {
             "name": "% Reponse",
             "displayFolder": "Measures",
             "expression": "DIVIDE([NbReponses],[NbReponseTotal],0)",
             "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
             "lineageTag": "28cf63c3-f573-4f5c-8db4-1c2723f56f4b"
+          },
+          {
+            "name": "Total_Points",
+            "displayFolder": "Measures",
+            "expression": [
+              "",
+              "SUMX(",
+              "    FILTER(",
+              "        FACT_ANSWERS,",
+              "        FACT_ANSWERS[LAST_CAMPAIGN_FLAG] = 1 ",
+              "    ),",
+              "    FACT_ANSWERS[WEIGHT] ",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "53afd91d-a33a-4f5a-8dcb-2c9e04d42ec4"
+          },
+          {
+            "name": "Total_Points_Disponibles",
+            "displayFolder": "Measures",
+            "expression": [
+              "",
+              "SUMX(",
+              "    FILTER(ANSWER, ANSWER[IS_NA] = 0),",
+              "    ANSWER[MAX_WEIGHT]",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "71869d20-cc40-442a-b58d-7b8888fe5a84"
+          },
+          {
+            "name": "AvgScore_New",
+            "displayFolder": "Measures",
+            "expression": [
+              "",
+              "var nb_site_rows = COUNTROWS(SITE)",
+              "",
+              "var score_moyen = DIVIDE(",
+              "            [Total_Points],",
+              "            [Total_Points_Disponibles],",
+              "            0",
+              "        )",
+              "",
+              "var scoremoyen_Total=",
+              "SUMX(",
+              "    SUMMARIZECOLUMNS(",
+              "        SITE[NAME],",
+              "        SITE[COUNTRY_NAME],",
+              "        \"TOTAL\",",
+              "        DIVIDE(",
+              "            [Total_Points],",
+              "            [Total_Points_Disponibles],",
+              "            0",
+              "        )",
+              "    ), [TOTAL]",
+              ")",
+              "RETURN",
+              "if (",
+              "    HASONEVALUE(SITE[NAME]), score_moyen,",
+              "     DIVIDE(scoremoyen_Total, nb_site_rows, 0)",
+              ")"
+            ],
+            "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
+            "lineageTag": "7605a771-104b-4475-8297-9165c640768a"
+          },
+          {
+            "name": "Average_Score_bakp",
+            "displayFolder": "Measures",
+            "expression": [
+              "\r",
+              "IF (\r",
+              "    HASONEVALUE(SITE[NAME]),\r",
+              "    DIVIDE([Total_Points], [Total_Points_Disponibles], 0),\r",
+              "    AVERAGEX(\r",
+              "        VALUES(SITE[NAME]),\r",
+              "        CALCULATE(\r",
+              "            DIVIDE([Total_Points], [Total_Points_Disponibles], 0)\r",
+              "        )\r",
+              "    )\r",
+              ")\r",
+              ""
+            ],
+            "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
+            "lineageTag": "80e7019c-ca84-4ea8-8ad0-5749a6a209b3"
           }
         ],
         "partitions": [
