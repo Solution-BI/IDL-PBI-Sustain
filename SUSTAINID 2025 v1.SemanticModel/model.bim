@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"ANSWER\",\"CAMPAIGN_SITE\",\"CATEGORY\",\"CAMPAIGN\",\"COUNTRY\",\"PILLAR\",\"QUESTION\",\"SITE\",\"THEME\",\"FACT_ANSWERS\",\"DB_NAME\",\"LANGUAGE\",\"DATE\"]"
+        "value": "[\"ANSWER\",\"CAMPAIGN_SITE\",\"CATEGORY\",\"CAMPAIGN\",\"COUNTRY\",\"PILLAR\",\"QUESTION\",\"SITE\",\"THEME\",\"FACT_ANSWERS\",\"DB_NAME\",\"LANGUAGE\",\"DATE\",\"USER_ACCESS\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -33296,6 +33296,60 @@
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
         "toTable": "LocalDateTable_4c267644-865d-4c9a-87c3-20a2b19759a1"
+      },
+      {
+        "name": "451d3f46-225d-9254-caff-52d677769264",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "COUNTRY",
+        "fromTable": "USER_ACCESS",
+        "securityFilteringBehavior": "bothDirections",
+        "toColumn": "NAME",
+        "toTable": "COUNTRY"
+      },
+      {
+        "name": "4c099f71-f99e-49c2-9ece-9da345e7ef0d",
+        "fromColumn": "CREATED_AT",
+        "fromTable": "CAMPAIGN",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_40db27f7-1c19-47fb-b6d7-e31ca16ce249"
+      },
+      {
+        "name": "9057b84c-4096-44a7-84b6-4c7414a54ac5",
+        "fromColumn": "UPDATED_AT",
+        "fromTable": "CAMPAIGN",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_023a8f75-252c-4774-9298-88d2e2d8f12e"
+      },
+      {
+        "name": "dc8eef38-95c1-4370-baae-ae29f02f6a30",
+        "fromColumn": "DELETED_AT",
+        "fromTable": "CAMPAIGN",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_beee986a-8423-4d6b-9898-e14bc9c697cc"
+      }
+    ],
+    "roles": [
+      {
+        "name": "Country Access",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "5aa3727751f54382885866c30d87baf5"
+          }
+        ],
+        "modelPermission": "read",
+        "tablePermissions": [
+          {
+            "name": "COUNTRY"
+          },
+          {
+            "name": "USER_ACCESS",
+            "filterExpression": "[EMAIL] = USERNAME()"
+          }
+        ]
       }
     ],
     "sourceQueryCulture": "fr-FR",
@@ -33408,7 +33462,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -33770,6 +33824,132 @@
             "lineageTag": "00e5b6d3-e8be-44fb-ad76-c7f10b32e986",
             "sourceColumn": "START_DATE_ID",
             "summarizeBy": "none"
+          },
+          {
+            "name": "CREATED_BY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2f466386-d041-4f56-90be-3099dd65bc28",
+            "sourceColumn": "CREATED_BY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UPDATED_BY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0af322bc-dd30-4a42-bf7c-0ea3ef6f8b86",
+            "sourceColumn": "UPDATED_BY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DELETED_BY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c4f02660-8721-4c95-8ff2-906cc941cdc8",
+            "sourceColumn": "DELETED_BY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CREATED_AT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "443ae280-c3e0-486a-9c52-ee9f26197394",
+            "sourceColumn": "CREATED_AT",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Hiérarchie de dates",
+                  "table": "LocalDateTable_40db27f7-1c19-47fb-b6d7-e31ca16ce249"
+                },
+                "isDefault": true,
+                "relationship": "4c099f71-f99e-49c2-9ece-9da345e7ef0d"
+              }
+            ]
+          },
+          {
+            "name": "UPDATED_AT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "8b2b0869-7e66-4808-82a7-f82a1881ed17",
+            "sourceColumn": "UPDATED_AT",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Hiérarchie de dates",
+                  "table": "LocalDateTable_023a8f75-252c-4774-9298-88d2e2d8f12e"
+                },
+                "isDefault": true,
+                "relationship": "9057b84c-4096-44a7-84b6-4c7414a54ac5"
+              }
+            ]
+          },
+          {
+            "name": "DELETED_AT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "635684b0-8290-44ef-a044-f832eacc546b",
+            "sourceColumn": "DELETED_AT",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Hiérarchie de dates",
+                  "table": "LocalDateTable_beee986a-8423-4d6b-9898-e14bc9c697cc"
+                },
+                "isDefault": true,
+                "relationship": "dc8eef38-95c1-4370-baae-ae29f02f6a30"
+              }
+            ]
           }
         ],
         "lineageTag": "576ebbc1-b28e-428f-9ab0-86c7c4a41d25",
@@ -34034,7 +34214,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -34902,7 +35082,18 @@
         "measures": [
           {
             "name": "# Site",
-            "expression": "CALCULATE(COUNTROWS(SITE),USERELATIONSHIP(SITE[COUNTRY_ID],COUNTRY[ID]))",
+            "expression": [
+              "",
+              "var country = SELECTEDVALUE(COUNTRY[ID],FALSE())",
+              "RETURN",
+              "IF(country = FALSE,",
+              "    COUNTROWS(SITE),",
+              "    CALCULATE(",
+              "        COUNTROWS(SITE),",
+              "        SITE[COUNTRY_ID] = country",
+              "    )",
+              ")"
+            ],
             "formatString": "0",
             "lineageTag": "e27f80f2-97d8-49fe-927c-19116deea558"
           },
@@ -34910,7 +35101,12 @@
             "name": "% Site",
             "expression": [
               "",
-              "var allSite = CALCULATE(COUNTROWS(SITE),ALL(SITE),USERELATIONSHIP(SITE[COUNTRY_ID],COUNTRY[ID]))",
+              "var country = SELECTEDVALUE(COUNTRY[ID],FALSE())",
+              "var allSite = ",
+              "IF(country = FALSE,",
+              "    CALCULATE(COUNTROWS(SITE),ALL(SITE)),",
+              "    CALCULATE(COUNTROWS(SITE),ALL(SITE),SITE[COUNTRY_ID] = country)",
+              ")",
               "RETURN ",
               "    DIVIDE([# Site],allSite,0)"
             ],
@@ -36174,7 +36370,7 @@
               "expression": [
                 "let",
                 "    Source = Snowflake.Databases(\"UY39352-IDLOGISTICS.snowflakecomputing.com\",\"WH_DEV_GRP\"),",
-                "    DB_DEV_GRP_Database = Source{[Name=\"DB_DEV_GRP\",Kind=\"Database\"]}[Data],",
+                "    DB_DEV_GRP_Database = Source{[Name=DB_NAME,Kind=\"Database\"]}[Data],",
                 "    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name=\"DWH_SUSTAIN_ID\",Kind=\"Schema\"]}[Data],",
                 "    LANGUAGE_Table = DWH_SUSTAIN_ID_Schema{[Name=\"LANGUAGE\",Kind=\"Table\"]}[Data]",
                 "in",
@@ -36497,21 +36693,21 @@
             "mode": "import",
             "source": {
               "expression": [
-                "{\r",
-                "    (\"Construction Type\", NAMEOF('SITE'[Construction Type]), 0),\r",
-                "    (\"Energy Mangement Device\", NAMEOF('SITE'[Energy Mangement Device]), 1),\r",
-                "    (\"Energy Storage\", NAMEOF('SITE'[Energy Storage]), 2),\r",
-                "    (\"Environment Certification\", NAMEOF('SITE'[Environment Certification]), 3),\r",
-                "    (\"Intramural Canteen\", NAMEOF('SITE'[Intramural Canteen]), 4),\r",
-                "    (\"Main Activity\", NAMEOF('SITE'[Main Activity]), 5),\r",
-                "    (\"Performance Certificate Energy\", NAMEOF('SITE'[Performance Certificate Energy]), 6),\r",
-                "    (\"Presence of Generator\", NAMEOF('SITE'[Presence of Generator]), 7),\r",
-                "    (\"Secondary Activity\", NAMEOF('SITE'[Secondary Activity]), 8),\r",
-                "    (\"Security Building Class\", NAMEOF('SITE'[Security Building Class]), 9),\r",
-                "    (\"Site In Environmental Risk Zone\", NAMEOF('SITE'[Site In Environmental Risk Zone]), 10),\r",
-                "    (\"Temperature\", NAMEOF('SITE'[Temperature]), 11),\r",
-                "    (\"Type of Operation\", NAMEOF('SITE'[Type of Operation]), 12),\r",
-                "    (\"Vertical\", NAMEOF('SITE'[Vertical]), 13)\r",
+                "{",
+                "    (\"Construction Type\", NAMEOF('SITE'[Construction Type]), 0),",
+                "    (\"Energy Mangement Device\", NAMEOF('SITE'[Energy Mangement Device]), 1),",
+                "    (\"Energy Storage\", NAMEOF('SITE'[Energy Storage]), 2),",
+                "    (\"Environment Certification\", NAMEOF('SITE'[Environment Certification]), 3),",
+                "    (\"Intramural Canteen\", NAMEOF('SITE'[Intramural Canteen]), 4),",
+                "    (\"Main Activity\", NAMEOF('SITE'[Main Activity]), 5),",
+                "    (\"Performance Certificate Energy\", NAMEOF('SITE'[Performance Certificate Energy]), 6),",
+                "    (\"Presence of Generator\", NAMEOF('SITE'[Presence of Generator]), 7),",
+                "    (\"Secondary Activity\", NAMEOF('SITE'[Secondary Activity]), 8),",
+                "    (\"Security Building Class\", NAMEOF('SITE'[Security Building Class]), 9),",
+                "    (\"Site In Environmental Risk Zone\", NAMEOF('SITE'[Site In Environmental Risk Zone]), 10),",
+                "    (\"Temperature\", NAMEOF('SITE'[Temperature]), 11),",
+                "    (\"Type of Operation\", NAMEOF('SITE'[Type of Operation]), 12),",
+                "    (\"Vertical\", NAMEOF('SITE'[Vertical]), 13)",
                 "}"
               ],
               "type": "calculated"
@@ -36608,21 +36804,21 @@
             ],
             "dataType": "int64",
             "expression": [
-              "\r",
-              "SWITCH(\r",
-              "    TRUE(),\r",
-              "    'Category Translation'[Category Translation Commande] = 0,1,\r",
-              "    'Category Translation'[Category Translation Commande] = 1,2,\r",
-              "    'Category Translation'[Category Translation Commande] = 2,3,\r",
-              "    'Category Translation'[Category Translation Commande] = 3,4,\r",
-              "    'Category Translation'[Category Translation Commande] = 4,5,\r",
-              "    'Category Translation'[Category Translation Commande] = 5,6,\r",
-              "    'Category Translation'[Category Translation Commande] = 6,7,\r",
-              "    'Category Translation'[Category Translation Commande] = 7,8,\r",
-              "    'Category Translation'[Category Translation Commande] = 8,9,\r",
-              "    'Category Translation'[Category Translation Commande] = 9,10,\r",
-              "    'Category Translation'[Category Translation Commande] = 10,11,\r",
-              "    \r",
+              "",
+              "SWITCH(",
+              "    TRUE(),",
+              "    'Category Translation'[Category Translation Commande] = 0,1,",
+              "    'Category Translation'[Category Translation Commande] = 1,2,",
+              "    'Category Translation'[Category Translation Commande] = 2,3,",
+              "    'Category Translation'[Category Translation Commande] = 3,4,",
+              "    'Category Translation'[Category Translation Commande] = 4,5,",
+              "    'Category Translation'[Category Translation Commande] = 5,6,",
+              "    'Category Translation'[Category Translation Commande] = 6,7,",
+              "    'Category Translation'[Category Translation Commande] = 7,8,",
+              "    'Category Translation'[Category Translation Commande] = 8,9,",
+              "    'Category Translation'[Category Translation Commande] = 9,10,",
+              "    'Category Translation'[Category Translation Commande] = 10,11,",
+              "    ",
               "    2)"
             ],
             "formatString": "0",
@@ -36639,18 +36835,18 @@
             "mode": "import",
             "source": {
               "expression": [
-                "{\r",
-                "    (\"Category\", NAMEOF('CATEGORY'['DEUTSCH_CATEGORY']), 0),\r",
-                "    (\"Category\", NAMEOF('CATEGORY'['ENGLISH_CATEGORY']), 1),\r",
-                "    (\"Category\", NAMEOF('CATEGORY'['ESPAÑOL_CATEGORY']), 2),\r",
-                "    (\"Category\", NAMEOF('CATEGORY'['FRANÇAIS_CATEGORY']), 3),\r",
-                "\t(\"Category\", NAMEOF('CATEGORY'['POLSKI_CATEGORY']), 4),\r",
-                "\t(\"Category\", NAMEOF('CATEGORY'['PORTUGUÊS_CATEGORY']), 5),\r",
-                "\t(\"Category\", NAMEOF('CATEGORY'['ROMÂNĂ_CATEGORY']), 6),\r",
-                "\t(\"Category\", NAMEOF('CATEGORY'['NEDERLANDS_CATEGORY']), 7),\r",
-                "\t(\"Category\", NAMEOF('CATEGORY'['ITALIANO_CATEGORY']), 8),\r",
-                "\t(\"Category\", NAMEOF(CATEGORY['CHINESE_CATEGORY']), 9),\r",
-                "    (\"Category\", NAMEOF('CATEGORY'['INDONESIA_CATEGORY']), 10) \r",
+                "{",
+                "    (\"Category\", NAMEOF('CATEGORY'['DEUTSCH_CATEGORY']), 0),",
+                "    (\"Category\", NAMEOF('CATEGORY'['ENGLISH_CATEGORY']), 1),",
+                "    (\"Category\", NAMEOF('CATEGORY'['ESPAÑOL_CATEGORY']), 2),",
+                "    (\"Category\", NAMEOF('CATEGORY'['FRANÇAIS_CATEGORY']), 3),",
+                "\t(\"Category\", NAMEOF('CATEGORY'['POLSKI_CATEGORY']), 4),",
+                "\t(\"Category\", NAMEOF('CATEGORY'['PORTUGUÊS_CATEGORY']), 5),",
+                "\t(\"Category\", NAMEOF('CATEGORY'['ROMÂNĂ_CATEGORY']), 6),",
+                "\t(\"Category\", NAMEOF('CATEGORY'['NEDERLANDS_CATEGORY']), 7),",
+                "\t(\"Category\", NAMEOF('CATEGORY'['ITALIANO_CATEGORY']), 8),",
+                "\t(\"Category\", NAMEOF(CATEGORY['CHINESE_CATEGORY']), 9),",
+                "    (\"Category\", NAMEOF('CATEGORY'['INDONESIA_CATEGORY']), 10) ",
                 "}"
               ],
               "type": "calculated"
@@ -36747,21 +36943,21 @@
             ],
             "dataType": "int64",
             "expression": [
-              "\r",
-              "SWITCH(\r",
-              "    TRUE(),\r",
-              "    'Answer Translation'[Answer Translation Commande] = 0,1,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 1,2,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 2,3,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 3,4,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 4,5,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 5,6,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 6,7,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 7,8,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 8,9,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 9,10,\r",
-              "    'Answer Translation'[Answer Translation Commande] = 10,11,\r",
-              "    \r",
+              "",
+              "SWITCH(",
+              "    TRUE(),",
+              "    'Answer Translation'[Answer Translation Commande] = 0,1,",
+              "    'Answer Translation'[Answer Translation Commande] = 1,2,",
+              "    'Answer Translation'[Answer Translation Commande] = 2,3,",
+              "    'Answer Translation'[Answer Translation Commande] = 3,4,",
+              "    'Answer Translation'[Answer Translation Commande] = 4,5,",
+              "    'Answer Translation'[Answer Translation Commande] = 5,6,",
+              "    'Answer Translation'[Answer Translation Commande] = 6,7,",
+              "    'Answer Translation'[Answer Translation Commande] = 7,8,",
+              "    'Answer Translation'[Answer Translation Commande] = 8,9,",
+              "    'Answer Translation'[Answer Translation Commande] = 9,10,",
+              "    'Answer Translation'[Answer Translation Commande] = 10,11,",
+              "    ",
               "    2)"
             ],
             "formatString": "0",
@@ -36778,18 +36974,18 @@
             "mode": "import",
             "source": {
               "expression": [
-                "{\r",
-                "    (\"Answer\", NAMEOF('ANSWER'['DEUTSCH_ANSWER']), 0),\r",
-                "    (\"Answer\", NAMEOF('ANSWER'['ENGLISH_ANSWER']), 1),\r",
-                "    (\"Answer\", NAMEOF('ANSWER'['ESPAÑOL_ANSWER']), 2),\r",
-                "    (\"Answer\", NAMEOF('ANSWER'['FRANÇAIS_ANSWER']), 3),\r",
-                "\t(\"Answer\", NAMEOF('ANSWER'['POLSKI_ANSWER']), 4),\r",
-                "\t(\"Answer\", NAMEOF('ANSWER'['PORTUGUÊS_ANSWER']), 5),\r",
-                "\t(\"Answer\", NAMEOF('ANSWER'['ROMÂNĂ_ANSWER']), 6),\r",
-                "\t(\"Answer\", NAMEOF('ANSWER'['NEDERLANDS_ANSWER']), 7),\r",
-                "\t(\"Answer\", NAMEOF('ANSWER'['ITALIANO_ANSWER']), 8),\r",
-                "\t(\"Answer\", NAMEOF(ANSWER['CHINESE_ANSWER']), 9),\r",
-                "    (\"Answer\", NAMEOF('ANSWER'['INDONESIA_ANSWER']), 10) \r",
+                "{",
+                "    (\"Answer\", NAMEOF('ANSWER'['DEUTSCH_ANSWER']), 0),",
+                "    (\"Answer\", NAMEOF('ANSWER'['ENGLISH_ANSWER']), 1),",
+                "    (\"Answer\", NAMEOF('ANSWER'['ESPAÑOL_ANSWER']), 2),",
+                "    (\"Answer\", NAMEOF('ANSWER'['FRANÇAIS_ANSWER']), 3),",
+                "\t(\"Answer\", NAMEOF('ANSWER'['POLSKI_ANSWER']), 4),",
+                "\t(\"Answer\", NAMEOF('ANSWER'['PORTUGUÊS_ANSWER']), 5),",
+                "\t(\"Answer\", NAMEOF('ANSWER'['ROMÂNĂ_ANSWER']), 6),",
+                "\t(\"Answer\", NAMEOF('ANSWER'['NEDERLANDS_ANSWER']), 7),",
+                "\t(\"Answer\", NAMEOF('ANSWER'['ITALIANO_ANSWER']), 8),",
+                "\t(\"Answer\", NAMEOF(ANSWER['CHINESE_ANSWER']), 9),",
+                "    (\"Answer\", NAMEOF('ANSWER'['INDONESIA_ANSWER']), 10) ",
                 "}"
               ],
               "type": "calculated"
@@ -36886,21 +37082,21 @@
             ],
             "dataType": "int64",
             "expression": [
-              "\r",
-              "SWITCH(\r",
-              "    TRUE(),\r",
-              "    'Question Translation'[Question Translation Commande] = 0,1,\r",
-              "    'Question Translation'[Question Translation Commande] = 1,2,\r",
-              "    'Question Translation'[Question Translation Commande] = 2,3,\r",
-              "    'Question Translation'[Question Translation Commande] = 3,4,\r",
-              "    'Question Translation'[Question Translation Commande] = 4,5,\r",
-              "    'Question Translation'[Question Translation Commande] = 5,6,\r",
-              "    'Question Translation'[Question Translation Commande] = 6,7,\r",
-              "    'Question Translation'[Question Translation Commande] = 7,8,\r",
-              "    'Question Translation'[Question Translation Commande] = 8,9,\r",
-              "    'Question Translation'[Question Translation Commande] = 9,10,\r",
-              "    'Question Translation'[Question Translation Commande] = 10,11,\r",
-              "    \r",
+              "",
+              "SWITCH(",
+              "    TRUE(),",
+              "    'Question Translation'[Question Translation Commande] = 0,1,",
+              "    'Question Translation'[Question Translation Commande] = 1,2,",
+              "    'Question Translation'[Question Translation Commande] = 2,3,",
+              "    'Question Translation'[Question Translation Commande] = 3,4,",
+              "    'Question Translation'[Question Translation Commande] = 4,5,",
+              "    'Question Translation'[Question Translation Commande] = 5,6,",
+              "    'Question Translation'[Question Translation Commande] = 6,7,",
+              "    'Question Translation'[Question Translation Commande] = 7,8,",
+              "    'Question Translation'[Question Translation Commande] = 8,9,",
+              "    'Question Translation'[Question Translation Commande] = 9,10,",
+              "    'Question Translation'[Question Translation Commande] = 10,11,",
+              "    ",
               "    2)"
             ],
             "formatString": "0",
@@ -36917,18 +37113,18 @@
             "mode": "import",
             "source": {
               "expression": [
-                "{\r",
-                "    (\"Question\", NAMEOF('QUESTION'['DEUTSCH_QUESTION']), 0),\r",
-                "    (\"Question\", NAMEOF('QUESTION'['ENGLISH_QUESTION']), 1),\r",
-                "    (\"Question\", NAMEOF('QUESTION'['ESPAÑOL_QUESTION']), 2),\r",
-                "    (\"Question\", NAMEOF('QUESTION'['FRANÇAIS_QUESTION']), 3),\r",
-                "\t(\"Question\", NAMEOF('QUESTION'['POLSKI_QUESTION']), 4),\r",
-                "\t(\"Question\", NAMEOF('QUESTION'['PORTUGUÊS_QUESTION']), 5),\r",
-                "\t(\"Question\", NAMEOF('QUESTION'['ROMÂNĂ_QUESTION']), 6),\r",
-                "\t(\"Question\", NAMEOF('QUESTION'['NEDERLANDS_QUESTION']), 7),\r",
-                "\t(\"Question\", NAMEOF('QUESTION'['ITALIANO_QUESTION']), 8),\r",
-                "\t(\"Question\", NAMEOF(QUESTION['CHINESE_QUESTION']), 9),\r",
-                "    (\"Question\", NAMEOF('QUESTION'['INDONESIA_QUESTION']), 10) \r",
+                "{",
+                "    (\"Question\", NAMEOF('QUESTION'['DEUTSCH_QUESTION']), 0),",
+                "    (\"Question\", NAMEOF('QUESTION'['ENGLISH_QUESTION']), 1),",
+                "    (\"Question\", NAMEOF('QUESTION'['ESPAÑOL_QUESTION']), 2),",
+                "    (\"Question\", NAMEOF('QUESTION'['FRANÇAIS_QUESTION']), 3),",
+                "\t(\"Question\", NAMEOF('QUESTION'['POLSKI_QUESTION']), 4),",
+                "\t(\"Question\", NAMEOF('QUESTION'['PORTUGUÊS_QUESTION']), 5),",
+                "\t(\"Question\", NAMEOF('QUESTION'['ROMÂNĂ_QUESTION']), 6),",
+                "\t(\"Question\", NAMEOF('QUESTION'['NEDERLANDS_QUESTION']), 7),",
+                "\t(\"Question\", NAMEOF('QUESTION'['ITALIANO_QUESTION']), 8),",
+                "\t(\"Question\", NAMEOF(QUESTION['CHINESE_QUESTION']), 9),",
+                "    (\"Question\", NAMEOF('QUESTION'['INDONESIA_QUESTION']), 10) ",
                 "}"
               ],
               "type": "calculated"
@@ -37025,21 +37221,21 @@
             ],
             "dataType": "int64",
             "expression": [
-              "\r",
-              "SWITCH(\r",
-              "    TRUE(),\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 0,1,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 1,2,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 2,3,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 3,4,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 4,5,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 5,6,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 6,7,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 7,8,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 8,9,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 9,10,\r",
-              "    'Pillar Translation'[Pillar Translation Commande] = 10,11,\r",
-              "    \r",
+              "",
+              "SWITCH(",
+              "    TRUE(),",
+              "    'Pillar Translation'[Pillar Translation Commande] = 0,1,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 1,2,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 2,3,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 3,4,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 4,5,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 5,6,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 6,7,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 7,8,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 8,9,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 9,10,",
+              "    'Pillar Translation'[Pillar Translation Commande] = 10,11,",
+              "    ",
               "    2)"
             ],
             "formatString": "0",
@@ -37056,18 +37252,18 @@
             "mode": "import",
             "source": {
               "expression": [
-                "{\r",
-                "    (\"Pillar\", NAMEOF('PILLAR'['DEUTSCH_PILLAR']), 0),\r",
-                "    (\"Pillar\", NAMEOF('PILLAR'['ENGLISH_PILLAR']), 1),\r",
-                "    (\"Pillar\", NAMEOF('PILLAR'['ESPAÑOL_PILLAR']), 2),\r",
-                "    (\"Pillar\", NAMEOF('PILLAR'['FRANÇAIS_PILLAR']), 3),\r",
-                "\t(\"Pillar\", NAMEOF('PILLAR'['POLSKI_PILLAR']), 4),\r",
-                "\t(\"Pillar\", NAMEOF('PILLAR'['PORTUGUÊS_PILLAR']), 5),\r",
-                "\t(\"Pillar\", NAMEOF('PILLAR'['ROMÂNĂ_PILLAR']), 6),\r",
-                "\t(\"Pillar\", NAMEOF('PILLAR'['NEDERLANDS_PILLAR']), 7),\r",
-                "\t(\"Pillar\", NAMEOF('PILLAR'['ITALIANO_PILLAR']), 8),\r",
-                "\t(\"Pillar\", NAMEOF(PILLAR['CHINESE_PILLAR']), 9),\r",
-                "    (\"Pillar\", NAMEOF('PILLAR'['INDONESIA_PILLAR']), 10) \r",
+                "{",
+                "    (\"Pillar\", NAMEOF('PILLAR'['DEUTSCH_PILLAR']), 0),",
+                "    (\"Pillar\", NAMEOF('PILLAR'['ENGLISH_PILLAR']), 1),",
+                "    (\"Pillar\", NAMEOF('PILLAR'['ESPAÑOL_PILLAR']), 2),",
+                "    (\"Pillar\", NAMEOF('PILLAR'['FRANÇAIS_PILLAR']), 3),",
+                "\t(\"Pillar\", NAMEOF('PILLAR'['POLSKI_PILLAR']), 4),",
+                "\t(\"Pillar\", NAMEOF('PILLAR'['PORTUGUÊS_PILLAR']), 5),",
+                "\t(\"Pillar\", NAMEOF('PILLAR'['ROMÂNĂ_PILLAR']), 6),",
+                "\t(\"Pillar\", NAMEOF('PILLAR'['NEDERLANDS_PILLAR']), 7),",
+                "\t(\"Pillar\", NAMEOF('PILLAR'['ITALIANO_PILLAR']), 8),",
+                "\t(\"Pillar\", NAMEOF(PILLAR['CHINESE_PILLAR']), 9),",
+                "    (\"Pillar\", NAMEOF('PILLAR'['INDONESIA_PILLAR']), 10) ",
                 "}"
               ],
               "type": "calculated"
@@ -37164,21 +37360,21 @@
             ],
             "dataType": "int64",
             "expression": [
-              "\r",
-              "SWITCH(\r",
-              "    TRUE(),\r",
-              "    'Theme Translation'[Theme Translation Commande] = 0,1,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 1,2,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 2,3,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 3,4,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 4,5,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 5,6,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 6,7,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 7,8,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 8,9,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 9,10,\r",
-              "    'Theme Translation'[Theme Translation Commande] = 10,11,\r",
-              "    \r",
+              "",
+              "SWITCH(",
+              "    TRUE(),",
+              "    'Theme Translation'[Theme Translation Commande] = 0,1,",
+              "    'Theme Translation'[Theme Translation Commande] = 1,2,",
+              "    'Theme Translation'[Theme Translation Commande] = 2,3,",
+              "    'Theme Translation'[Theme Translation Commande] = 3,4,",
+              "    'Theme Translation'[Theme Translation Commande] = 4,5,",
+              "    'Theme Translation'[Theme Translation Commande] = 5,6,",
+              "    'Theme Translation'[Theme Translation Commande] = 6,7,",
+              "    'Theme Translation'[Theme Translation Commande] = 7,8,",
+              "    'Theme Translation'[Theme Translation Commande] = 8,9,",
+              "    'Theme Translation'[Theme Translation Commande] = 9,10,",
+              "    'Theme Translation'[Theme Translation Commande] = 10,11,",
+              "    ",
               "    2)"
             ],
             "formatString": "0",
@@ -37195,18 +37391,18 @@
             "mode": "import",
             "source": {
               "expression": [
-                "{\r",
-                "    (\"Theme\", NAMEOF('THEME'['DEUTSCH_THEME']), 0),\r",
-                "    (\"Theme\", NAMEOF('THEME'['ENGLISH_THEME']), 1),\r",
-                "    (\"Theme\", NAMEOF('THEME'['ESPAÑOL_THEME']), 2),\r",
-                "    (\"Theme\", NAMEOF('THEME'['FRANÇAIS_THEME']), 3),\r",
-                "\t(\"Theme\", NAMEOF('THEME'['POLSKI_THEME']), 4),\r",
-                "\t(\"Theme\", NAMEOF('THEME'['PORTUGUÊS_THEME']), 5),\r",
-                "\t(\"Theme\", NAMEOF('THEME'['ROMÂNĂ_THEME']), 6),\r",
-                "\t(\"Theme\", NAMEOF('THEME'['NEDERLANDS_THEME']), 7),\r",
-                "\t(\"Theme\", NAMEOF('THEME'['ITALIANO_THEME']), 8),\r",
-                "\t(\"Theme\", NAMEOF(THEME['CHINESE_THEME']), 9),\r",
-                "    (\"Theme\", NAMEOF('THEME'['INDONESIA_THEME']), 10) \r",
+                "{",
+                "    (\"Theme\", NAMEOF('THEME'['DEUTSCH_THEME']), 0),",
+                "    (\"Theme\", NAMEOF('THEME'['ENGLISH_THEME']), 1),",
+                "    (\"Theme\", NAMEOF('THEME'['ESPAÑOL_THEME']), 2),",
+                "    (\"Theme\", NAMEOF('THEME'['FRANÇAIS_THEME']), 3),",
+                "\t(\"Theme\", NAMEOF('THEME'['POLSKI_THEME']), 4),",
+                "\t(\"Theme\", NAMEOF('THEME'['PORTUGUÊS_THEME']), 5),",
+                "\t(\"Theme\", NAMEOF('THEME'['ROMÂNĂ_THEME']), 6),",
+                "\t(\"Theme\", NAMEOF('THEME'['NEDERLANDS_THEME']), 7),",
+                "\t(\"Theme\", NAMEOF('THEME'['ITALIANO_THEME']), 8),",
+                "\t(\"Theme\", NAMEOF(THEME['CHINESE_THEME']), 9),",
+                "    (\"Theme\", NAMEOF('THEME'['INDONESIA_THEME']), 10) ",
                 "}"
               ],
               "type": "calculated"
@@ -37301,9 +37497,9 @@
             "mode": "import",
             "source": {
               "expression": [
-                "{\r",
-                "    (\"Site\", NAMEOF('SITE'[NAME]), 0),\r",
-                "    (\"Country\", NAMEOF('COUNTRY'[SURNAME]), 1)\r",
+                "{",
+                "    (\"Site\", NAMEOF('SITE'[NAME]), 0),",
+                "    (\"Country\", NAMEOF('COUNTRY'[SURNAME]), 1)",
                 "}"
               ],
               "type": "calculated"
@@ -39520,6 +39716,763 @@
             "mode": "import",
             "source": {
               "expression": "Calendar(Date(Year(MIN('SITE'[DATE_LAST_CID_AUDIT])), 1, 1), Date(Year(MAX('SITE'[DATE_LAST_CID_AUDIT])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "USER_ACCESS",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EMAIL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "de09558a-cb3f-4da8-a9bd-affd3b489b98",
+            "sourceColumn": "EMAIL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EMAIL_2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "52c82b1c-46ab-479b-8d81-65d8599db243",
+            "sourceColumn": "EMAIL_2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NOM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "50baa825-a037-4634-bf9b-00b0220a9451",
+            "sourceColumn": "NOM",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RESPONSABILITY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "d91bde20-3d38-4e3a-82a2-a52ce2d4cd8e",
+            "sourceColumn": "RESPONSABILITY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FUNCTION",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "85b53c38-6b97-4406-94a1-5c3a7b197f04",
+            "sourceColumn": "FUNCTION",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "COUNTRY",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "3de3e28d-f6a2-48ed-b026-c2dbe6e5f67f",
+            "sourceColumn": "COUNTRY",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "a794cc05-983c-45e4-8978-653c39f008c8",
+        "partitions": [
+          {
+            "name": "USER_ACCESS",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Snowflake.Databases(\"UY39352-IDLOGISTICS.snowflakecomputing.com\",\"WH_DEV_GRP\"),",
+                "    DB_DEV_GRP_Database = Source{[Name=DB_NAME,Kind=\"Database\"]}[Data],",
+                "    DWH_SUSTAIN_ID_Schema = DB_DEV_GRP_Database{[Name=\"DWH_SUSTAIN_ID\",Kind=\"Schema\"]}[Data],",
+                "    LANGUAGE_Table = DWH_SUSTAIN_ID_Schema{[Name=\"DIM_USER_ACCESS\",Kind=\"Table\"]}[Data]",
+                "in",
+                "    LANGUAGE_Table"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_40db27f7-1c19-47fb-b6d7-e31ca16ce249",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "9c82ae9a-757f-46d4-99df-e64d0dff739c",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Année",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "a3af36d9-9719-41ae-8e33-67b791d115cc",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoMois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "fe03eed9-aabe-43d2-b412-26f60bedfcb7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "25b7e731-587b-4f06-a51c-0de29b4353f2",
+            "sortByColumn": "NoMois",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoTrimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([NoMois] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "2169e556-e390-471b-87e6-49f78708be4d",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [NoTrimestre]",
+            "isHidden": true,
+            "lineageTag": "8f243fba-2b8b-452c-b0d0-95334590c57d",
+            "sortByColumn": "NoTrimestre",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Jour",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "fbbe47f6-ddb4-40a4-8bb9-054ae97f5a31",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hiérarchie de dates",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Année",
+                "column": "Année",
+                "lineageTag": "e15f7ae5-5836-4a1b-8deb-d8d48ca23ee0",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "ebd9826d-071c-4a19-87bc-551a65c2f221",
+                "ordinal": 1
+              },
+              {
+                "name": "Mois",
+                "column": "Mois",
+                "lineageTag": "a16b95f3-e0ff-459f-906a-aa49875e7e96",
+                "ordinal": 2
+              },
+              {
+                "name": "Jour",
+                "column": "Jour",
+                "lineageTag": "e7d58037-c3a9-43b6-94af-f3d2f849aa0e",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "030098bc-3069-4db3-b461-bb8d0f8ce31c"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "3a7e6ed7-7118-47c4-813e-a8e75d606878",
+        "partitions": [
+          {
+            "name": "LocalDateTable_40db27f7-1c19-47fb-b6d7-e31ca16ce249",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('CAMPAIGN'[CREATED_AT])), 1, 1), Date(Year(MAX('CAMPAIGN'[CREATED_AT])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_023a8f75-252c-4774-9298-88d2e2d8f12e",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "29b71c0a-7f65-4488-8321-6f44c88c99d2",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Année",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "bb65c1fc-7d97-496e-bd23-1bd9a3a00b7b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoMois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "90f6eaf3-e962-45d6-93c6-c3b35305f10c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "e0ec2a15-a78b-4180-96db-bcd80a4e4d68",
+            "sortByColumn": "NoMois",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoTrimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([NoMois] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "682075a3-45be-4d90-b805-123c685b4469",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [NoTrimestre]",
+            "isHidden": true,
+            "lineageTag": "2f6c6f11-87a6-4941-930e-7356797da7ab",
+            "sortByColumn": "NoTrimestre",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Jour",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "a2fa9031-86f4-44d0-962f-65ad7e3a6d06",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hiérarchie de dates",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Année",
+                "column": "Année",
+                "lineageTag": "e1619477-391e-4652-8c79-da4672dba70e",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "1bc18e6d-4ffa-41e3-9ed3-e375afe1287f",
+                "ordinal": 1
+              },
+              {
+                "name": "Mois",
+                "column": "Mois",
+                "lineageTag": "7145b22e-b2cc-4299-87b6-e8068a600ae0",
+                "ordinal": 2
+              },
+              {
+                "name": "Jour",
+                "column": "Jour",
+                "lineageTag": "2c83a6e7-b534-45f0-9bc4-e9e9df279310",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "62ef73c5-52b2-4a19-9e27-51b73f932dcc"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "b83c7cc4-89a3-4873-b2e1-e1326d955086",
+        "partitions": [
+          {
+            "name": "LocalDateTable_023a8f75-252c-4774-9298-88d2e2d8f12e",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('CAMPAIGN'[UPDATED_AT])), 1, 1), Date(Year(MAX('CAMPAIGN'[UPDATED_AT])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_beee986a-8423-4d6b-9898-e14bc9c697cc",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "03695368-76ec-434c-bf9b-890f12d7f60f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Année",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "15a3db71-c4a9-4b96-9506-5a73b18b5b81",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoMois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "83f09ed1-9010-4727-8a70-d7f5ad94ce7e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "376da369-7c06-4952-b990-362c0e6b94d6",
+            "sortByColumn": "NoMois",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoTrimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([NoMois] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "1bdb2879-647f-426a-a550-25c36fc7da1f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [NoTrimestre]",
+            "isHidden": true,
+            "lineageTag": "08302bfc-68b1-4e93-8f3a-0b8f2f7435fe",
+            "sortByColumn": "NoTrimestre",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Jour",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "7837f061-a21d-4c75-b52c-d3360d47a05e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hiérarchie de dates",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Année",
+                "column": "Année",
+                "lineageTag": "57c571f5-5ab2-4afe-9185-728506b75fc3",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "dd38bfdf-9795-4e37-a80c-49577be56956",
+                "ordinal": 1
+              },
+              {
+                "name": "Mois",
+                "column": "Mois",
+                "lineageTag": "b59a809e-5fba-4fe1-a3e5-e310b21aafb6",
+                "ordinal": 2
+              },
+              {
+                "name": "Jour",
+                "column": "Jour",
+                "lineageTag": "e50b4b16-6289-49a6-858f-b8265248097e",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "512c4001-8b27-4f06-9d84-abefc6054f6f"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "05577d7e-9994-4c98-b4c8-011a28307cc5",
+        "partitions": [
+          {
+            "name": "LocalDateTable_beee986a-8423-4d6b-9898-e14bc9c697cc",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('CAMPAIGN'[DELETED_AT])), 1, 1), Date(Year(MAX('CAMPAIGN'[DELETED_AT])), 12, 31))",
               "type": "calculated"
             }
           }

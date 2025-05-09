@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: DWH_SUSTAIN_ID
+    database: "{{'DB_PRD_GRP' if target.name == 'prd'  else 'DB_DEV_GRP'}}"
     schema: DWH_SUSTAIN_ID
     tables:
       - name: SITE
@@ -16,8 +17,11 @@ sources:
       - name: THEME
       - name: PILLAR
       - name: LANGUAGE_ANSWER
-      - name: LANGUAGE_QUESTION
-      - name: LANGUAGE_PILLAR
-      - name: EVALUATION
+      - name: LANGUAGE_QUESTION 
+      - name: LANGUAGE_PILLAR 
+      - name: LANGUAGE_CATEGORY 
+      - name: LANGUAGE_THEME 
+      - name: EVALUATION 
+      - name: SUSTAIN_ID_ACCESS
 
         
